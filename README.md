@@ -1,5 +1,5 @@
 ActiveWeb Bootstrap
 ===================
 
-Provides an example CRUD REST service using [JavaaLite](http://javalite.io) technologies. 
+Provides an example CRUD REST service using [JavaLite](http://javalite.io) technologies. 
 
