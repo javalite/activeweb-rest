@@ -7,7 +7,7 @@ Provides an example CRUD REST service using [JavaLite](http://javalite.io) techn
 
 ## Adjust database connection values to reflect your environment:
 * [pom.xml](pom.xml)
-* [src/main/java/app/config/DbConfig.java](blob/master/src/main/java/app/config/DbConfig.java)
+* [src/main/java/app/config/DbConfig.java](src/main/java/app/config/DbConfig.java)
 
 ## Reset/re-create databases:
 
@@ -25,7 +25,6 @@ Running is the same as any other Java app:
 
 ```
 mvn jetty:run
-
 ```
 
 and then navigating to [http://localhost:8080/people](http://localhost:8080/people).
@@ -40,7 +39,7 @@ is easy by executing this script:
 ./update.sh
 ```
 
-Take a look at the contents of this script: [upload.sh](blob/master/upload.sh) and see that this app is a really service.
+Take a look at the contents of this script: [upload.sh](upload.sh) and see that this app is a really service.
 
 Navigate to [http://localhost:8080/people](http://localhost:8080/people) again and see new people created (and note their IDs).
 
@@ -50,9 +49,9 @@ Explore an individual person:
 
 ## Features
 
-* **Models are simple**: [tree/master/src/main/java/app/models](tree/master/src/main/java/app/models). Only the Person model
+* **Models are simple**: [src/main/java/app/models](src/main/java/app/models). Only the Person model
 has a method `getAddresses()`, otherwise no methods
-* **RESTful controller uses automatic routes**: [PeopleController.java](blob/master/src/main/java/app/controllers/PeopleController.java)
-* **Exceptional conditions handled outside business logic**: [CatchAllFilter.java](blob/master/src/main/java/app/controllers/CatchAllFilter.java)
-* **JSON is generated using powerful templating**: with partials and children - [people views](blob/master/src/main/webapp/WEB-INF/views/people/)
-* **Tests expect certain JSON structure and data**: [PeopleControllerSpec.java](blob/master/src/test/java/app/controllers/PeopleControllerSpec.java)
+* **RESTful controller uses automatic routes**: [PeopleController.java](src/main/java/app/controllers/PeopleController.java)
+* **Exceptional conditions handled outside business logic**: [CatchAllFilter.java](src/main/java/app/controllers/CatchAllFilter.java)
+* **JSON is generated using powerful templating**: with partials and children - [people views](src/main/webapp/WEB-INF/views/people/)
+* **Tests expect certain JSON structure and data**: [PeopleControllerSpec.java](src/test/java/app/controllers/PeopleControllerSpec.java)
