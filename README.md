@@ -18,8 +18,6 @@ Provides an example CRUD REST service using [JavaLite](http://javalite.io) techn
 
 >  If you are on Windows, just execute maven commands inside the script or create batch files with the same content.
 
-### Explore the app
-
 ### Start the app
 
 Running is the same as any other Java app:
