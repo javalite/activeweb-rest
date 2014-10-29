@@ -1,5 +1,6 @@
 package app.config;
 
+import app.controllers.CatchAllFilter;
 import app.controllers.PeopleController;
 import org.javalite.activeweb.AbstractControllerConfig;
 import org.javalite.activeweb.AppContext;
@@ -11,6 +12,6 @@ public class AppControllerConfig extends AbstractControllerConfig {
     public void init(AppContext context) {
         addGlobalFilters(new TimingFilter());
 
-        add(new DBConnectionFilter()).to(PeopleController.class);
+        add(new DBConnectionFilter(), new CatchAllFilter()).to(PeopleController.class);
     }
 }

@@ -37,16 +37,16 @@ public class PeopleController extends APIController {
             }
         }
         view("message", "successfully created people and addresses", "code", 200);
+        render("message");
     }
 
     public void show(){
 
-        Person p = Person.findFirst(getId());
-        if(p == null)
+        List<Person> people = Person.where("id = ?", getId()).include(Address.class);
+        if(people.size() == 0)
             throw  new RuntimeException("could not find person with id: " + getId()); //catch by filter
 
-        view("person", p);
-        view("addresses", p.getAddresses());
+        view("person", people.get(0));
         render("_person"); // unusual use of a partial - we are doing it for reuse
     }
 }

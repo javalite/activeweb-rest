@@ -10,7 +10,7 @@
 
     <properties>
         <activejdbc.version>1.4.9</activejdbc.version>
-        <activeweb.version>1.10</activeweb.version>
+        <activeweb.version>1.11-SNAPSHOT</activeweb.version>
         <driver>com.mysql.jdbc.Driver</driver>
         <jdbc.username>root</jdbc.username>
         <jdbc.password>p@ssw0rd</jdbc.password>
@@ -185,4 +185,30 @@
         </dependency>
 
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>snapshots1</id>
+            <name>Sonatype Snapshots</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+                <checksumPolicy>warn</checksumPolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>snapshots2</id>
+            <name>Sonatype Snapshots</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+                <checksumPolicy>warn</checksumPolicy>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
 </project>
