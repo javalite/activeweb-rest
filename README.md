@@ -6,8 +6,8 @@ Provides an example CRUD REST service using [JavaLite](http://javalite.io) techn
 ## Running
 
 ## Adjust database connection values to reflect your environment:
-* [blob/master/pom.xml](blob/master/pom.xml)
-* [blob/master/src/main/java/app/config/DbConfig.java](blob/master/src/main/java/app/config/DbConfig.java)
+* [pom.xml](pom.xml)
+* [src/main/java/app/config/DbConfig.java](blob/master/src/main/java/app/config/DbConfig.java)
 
 ## Reset/re-create databases:
 
