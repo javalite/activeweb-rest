@@ -5,7 +5,8 @@ Provides an example CRUD REST service using [JavaLite](http://javalite.io) techn
 
 ## Running
 
-## Adjust database connection values to reflect your environment:
+### Adjust database connection values
+
 * [pom.xml](pom.xml)
 * [src/main/java/app/config/DbConfig.java](src/main/java/app/config/DbConfig.java)
 
