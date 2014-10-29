@@ -9,7 +9,7 @@ Provides an example CRUD REST service using [JavaLite](http://javalite.io) techn
 * [pom.xml](pom.xml)
 * [src/main/java/app/config/DbConfig.java](src/main/java/app/config/DbConfig.java)
 
-## Reset/re-create databases:
+### Reset/re-create databases:
 
 ```
 ./scripts/reset_db.sh
@@ -17,7 +17,7 @@ Provides an example CRUD REST service using [JavaLite](http://javalite.io) techn
 
 >  If you are on Windows, just execute maven commands inside the script or create batch files with the same content.
 
-## Explore the app
+### Explore the app
 
 ### Start the app
 
@@ -28,8 +28,6 @@ mvn jetty:run
 ```
 
 and then navigating to [http://localhost:8080/people](http://localhost:8080/people).
-
-
 
 ### Posting new JSON document
 
