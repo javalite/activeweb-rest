@@ -21,6 +21,10 @@
             <param-name>root_controller</param-name>
             <param-value>home</param-value>
         </init-param>
+         <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
     </filter>
 
 
