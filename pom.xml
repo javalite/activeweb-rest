@@ -9,8 +9,8 @@
     <name>JavaLite REST Example</name>
 
     <properties>
-        <activejdbc.version>1.4.9</activejdbc.version>
-        <activeweb.version>1.11-SNAPSHOT</activeweb.version>
+        <activejdbc.version>1.4.11</activejdbc.version>
+        <activeweb.version>1.13</activeweb.version>
         <driver>com.mysql.jdbc.Driver</driver>
         <jdbc.username>root</jdbc.username>
         <jdbc.password>p@ssw0rd</jdbc.password>
