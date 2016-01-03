@@ -11,31 +11,8 @@
     <properties>
         <activejdbc.version>1.4.11</activejdbc.version>
         <activeweb.version>1.13</activeweb.version>
-        <driver>com.mysql.jdbc.Driver</driver>
-        <jdbc.username>root</jdbc.username>
-        <jdbc.password>p@ssw0rd</jdbc.password>
-
-        <dev.url>jdbc:mysql://localhost/rest_development</dev.url>
-        <test.url>jdbc:mysql://localhost/rest_test</test.url>
+        <environments>development,test</environments>
     </properties>
-    <profiles>
-        <!--these profiles are used by out-of-lifecycle commands like db-migrator:reset-->
-        <profile>
-            <id>development</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <properties>
-                <url>${dev.url}</url>
-            </properties>
-        </profile>
-        <profile>
-            <id>test</id>
-            <properties>
-                <url>${test.url}</url>
-            </properties>
-        </profile>
-    </profiles>
 
     <build>
         <plugins>
@@ -81,44 +58,28 @@
                 <groupId>org.javalite</groupId>
                 <artifactId>db-migrator-maven-plugin</artifactId>
                 <version>${activejdbc.version}</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>5.1.34</version>
+                    </dependency>
+                </dependencies>
                 <configuration>
-                    <url>${url}</url>
-                    <driver>com.mysql.jdbc.Driver</driver>
-                    <username>${jdbc.username}</username>
-                    <password>p@ssw0rd</password>
+                    <configFile>${project.basedir}/src/main/resources/database.properties</configFile>
+                    <environments>${environments}</environments>
                 </configuration>
-                <!--these executions are used during Maven life-cycles (mvn validate)-->
                 <executions>
-                    <execution>
-                        <id>test_migrations</id>
-                        <phase>validate</phase>
-                        <goals>
-                            <goal>migrate</goal>
-                        </goals>
-                        <configuration>
-                            <url>${test.url}</url>
-                        </configuration>
-                    </execution>
                     <execution>
                         <id>dev_migrations</id>
                         <phase>validate</phase>
                         <goals>
                             <goal>migrate</goal>
                         </goals>
-                        <configuration>
-                            <url>${dev.url}</url>
-                        </configuration>
                     </execution>
                 </executions>
-                <dependencies>
-                    <dependency>
-                        <groupId>mysql</groupId>
-                        <artifactId>mysql-connector-java</artifactId>
-                        <version>5.1.30</version>
-                    </dependency>
-
-                </dependencies>
             </plugin>
+
             <plugin>
                 <groupId>org.javalite</groupId>
                 <artifactId>activejdbc-instrumentation</artifactId>

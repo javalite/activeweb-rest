@@ -2,21 +2,19 @@
 
 Provides an example CRUD REST service using [JavaLite](http://javalite.io) technologies. 
 
-
 ## Running
 
 ### Adjust database connection values
 
-* [pom.xml](pom.xml)
-* [src/main/java/app/config/DbConfig.java](src/main/java/app/config/DbConfig.java)
+* [database.properties](src/main/resources/database.properties)
 
-### Reset/re-create databases:
+### create databases:
+
+You need to do this only once. Foe more information see [Database migrations](http://javalite.io/database_migrations). 
 
 ```
-./scripts/reset_db.sh
+mvn db-migrator:create
 ```
-
->  If you are on Windows, just execute maven commands inside the script or create batch files with the same content.
 
 ### Start the app
 
@@ -30,13 +28,12 @@ and then navigating to [http://localhost:8080/people](http://localhost:8080/peop
 
 ### Posting new JSON document
 
-is easy by executing this script:
+is easy by executing this command (from root of this project):
 
 ```
-./update.sh
-```
+curl -X POST -H "Content-Type: octet/stream" --data-binary @src/test/resources/people.json http://localhost:8080/people
 
-Take a look at the contents of this script: [upload.sh](upload.sh) and see that this app is a really service.
+```
 
 Navigate to [http://localhost:8080/people](http://localhost:8080/people) again and see new people created (and note their IDs).
 
