@@ -1,3 +1,3 @@
-<@compress single_line=true>
+<#--<@compress single_line=true>-->
 [<@render partial="person" collection=people spacer="comma"/>]
-</@compress>
+<#--</@compress>-->

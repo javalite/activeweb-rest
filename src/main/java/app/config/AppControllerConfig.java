@@ -10,8 +10,6 @@ import org.javalite.activeweb.controller_filters.TimingFilter;
 public class AppControllerConfig extends AbstractControllerConfig {
 
     public void init(AppContext context) {
-        addGlobalFilters(new TimingFilter());
-
-        add(new DBConnectionFilter(), new CatchAllFilter()).to(PeopleController.class);
+        add(new CatchAllFilter(), new DBConnectionFilter()).to(PeopleController.class);
     }
 }

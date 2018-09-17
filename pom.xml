@@ -9,8 +9,7 @@
     <name>JavaLite REST Example</name>
 
     <properties>
-        <activejdbc.version>1.4.11</activejdbc.version>
-        <activeweb.version>1.13</activeweb.version>
+        <javalite.version>2.2</javalite.version>
         <environments>development,test</environments>
     </properties>
 
@@ -21,11 +20,11 @@
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>9.3.4.RC1</version>
                 <configuration>
-                    <scanIntervalSeconds>10000</scanIntervalSeconds>
+                    <scanIntervalSeconds>1000000</scanIntervalSeconds>
                     <systemProperties>
                         <systemProperty>
                             <name>activejdbc.log</name>
-                            <value></value>
+                            <value/>
                         </systemProperty>
                         <systemProperty>
                             <name>active_reload</name>
@@ -57,7 +56,7 @@
             <plugin>
                 <groupId>org.javalite</groupId>
                 <artifactId>db-migrator-maven-plugin</artifactId>
-                <version>${activejdbc.version}</version>
+                <version>${javalite.version}</version>
                 <dependencies>
                     <dependency>
                         <groupId>mysql</groupId>
@@ -83,7 +82,7 @@
             <plugin>
                 <groupId>org.javalite</groupId>
                 <artifactId>activejdbc-instrumentation</artifactId>
-                <version>${activejdbc.version}</version>
+                <version>${javalite.version}</version>
                 <executions>
                     <execution>
                         <phase>process-classes</phase>
@@ -106,13 +105,13 @@
         <dependency>
             <groupId>org.javalite</groupId>
             <artifactId>activeweb</artifactId>
-            <version>${activeweb.version}</version>
+            <version>${javalite.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.javalite</groupId>
             <artifactId>activeweb-testing</artifactId>
-            <version>${activeweb.version}</version>
+            <version>${javalite.version}</version>
             <scope>test</scope>
         </dependency>
 
