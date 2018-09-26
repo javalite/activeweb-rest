@@ -57,14 +57,14 @@ public class PeopleControllerSpec extends DBControllerSpec {
     public void shouldCreateNewPeopleWithAddresses(){
 
         String json = Util.readResource("/people.json");
-        request().content(json.getBytes()).contentType("application/json").integrateViews().post("create"); // <--- need to call "create" according to REST routing
+        request().content(json.getBytes()).contentType("application/json").post("create"); // <--- need to call "create" according to REST routing
 
         Map response = JsonHelper.toMap(responseContent());
 
         the(response.get("code")).shouldBeEqual(200);
         the(response.get("message")).shouldBeEqual("successfully created people and addresses");
 
-        request().integrateViews().get("index");
+        request().get("index");
         Map[] peopleMaps = JsonHelper.toMaps(responseContent());
 
         the(peopleMaps.length).shouldBeEqual(2);
@@ -87,7 +87,7 @@ public class PeopleControllerSpec extends DBControllerSpec {
         p.add(new Address("shipping", "135 S LaSalle St", "", "Chicago", "IL", "60604"));
 
         //call controller with ID
-        request().integrateViews().id(p.getId()).get("show"); // <--- need to call "show" with ID according to REST routing
+        request().id(p.getId()).get("show"); // <--- need to call "show" with ID according to REST routing
 
         Map person = JsonHelper.toMap(responseContent());
         the(person.get("first_name")).shouldBeEqual("Marylin");
