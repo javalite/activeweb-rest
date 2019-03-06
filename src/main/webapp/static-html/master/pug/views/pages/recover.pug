@@ -1,0 +1,25 @@
+extends ../../_layout_page
+
+block content
+    .block-center.mt-4.wd-xl
+        // START card
+        .card.card-flat
+            .card-header.text-center.bg-dark
+                a(href="#")
+                    img.block-center.rounded(src='img/logo.png', alt='Image')
+            .card-body
+                p.text-center.py-2 PASSWORD RESET
+                form
+                    p.text-center Fill with your mail to receive instructions on how to reset your password.
+                    .form-group
+                        label.text-muted(for='resetInputEmail1') Email address
+                        .input-group.with-focus
+                            input#resetInputEmail1.form-control.border-right-0(type='email', placeholder='Enter email', autocomplete="off")
+                            .input-group-append
+                                span.input-group-text.text-muted.bg-transparent.border-left-0
+                                    em.fa.fa-envelope
+
+                    button.btn.btn-danger.btn-block(type='submit') Reset
+
+        // END card
+        include ../_partials/_footer_page

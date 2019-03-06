@@ -12,10 +12,6 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <properties>
-        <javalite.version>2.2</javalite.version>
-        <environments>development,test</environments>
-    </properties>
 
     <build>
         <plugins>

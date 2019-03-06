@@ -1,0 +1,214 @@
+extends ../../_layout
+
+block active
+  - sidebar_active = 'followers.html'
+
+block content
+    .content-heading Followers
+
+    .row
+
+        // Aside card
+        .col-xl-3.col-lg-4
+            .card.b.text-center
+                .card-body
+                    p.h4.text-bold.mb-0 This is you
+                .card-body
+                    img.rounded-circle.thumb64.mb-2(src="img/user/02.jpg", alt="avatar")
+                    p.h4.text-bold.mb-0 Todd Evans
+                    p Rome, Italy
+                    p Joined on Feb, 2015
+                .card-body.bt
+                    .row
+                        .col-4.br
+                            em.fab.fa-facebook-f.fa-fw.text-primary
+                            strong +700
+                        .col-4.br
+                            em.fab.fa-twitter.fa-fw.text-info
+                            strong +300
+                        .col-4
+                            em.fa.fa-heart.fa-fw.text-danger
+                            strong +150
+            .card.b
+                .card-header
+                    h5 Who may interest you
+                .card-body
+                    .media.align-items-center
+                        a(href='#').mr-2
+                            img.rounded-circle.img-thumbnail.thumb48(src='img/user/04.jpg', alt='Contact')
+                        .media-body.pt-1
+                            .float-right: button(type="button").btn.btn-secondary.btn-sm Follow
+                            .text-bold Floyd Ortiz
+                                .text-sm.text-muted 125k followers
+                    .media.align-items-center
+                        a(href='#').mr-2
+                            img.rounded-circle.img-thumbnail.thumb48(src='img/user/05.jpg', alt='Contact')
+                        .media-body.pt-1
+                            .float-right: button(type="button").btn.btn-secondary.btn-sm Follow
+                            .text-bold Luis Vasquez
+                                .text-sm.text-muted +30k followers
+                    .media.align-items-center
+                        a(href='#').mr-2
+                            img.rounded-circle.img-thumbnail.thumb48(src='img/user/06.jpg', alt='Contact')
+                        .media-body.pt-1
+                            .float-right: button(type="button").btn.btn-secondary.btn-sm Follow
+                            .text-bold Duane Mckinney
+                                .text-sm.text-muted +100k followers
+
+                .card-body
+                    a(href="").link-unstyled.text-muted Find more friends
+
+            .text-sm.text-muted.mb-3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        // end Aside card
+
+        // Main cards
+        .col-xl-9.col-lg-8
+            .row
+                .col-xl-4.col-lg-6
+                    .card.b.text-center
+                        .card-body
+                            img.rounded-circle.thumb64.mb-2(src="img/user/01.jpg", alt="avatar")
+                            p.h4.text-bold.mb-0 Savannah Ramirez
+                            p Rome, Italy
+                            button(type="button").btn.btn-success.btn-oval Follow
+                        .card-body.bt
+                            .row
+                                .col-4.br
+                                    em.fab.fa-facebook-f.fa-fw.text-primary
+                                    strong +700
+                                .col-4.br
+                                    em.fab.fa-twitter.fa-fw.text-info
+                                    strong +300
+                                .col-4
+                                    em.fa.fa-heart.fa-fw.text-danger
+                                    strong +150
+                .col-xl-4.col-lg-6
+                    .card.b.text-center
+                        .card-body
+                            img.rounded-circle.thumb64.mb-2(src="img/user/03.jpg", alt="avatar")
+                            p.h4.text-bold.mb-0 Warren Watts
+                            p Rome, Italy
+                            button(type="button").btn.btn-info.btn-oval Following
+                        .card-body.bt
+                            .row
+                                .col-4.br
+                                    em.fab.fa-facebook-f.fa-fw.text-primary
+                                    strong +700
+                                .col-4.br
+                                    em.fab.fa-twitter.fa-fw.text-info
+                                    strong +300
+                                .col-4
+                                    em.fa.fa-heart.fa-fw.text-danger
+                                    strong +150
+                .col-xl-4.col-lg-6
+                    .card.b.text-center
+                        .card-body
+                            img.rounded-circle.thumb64.mb-2(src="img/user/04.jpg", alt="avatar")
+                            p.h4.text-bold.mb-0 Charlie Price
+                            p Rome, Italy
+                            button(type="button").btn.btn-success.btn-oval Follow
+                        .card-body.bt
+                            .row
+                                .col-4.br
+                                    em.fab.fa-facebook-f.fa-fw.text-primary
+                                    strong +700
+                                .col-4.br
+                                    em.fab.fa-twitter.fa-fw.text-info
+                                    strong +300
+                                .col-4
+                                    em.fa.fa-heart.fa-fw.text-danger
+                                    strong +150
+
+                .col-xl-4.col-lg-6
+                    .card.b.text-center
+                        .card-body
+                            img.rounded-circle.thumb64.mb-2(src="img/user/05.jpg", alt="avatar")
+                            p.h4.text-bold.mb-0 Vickie Alvarez
+                            p Rome, Italy
+                            button(type="button").btn.btn-success.btn-oval Follow
+                        .card-body.bt
+                            .row
+                                .col-4.br
+                                    em.fab.fa-facebook-f.fa-fw.text-primary
+                                    strong +700
+                                .col-4.br
+                                    em.fab.fa-twitter.fa-fw.text-info
+                                    strong +300
+                                .col-4
+                                    em.fa.fa-heart.fa-fw.text-danger
+                                    strong +150
+                .col-xl-4.col-lg-6
+                    .card.b.text-center
+                        .card-body
+                            img.rounded-circle.thumb64.mb-2(src="img/user/06.jpg", alt="avatar")
+                            p.h4.text-bold.mb-0 Marjorie Miller
+                            p Rome, Italy
+                            button(type="button").btn.btn-info.btn-oval Following
+                        .card-body.bt
+                            .row
+                                .col-4.br
+                                    em.fab.fa-facebook-f.fa-fw.text-primary
+                                    strong +700
+                                .col-4.br
+                                    em.fab.fa-twitter.fa-fw.text-info
+                                    strong +300
+                                .col-4
+                                    em.fa.fa-heart.fa-fw.text-danger
+                                    strong +150
+                .col-xl-4.col-lg-6
+                    .card.b.text-center
+                        .card-body
+                            img.rounded-circle.thumb64.mb-2(src="img/user/07.jpg", alt="avatar")
+                            p.h4.text-bold.mb-0 Tracy Reynolds
+                            p Rome, Italy
+                            button(type="button").btn.btn-success.btn-oval Follow
+                        .card-body.bt
+                            .row
+                                .col-4.br
+                                    em.fab.fa-facebook-f.fa-fw.text-primary
+                                    strong +700
+                                .col-4.br
+                                    em.fab.fa-twitter.fa-fw.text-info
+                                    strong +300
+                                .col-4
+                                    em.fa.fa-heart.fa-fw.text-danger
+                                    strong +150
+
+                .col-xl-4.col-lg-6
+                    .card.b.text-center
+                        .card-body
+                            img.rounded-circle.thumb64.mb-2(src="img/user/08.jpg", alt="avatar")
+                            p.h4.text-bold.mb-0 Lori Lewis
+                            p Rome, Italy
+                            button(type="button").btn.btn-success.btn-oval Follow
+                        .card-body.bt
+                            .row
+                                .col-4.br
+                                    em.fab.fa-facebook-f.fa-fw.text-primary
+                                    strong +700
+                                .col-4.br
+                                    em.fab.fa-twitter.fa-fw.text-info
+                                    strong +300
+                                .col-4
+                                    em.fa.fa-heart.fa-fw.text-danger
+                                    strong +150
+                .col-xl-4.col-lg-6
+                    .card.b.text-center
+                        .card-body
+                            img.rounded-circle.thumb64.mb-2(src="img/user/09.jpg", alt="avatar")
+                            p.h4.text-bold.mb-0 Judy Shelton
+                            p Rome, Italy
+                            button(type="button").btn.btn-success.btn-oval Follow
+                        .card-body.bt
+                            .row
+                                .col-4.br
+                                    em.fab.fa-facebook-f.fa-fw.text-primary
+                                    strong +700
+                                .col-4.br
+                                    em.fab.fa-twitter.fa-fw.text-info
+                                    strong +300
+                                .col-4
+                                    em.fa.fa-heart.fa-fw.text-danger
+                                    strong +150
+
+        // end Main cards

@@ -1,0 +1,220 @@
+@color_1: #fff;
+@color_2: #443a80;
+@color_3: #919DA8;
+@color_4: #515253;
+@color_5: #7266ba;
+@color_6: inherits;
+@color_7: #656565;
+@background_color_1: #f5f7fa;
+@background_color_2: #fff;
+@background_color_3: #7266ba;
+@background_color_4: #fcfcfc;
+@border_color_1: #7266ba;
+@border_left_color_1: #7266ba;
+
+/* ========================================================================
+   Component: layout
+ ========================================================================== */
+/* ========================================================================
+   Component: top-navbar
+ ========================================================================== */
+/* ========================================================================
+   Component: sidebar
+ ========================================================================== */
+/* ========================================================================
+   Component: offsidebar
+ ========================================================================== */
+body {
+  background-color: @background_color_1;
+}
+.wrapper {
+  .section-container {
+    background-color: @background_color_1;
+  }
+  .aside-container {
+    background-color: @background_color_2;
+  }
+}
+.topnavbar {
+  background-color: @background_color_3;
+  background-image: linear-gradient(to right, #7266ba 0%, #9289ca 100%);
+  background-repeat: repeat-x;
+  .navbar-nav {
+    >.nav-item {
+      >.navbar-text {
+        color: @color_1;
+      }
+      >.nav-link {
+        color: @color_1;
+        &:hover {
+          color: @color_2;
+        }
+        &:focus {
+          color: @color_2;
+        }
+      }
+    }
+    >.nav-item.show {
+      >.nav-link {
+        color: @color_1;
+        &:hover {
+          color: @color_2;
+        }
+        &:focus {
+          color: @color_2;
+        }
+      }
+    }
+  }
+  .dropdown-item.active {
+    background-color: @background_color_3;
+  }
+  .dropdown-item {
+    &:active {
+      background-color: @background_color_3;
+    }
+  }
+}
+.sidebar {
+  background-color: @background_color_2;
+  .nav-heading {
+    color: @color_3;
+  }
+}
+.sidebar-nav {
+  >li {
+    >a {
+      color: @color_4;
+      &:focus {
+        color: @color_5;
+      }
+      &:hover {
+        color: @color_5;
+      }
+      >em {
+        color: @color_6;
+      }
+    }
+    >.nav-item {
+      color: @color_4;
+      &:focus {
+        color: @color_5;
+      }
+      &:hover {
+        color: @color_5;
+      }
+      >em {
+        color: @color_6;
+      }
+    }
+  }
+  >li.active {
+    background-color: @background_color_4;
+    color: @color_5;
+    border-left-color: @border_left_color_1;
+    >a {
+      background-color: @background_color_4;
+      color: @color_5;
+      >em {
+        color: @color_5;
+      }
+    }
+    >.nav-item {
+      background-color: @background_color_4;
+      color: @color_5;
+      >em {
+        color: @color_5;
+      }
+    }
+    .sidebar-nav {
+      background-color: @background_color_4;
+      color: @color_5;
+    }
+  }
+  >li.open {
+    background-color: @background_color_4;
+    color: @color_5;
+    >a {
+      background-color: @background_color_4;
+      color: @color_5;
+      >em {
+        color: @color_5;
+      }
+    }
+    >.nav-item {
+      background-color: @background_color_4;
+      color: @color_5;
+      >em {
+        color: @color_5;
+      }
+    }
+    .sidebar-nav {
+      background-color: @background_color_4;
+      color: @color_5;
+    }
+  }
+}
+.sidebar-subnav {
+  background-color: @background_color_2;
+  >.sidebar-subnav-header {
+    color: @color_4;
+  }
+  >li {
+    >a {
+      color: @color_4;
+      &:focus {
+        color: @color_5;
+      }
+      &:hover {
+        color: @color_5;
+      }
+    }
+    >.nav-item {
+      color: @color_4;
+      &:focus {
+        color: @color_5;
+      }
+      &:hover {
+        color: @color_5;
+      }
+    }
+  }
+  >li.active {
+    >a {
+      color: @color_5;
+      &:after {
+        border-color: @border_color_1;
+        background-color: @background_color_3;
+      }
+    }
+    >.nav-item {
+      color: @color_5;
+      &:after {
+        border-color: @border_color_1;
+        background-color: @background_color_3;
+      }
+    }
+  }
+}
+.offsidebar {
+  border-left: 1px solid greyscale(#cccccc);
+  background-color: @background_color_2;
+  color: @color_7;
+}
+@media (min-width: 992px) {
+  .topnavbar {
+    .navbar-nav {
+      >.nav-item.show {
+        >.nav-link {
+          box-shadow: 0 -3px 0 #5f51b0 inset;
+          &:hover {
+            box-shadow: 0 -3px 0 #5f51b0 inset;
+          }
+          &:focus {
+            box-shadow: 0 -3px 0 #5f51b0 inset;
+          }
+        }
+      }
+    }
+  }
+}

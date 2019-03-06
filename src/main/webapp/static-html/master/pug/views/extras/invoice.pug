@@ -1,0 +1,114 @@
+extends ../../_layout
+
+block active
+    - sidebar_active = 'invoice.html'
+
+block content
+    .content-heading
+        | Invoice
+        button(type='button').btn.btn-primary.ml-auto
+            em.fa.fa-plus-circle.fa-fw.mr-1
+            | New Invoice
+
+    .card
+        .card-body
+            .d-flex.align-items-center
+                h3.m-0 Invoice 00004879
+                button(type="button").ml-auto.btn.btn-secondary.btn-sm Copy this invoice
+            hr
+
+            .row.mb-3
+                .col-xl-4.col-6.br.py-2
+                    .row
+                        .col-lg-2.text-center.d-none.d-lg-block
+                            em.fa.fa-plane.fa-4x.text-muted
+                        .col-lg-10
+                            h4 Bill Mitchelle
+                            address
+                            | Nowhere 1024
+                            br
+                            | Happy St., 50487
+                            br
+                            | Neverland
+                .col-xl-4.col-6.br.py-2
+                    .row
+                        .col-lg-2.text-center.d-none.d-lg-block
+                            em.fa.fa-truck.fa-4x.text-muted
+                        .col-lg-10
+                            h4 Lloyd Gonzales
+                            address
+                            | Basilisa 2145
+                            br
+                            | Mate, Cliff., 20145
+                            br
+                            | Moon
+                hr
+                .col-xl-4.col-12.py-2
+                    .clearfix
+                        p.float-left INVOICE NO.
+                        p.float-right.mr-2 00004879
+                    .clearfix
+                        p.float-left Date
+                        p.float-right.mr-2 25/08/2014
+                    .clearfix
+                        p.float-left Due Date
+                        p.float-right.mr-2 30/08/2014
+
+            .table-responsive.table-bordered.mb-3
+                table.table
+                    thead
+                        tr
+                            th Item #
+                            th Description
+                            th Quantity
+                            th Unit Price
+                            th.text-right Total
+                    tbody
+                        tr
+                            td 1001
+                            td Iphone 5s - 64Gb
+                            td 3
+                            td $ 200
+                            td.text-right $ 600
+                        tr
+                            td 2002
+                            td Iphone 6s - 128Gb
+                            td 5
+                            td $ 500
+                            td.text-right $ 2500
+                        tr
+                            td 3010
+                            td Ipad 11z - 512Gb
+                            td 1
+                            td $ 650
+                            td.text-right $ 650
+                        tr
+                            td 3009
+                            td iMac ProRetina 17
+                            td 6
+                            td $ 1100
+                            td.text-right $ 6600
+
+
+            .row
+                .col-lg-6
+                .col-lg-6.py-2
+                    .row.mb-3
+                        .col-8 Subtotal
+                        .col-4
+                            .text-right $ 10300
+                    .row.mb-3
+                        .col-8 Tax (21%)
+                        .col-4
+                            .text-right $ 2700
+                    .row.mb-3.align-items-center
+                        .col-7
+                            .h3 GRAND TOTAL
+                        .col-5
+                            .text-right.h3 $ 13000
+
+            hr.d-print-none
+            .clearfix
+                button(type="button").btn.btn-info.float-left.mr-2 Edit
+                button(type="button", onclick="window.print();").btn.btn-secondary.float-left Print
+                button(type="button").btn.btn-success.float-right Send Invoice

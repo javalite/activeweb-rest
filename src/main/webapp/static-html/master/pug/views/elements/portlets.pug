@@ -1,0 +1,172 @@
+extends ../../_layout
+
+block active
+    - sidebar_active = 'portlets.html'
+
+block content
+    .content-heading
+        div
+            | Portlets
+            small Drag and collapse cards. Refresh and see how their state is automatically saved
+        .btn-group.ml-auto
+            button(type='button', onclick="resetPorlets()").btn.btn-secondary.btn-sm Reset Porlets
+
+    .portlets-wrapper
+        // START row
+        .row
+            #portlet-1.col-lg-4(data-toggle="portlet")
+                // START card
+                #cardPortlet1.card.card-default
+                    .card-header.portlet-handler
+                        | Default Card
+                    .card-wrapper
+                        .card-body
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+                        .card-footer Card Footer
+                // END card
+
+                // START card
+                #cardPortlet2.card.bg-primary
+                    .card-header.portlet-handler
+                        | Primary Card
+                    .card-wrapper
+                        .card-body
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+                        .card-footer Card Footer
+                // END card
+
+                // START card
+                #cardPortlet3.card.bg-success
+                    .card-header.portlet-handler
+                        | Success Card
+                    .card-body
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+                    .card-footer Card Footer
+                // END card
+
+                // START card
+                #cardPortlet4.card
+                    .portlet-handler
+                        .row.row-flush
+                            .col-4.bg-danger.text-center.d-flex.align-items-center.justify-content-center.rounded-left
+                                em.fa.fa-music.fa-2x
+                            .col-8
+                                .card-body.text-center
+                                    h4.mt-0 100%
+                                    p.mb-0.text-muted VOLUME
+                // END card
+
+                // START card
+                #cardPortlet5.card
+                    .portlet-handler
+                        .row.row-flush
+                            .col-4.bg-inverse.text-center.d-flex.align-items-center.justify-content-center.rounded-left
+                                em.fas.fa-code-branch.fa-2x
+                            .col-8
+                                .card-body.text-center
+                                    h4.mt-0 150
+                                    p.mb-0.text-muted FORKS
+                // END card
+
+            #portlet-2.col-lg-4(data-toggle="portlet")
+                // START card
+                #cardPortlet6.card.bg-info
+                    .card-header.portlet-handler
+                        | Info Card
+                    .card-body
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+                    .card-footer Card Footer
+                // END card
+
+                // START card
+                #cardPortlet7.card.bg-warning
+                    .card-header.portlet-handler
+                        | Warning Card
+                    .card-body
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+                    .card-footer Card Footer
+                // END card
+
+                // START card
+                #cardPortlet8.card.bg-danger
+                    .card-header.portlet-handler
+                        | Danger Card
+                    .card-body
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+                    .card-footer Card Footer
+                // END card
+
+                // START card
+                #cardPortlet9.card
+                    .portlet-handler
+                        .row.row-flush
+                            .col-12
+                                .card-body.text-center.bg-purple
+                                    h4.mt-0 10k
+                                    p.mb-0.text-white VISITORS
+                // END card
+
+                // START card
+                #cardPortlet10.card
+                    .portlet-handler
+                        .row.row-flush
+                            .col-12
+                                .card-body.text-center.bg-pink
+                                    h4.mt-0 100%
+                                    p.mb-0.text-white VOLUME
+                // END card
+
+            #portlet-3.col-lg-4(data-toggle="portlet")
+                // START card
+                #cardPortlet11.card.bg-inverse
+                    .card-header.portlet-handler
+                        | Inverse Card
+                    .card-body
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+                    .card-footer Card Footer
+                // END card
+
+                // START card
+                #cardPortlet12.card.bg-purple
+                    .card-header.portlet-handler
+                        | Purple Card
+                    .card-body
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+                    .card-footer Card Footer
+                // END card
+
+                // START card
+                #cardPortlet13.card.bg-green
+                    .card-header.portlet-handler
+                        | Green Card
+                    .card-body
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+                    .card-footer Card Footer
+                // END card
+
+                // START card
+                #cardPortlet14.card
+                    .portlet-handler
+                        .row.row-flush
+                            .col-12
+                                .card-body.text-center.bg-green
+                                    h4.mt-0 150
+                                    p.mb-0.text-white FORKS
+                // END card
+
+                // START card
+                #cardPortlet15.card
+                    .portlet-handler
+                        .row.row-flush
+                            .col-12
+                                .card-body.text-center.bg-primary
+                                    h4.mt-0 10
+                                    p.mb-0.text-white NEW MESSAGES
+                // END card
+
+        // END row
+
+block vendor_js
+    // JQUERY UI
+    script(src='vendor/components-jqueryui/jquery-ui.js')
+    script(src='vendor/jquery-ui-touch-punch/jquery.ui.touch-punch.js')

@@ -1,0 +1,78 @@
+extends ../../_layout
+
+block active
+    - sidebar_active = 'todo.html'
+
+block content
+    .content-heading
+        div
+            | Todo List
+            small Keeping track of tasks
+        button.ml-auto.btn.btn-danger Clear All Items
+
+    .row.todo
+        .col-lg-3
+            .pr-3
+                form.mb-4
+                    .form-group
+                        input.form-control(type='text', placeholder='Task title..', required)
+                    .form-group
+                        textarea.form-control(placeholder='Type a description..', rows="8")
+                    button.btn.btn-primary.btn-block(type='submit') Add Todo
+
+        .col-lg-9.todo-item-list
+            //- .lead.text-muted.text-center No tasks...
+            #accordion(role="tablist", aria-multiselectable="true")
+                .card.mb-0.todo-item.todo-complete
+                    .card-header
+                        p.text-bold.mb-0
+                            span.clickable(data-toggle="collapse-disabled", data-parent="#accordion", data-target="#collapseOne")
+                                span.close &times;
+                                span.inline.checkbox.c-checkbox
+                                    label
+                                        input#todo-item-0(type='checkbox')
+                                        span.fa.fa-check
+                                span.todo-title Meeting with Mark at 7am.
+                                span.todo-edit.fas.fa-pencil-alt
+                    #collapseOne.collapse
+                        .card-body
+                            p
+                                span Pellentesque convallis mauris eu elit imperdiet quis eleifend quam aliquet.
+
+                .card.mb-0.todo-item
+                    .card-header
+                        p.text-bold.mb-0
+                            span.clickable(class="collapsed", data-toggle="collapse", data-parent="#accordion", data-target="#collapseTwo")
+                                span.close &times;
+                                span.inline.checkbox.c-checkbox
+                                    label
+                                        input#todo-item-1(type='checkbox')
+                                        span.fa.fa-check
+                                span.todo-title Call Sonya. Talk about the new project.
+                                span.todo-edit.fas.fa-pencil-alt
+                    #collapseTwo.collapse
+                        .card-body
+                            p
+                                span.text-muted No item description
+                .card.mb-0.todo-item
+                    .card-header
+                        p.text-bold.mb-0
+                            span.clickable(class="collapsed", data-toggle="collapse", data-parent="#accordion", data-target="#collapseThree")
+                                span.close &times;
+                                span.inline.checkbox.c-checkbox
+                                    label
+                                        input#todo-item-2(type='checkbox')
+                                        span.fa.fa-check
+                                span.todo-title Find a new place for vacations
+                                span.todo-edit.fas.fa-pencil-alt
+                    #collapseThree.collapse
+                        .card-body
+                            p
+                                span.text-muted No item description
+            p.text-right
+                span 1 Completed
+                | -
+                span 2 Pending
+            // end ngIf: items.length > 0
+
+

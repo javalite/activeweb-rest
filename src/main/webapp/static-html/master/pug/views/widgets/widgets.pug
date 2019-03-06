@@ -1,0 +1,669 @@
+extends ../../_layout
+
+block active
+    - sidebar_active = 'widgets.html'
+
+block content
+    .content-heading Widgets
+
+    // START row
+    .row
+        .col-xl-4
+            // START card
+            .card
+                .card-body
+                    .text-right.text-muted
+                        em.fa.fa-gamepad.fa-2x
+                    h3.mt-0 99.999
+                    p.text-muted Games played last month
+                    .progress.progress-xs.mb-3
+                        .progress-bar.progress-bar-striped.bg-warning(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='70', style="width: 60%")
+                            span.sr-only 60% Complete
+            // END card
+        .col-xl-4
+            // START card
+            .card
+                .card-body
+                    .text-right.text-muted
+                        em.fa.fa-coffee.fa-2x
+                    h3.mt-0 300
+                    p.text-muted Coffee cups per day
+                    .progress.progress-xs.mb-3
+                        .progress-bar.progress-bar-striped.bg-green(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style="width: 80%")
+                            span.sr-only 80% Complete
+            // END card
+        .col-xl-4
+            // START card
+            .card
+                .card-body
+                    .text-right.text-muted
+                        em.fa.fa-upload.fa-2x
+                    h3.mt-0 1000 Gb
+                    p.text-muted Average Monthly Uploads
+                    .progress.progress-xs.mb-3
+                        .progress-bar.progress-bar-striped.bg-info(role='progressbar', aria-valuenow='40', aria-valuemin='0', aria-valuemax='100', style="width: 40%")
+                            span.sr-only 40% Complete
+            // END card
+    // END row
+    // START row
+    .row
+        .col-xl-4
+            // START card
+            .card
+                .d-flex
+                    .w-50.bb.br.px-3
+                        .d-flex.align-items-center
+                            em.fa.fa-users.fa-2x.text-info
+                            .ml-auto
+                                .card-body.text-right
+                                    h4.mt-0 10k
+                                    p.mb-0.text-muted VISITORS
+                    .w-50.bb.px-3
+                        .d-flex.align-items-center
+                            em.fa.fa-music.fa-2x.text-danger
+                            .ml-auto
+                                .card-body.text-right
+                                    h4.mt-0 100%
+                                    p.mb-0.text-muted VOLUME
+                .d-flex
+                    .w-50.br.px-3
+                        .d-flex.align-items-center
+                            em.fas.fa-code-branch.fa-2x.text-inverse
+                            .ml-auto
+                                .card-body.text-right
+                                    h4.mt-0 150
+                                    p.mb-0.text-muted FORKS
+                    .w-50.px-3
+                        .d-flex.align-items-center
+                            em.fa.fa-inbox.fa-2x.text-success
+                            .ml-auto
+                                .card-body.text-right
+                                    h4.mt-0 10
+                                    p.mb-0.text-muted MESSAGES
+            // END card
+            // START card
+
+            .card
+                .d-flex
+                    .w-50.bb.br.px-3
+                        .d-flex.align-items-center
+                            // Bar chart
+                            div(data-sparkline="", data-bar-color="#5d9cec", data-height="20", data-bar-width="3", data-bar-spacing="2", data-values="5,9,4,1,3,4,7,5")
+                            .ml-auto
+                                .card-body.text-right
+                                    h4.mt-0 10k
+                                    p.mb-0.text-muted VISITORS
+                    .w-50.bb.px-3
+                        .d-flex.align-items-center
+                            // Bar chart
+                            div(data-sparkline="", data-bar-color="#5d9cec", data-height="20", data-bar-width="3", data-bar-spacing="2", data-values="1,2,3,4,5,6,7,8,9")
+                            .ml-auto
+                                .card-body.text-right
+                                    h4.mt-0 100%
+                                    p.mb-0.text-muted CONVERSIONS
+                .d-flex
+                    .w-50.br.px-3
+                        .d-flex.align-items-center
+                            // Bar chart
+                            div(data-sparkline="", data-bar-color="#5d9cec", data-height="20", data-bar-width="3", data-bar-spacing="2", data-values="1,0,4,9,5,7,8,4,7")
+                            .ml-auto
+                                .card-body.text-right
+                                    h4.mt-0 150
+                                    p.mb-0.text-muted RETURNS
+                    .w-50.px-3
+                        .d-flex.align-items-center
+                            // Bar chart
+                            div(data-sparkline="", data-bar-color="#5d9cec", data-height="20", data-bar-width="3", data-bar-spacing="2", data-values="1,5,2,2,8,4,4,8")
+                            .ml-auto
+                                .card-body.text-right
+                                    h4.mt-0 10
+                                    p.mb-0.text-muted UNIQUES
+        .col-xl-4
+            // START card
+            .card
+                .half-float.ie-fix-flex
+                    img.img-fluid(src="img/bg3.jpg",alt="")
+                    .half-float-bottom
+                        img.img-thumbnail.circle.thumb128(src='img/user/09.jpg', alt="Image")
+                .card-body.text-center
+                    h3.m-0 Ted Berry
+                    p.text-muted Lead director
+                    p Proin metus justo, commodo in ultrices at, lobortis sit amet dui. Fusce dolor purus, adipiscing a tempus at, gravida vel purus.
+                .card-body.text-center.bg-gray-dark
+                    .row
+                        .col-4
+                            h3.m-0 400
+                            p.m-0 Photos
+                        .col-4
+                            h3.m-0 2000
+                            p.m-0 Likes
+                        .col-4
+                            h3.m-0 500
+                            p.m-0 Following
+            // END card
+        .col-xl-4
+            // START card
+            .card
+                .card-body.text-center.bg-center(style="background-image: url('img/bg4.jpg')")
+                    .row
+                        .col-12.text-white
+                            img.img-thumbnail.circle.thumb128(src='img/user/06.jpg', alt="Image")
+                            h3.m-0 Chris
+                            p.m-0
+                                em.fab.fa-twitter.fa-fw
+                                |  @chris
+
+                .card-body.text-center.bg-gray-darker
+                    .row
+                        .col-4
+                            a(href="#").text-white: em.fab.fa-twitter.fa-2x
+                        .col-4
+                            a(href="#").text-white: em.fab.fa-facebook-f.fa-2x
+                        .col-4
+                            a(href="#").text-white: em.fa.fa-comments.fa-2x
+                .list-group
+                    a(href="#").list-group-item
+                        span.badge.badge-primary.float-right 15
+                        em.fa-fw.far.fa-clock.text-muted
+                        |  Recent Activity
+                    a(href="#").list-group-item
+                        span.badge.badge-primary.float-right 100
+                        em.fa-fw.fa.fa-user.text-muted
+                        |  Following
+                    a(href="#").list-group-item
+                        span.badge.badge-primary.float-right 300
+                        em.fa-fw.far.fa-folder-open.text-muted
+                        |  Photos
+            // END card
+    // END row
+    // START row
+    .row
+        .col-xl-4.col-lg-6
+            // START card
+            .card.bg-success-dark.border-0
+                .row.align-items-center.mx-0
+                    .col-4.text-center
+                        em.icon-share.fa-3x
+                    .col-8.py-4.bg-success.rounded-right
+                        .h1.m-0.text-bold 150
+                        .text-uppercase New connections
+        .col-xl-4.col-lg-6
+            // START card
+            .card.bg-danger-dark.border-0
+                .row.align-items-center.mx-0
+                    .col-4.text-center
+                        em.icon-star.fa-3x
+                    .col-8.py-4.bg-danger.rounded-right
+                        .h1.m-0.text-bold 7000
+                        .text-uppercase Ratings received
+        .col-xl-4.col-lg-12
+            // START card
+            .card.bg-warning-dark.border-0
+                .row.align-items-center.mx-0
+                    .col-4.text-center
+                        em.icon-trophy.fa-3x
+                    .col-8.py-4.bg-warning.rounded-right
+                        .h1.m-0.text-bold 10
+                        .text-uppercase Achievements
+    // END row
+    // START row
+    .row
+        .col-xl-4
+            // START card
+            .card.border-0
+                .card-body.bg-success
+                    .h5.mt-0 Received all time
+                    // Line chart
+                    div(data-sparkline="", data-values="1,3,4,7,5,9,4,4,7,5,9,6,4", data-type='line', data-height='80', data-width='100%', data-line-width='2', data-line-color='#dddddd', data-spot-color='#bbbbbb', data-fill-color='', data-highlight-line-color='#fff', data-spot-radius='3', data-resize='true')
+                    // Bar chart
+                    .text-center
+                        div(data-sparkline="", data-bar-color="#fff", data-height="50", data-bar-width="6", data-bar-spacing="6", data-values="1,3,4,7,5,9,4,4,7,5,9,6,4")
+                .card-body.bg-inverse
+                    .row.text-center
+                        .col-4
+                            p.m-0.h3 15080
+                            p.m-0.text-muted Shots
+                        .col-4
+                            p.m-0.h3 12000
+                            p.m-0.text-muted Likes
+                        .col-4
+                            p.m-0.h3 5100
+                            p.m-0.text-muted Comments
+            // END card
+        .col-xl-4
+            // START card
+            .card
+                .card-body.bg-primary
+                    .h5.mt-0 Monthly incomes
+                    // Line chart
+                    div(data-sparkline="",data-type='line', data-height='80', data-width='100%', data-line-width='2', data-line-color='#dddddd', data-spot-color='#bbbbbb', data-fill-color='', data-highlight-line-color='#fff', data-spot-radius='3', data-resize='true', data-values="1,3,4,7,5,9,4,4,7,5,9,6,4")
+                .card-body.bg-inverse
+                    .row.text-center
+                        .col-6
+                            // Bar chart
+                            div(data-sparkline="", data-bar-color="#5d9cec", data-height="30", data-bar-width="6", data-bar-spacing="6", data-values="1,3,4,7,5,9,4,4,7,5,9,6,4")
+                        .col-6
+                            h4.m-0 +150
+                            p.m-0.text-muted: small From last month
+                .card-body
+                    .row.text-center
+                        .col-6
+                            p.m-0.text-muted Gross income
+                            h4.m-0 12000
+                        .col-6
+                            p.m-0.text-muted Net income
+                            h4.m-0 5100
+            // END card
+        .col-xl-4
+            // START card
+            .card
+                .row.row-flush(style="min-height: 100%")
+                    .col-8
+                        img.img-fluid(src="img/bg1.jpg", alt="")
+                    .col-4.bg-info.d-flex.align-items-center.justify-content-center
+                        .text-center
+                            .text-lg.mt-0 11&deg;
+                            p Cold
+                            em.far.fa-sun.fa-2x
+            // END card
+    // END row
+
+    // START row
+    .row
+        .col-xl-3
+            // START card
+            .card.border-0
+                .row.row-flush
+                    .col-4.bg-info.text-center.d-flex.align-items-center.justify-content-center.rounded-left
+                        em.fa.fa-users.fa-2x
+                    .col-8
+                        .card-body.text-center
+                            h4.mt-0 10k
+                            p.mb-0.text-muted VISITORS
+            // END card
+        .col-xl-3
+            // START card
+            .card.border-0
+                .row.row-flush
+                    .col-4.bg-danger.text-center.d-flex.align-items-center.justify-content-center.rounded-left
+                        em.fa.fa-music.fa-2x
+                    .col-8
+                        .card-body.text-center
+                            h4.mt-0 100%
+                            p.mb-0.text-muted VOLUME
+            // END card
+        .col-xl-3
+            // START card
+            .card.border-0
+                .row.row-flush
+                    .col-4.bg-inverse.text-center.d-flex.align-items-center.justify-content-center.rounded-left
+                        em.fas.fa-code-branch.fa-2x
+                    .col-8
+                        .card-body.text-center
+                            h4.mt-0 150
+                            p.mb-0.text-muted FORKS
+            // END card
+        .col-xl-3
+            // START card
+            .card.border-0
+                .row.row-flush
+                    .col-4.bg-green.text-center.d-flex.align-items-center.justify-content-center.rounded-left
+                        em.fa.fa-inbox.fa-2x
+                    .col-8
+                        .card-body.text-center
+                            h4.mt-0 10
+                            p.mb-0.text-muted NEW MESSAGES
+            // END card
+    // END row
+
+    // START row
+    .row
+        .col-xl-4
+            // START card
+            .card
+                .row.row-flush
+                    .col-5.d-flex.align-items-center.justify-content-center(style="background: url('img/bg2.jpg');background-size: cover;")
+                    .col-7
+                        .p-3
+                            .float-right
+                                a(href="#").btn.btn-primary.btn-sm Register
+                            p
+                                span.text-lg 16
+                                | Aug
+                            p: strong EVENT INVITATION
+                            p Donec posuere neque in elit luctus tempor consequat enim egestas. Nulla dictum egestas leo at lobortis.
+                // END card
+        .col-xl-4
+            // START card
+            .card
+                .card-body.bg-danger.text-center
+                    .d-flex
+                        div 200 Following
+                        .ml-auto 150 Followers
+                    img.img-thumbnail.circle.thumb96(src="img/user/06.jpg", alt="Image")
+                    h4.mt-0 Lois Berry
+                    p.m-0
+                        em.fa-fw.fas.fa-map-marker-alt
+                        |  San Francisco, California
+                    .d-flex
+                        div 15k Likes
+                        .ml-auto 100 Feeds
+            // END card
+        .col-xl-4
+            // START card
+            .card
+                .gmap.gmap-sm(data-gmap="", data-zoom='14', data-address='276 N TUSTIN ST, ORANGE, CA 92867', data-toggle="gmap")
+                .card-body.bg-inverse
+                    .d-flex.justify-content-center.align-items-center
+                        .h2.m-0 Find Us!
+                        .ml-auto
+                            .d-flex
+                                em.fas.fa-map-marker-alt.fa-3x.mr-3
+                                p.m-0
+                                    | Street 123
+                                    br
+                                    | Location, Unknow
+            // END card
+    // END row
+
+    // START row
+    .row
+        .col-xl-4
+            // START card
+            .card
+                img.img-fluid.ie-fix-flex(src="img/bg1.jpg", alt="Image")
+                .card-body
+                    .row.text-center
+                        .col-4
+                            p Comments
+                            h3.m-0.text-primary 700
+                        .col-4
+                            p Likes
+                            h3.m-0.text-primary 1500
+                        .col-4
+                            p Shots
+                            h3.m-0.text-primary 300
+            // END card
+        .col-xl-4
+            // START card
+            .card
+                .card-body
+                    .row
+                        .col-6.text-center
+                            img.circle.thumb96(src='img/user/09.jpg', alt="Image")
+                        .col-6
+                            h3.mt-0 Peggy Peters
+                            ul.list-unstyled.mb-0
+                                li.mb-1
+                                    em.fas.fa-map-marker-alt.fa-fw
+                                    |  ASD, Qwerty
+                                li.mb-1
+                                    em.fab.fa-twitter.fa-fw
+                                    |  @asdasd
+                                li.mb-1
+                                    em.fa.fa-envelope.fa-fw
+                                    |  asdasd@mail.com
+                .card-body.bg-inverse
+                    .row.text-center
+                        .col-4
+                            p.m-0.h3 700
+                            p.m-0.text-muted Followers
+                        .col-4
+                            p.m-0.h3 1500
+                            p.m-0.text-muted Following
+                        .col-4
+                            p.m-0.h3 510
+                            p.m-0.text-muted Loved
+            // END card
+            // START card
+            .card
+                .card-body
+                    .row.align-items-center
+                        .col-5.text-center
+                            img.img-thumbnail.circle.img-fluid.thumb96(src="img/user/06.jpg", alt="Image")
+                        .col-7
+                            .text-right
+                                a(href="#").btn.btn-success.btn-sm Follow
+                            .d-flex
+                                .text-left
+                                    h3.mt-0 Sarah Pierce
+                                    p.text-muted 150 Following / 100 Followers
+            // END card
+        .col-xl-4
+            .row
+                .col-md-6
+                    // START card
+                    .card.bg-info
+                        .card-body.text-center
+                            .text-lg.m-0 300
+                            p Re-Tweets
+                            .mb-3
+                            em.fab.fa-twitter.text-alpha
+                    // END card
+                .col-md-6
+                    // START card
+                    .card.bg-primary
+                        .card-body.text-center
+                            .text-lg.m-0 12&deg;
+                            p Bariloche
+                            .mb-3
+                            em.far.fa-sun
+                    // END card
+            .row
+                .col-md-6
+                    // START card
+                    .card.bg-danger
+                        .card-body.text-center
+                            .radial-bar.radial-bar-40.radial-bar.radial-bar-danger.m-0
+                                img(src="img/user/03.jpg",alt="")
+                            p
+                                strong 40%
+                                span complete
+                    // END card
+                .col-md-6
+                    // START card
+                    .card.bg-purple
+                        .card-body.text-center
+                            p.mb-3: img.rounded.thumb64(src='img/user/08.jpg',alt="")
+                            p.m-0
+                                strong Mika
+                                span is now following you
+                    // END card
+            .row
+            // START card
+            .card
+                .card-body
+                    .d-flex.align-items-center
+                        .text-center
+                            img.img-thumbnail.circle.img-fluid.thumb64(src="img/user/06.jpg", alt="Image")
+                        .text-center
+                            h3.m-0 Sylvia Morris
+                        .ml-auto.align-self-start
+                            a(href="#").btn.btn-purple.btn-sm
+                                em.far.fa-hand-point-right
+                                span  Touch
+            // END card
+    // END row
+
+    // START row
+    .row
+        .col-xl-3.col-lg-6
+            // START card
+            .card.bg-primary.border-0
+                .card-header
+                    .row.align-items-center
+                        .col-3
+                            em.fa.fa-comments.fa-5x
+                        .col-9.text-right
+                            .text-lg 26
+                            p.m-0 New Comments!
+                a(href='#').card-footer.bg-gray-dark.bt0.clearfix.btn-block.d-flex
+                    span View Details
+                    span.ml-auto
+                        em.fa.fa-chevron-circle-right
+                // END card
+        .col-xl-3.col-lg-6
+            // START card
+            .card.bg-green.border-0
+                .card-header
+                    .row.align-items-center
+                        .col-3
+                            em.fa.fa-tasks.fa-5x
+                        .col-9.text-right
+                            .text-lg 12
+                            p.m-0 New Tasks!
+                a(href='#').card-footer.bg-gray-dark.bt0.clearfix.btn-block.d-flex
+                    span View Details
+                    span.ml-auto
+                        em.fa.fa-chevron-circle-right
+            // END card
+        .col-xl-3.col-lg-6
+            // START card
+            .card.bg-warning.border-0
+                .card-header
+                    .row.align-items-center
+                        .col-3
+                            em.fa.fa-shopping-cart.fa-5x
+                        .col-9.text-right
+                            .text-lg 124
+                            p.m-0 New Orders!
+                a(href='#').card-footer.bg-gray-dark.bt0.clearfix.btn-block.d-flex
+                    span View Details
+                    span.ml-auto
+                        em.fa.fa-chevron-circle-right
+            // END card
+        .col-xl-3.col-lg-6
+            // START card
+            .card.bg-danger.border-0
+                .card-header
+                    .row.align-items-center
+                        .col-3
+                            em.far.fa-life-ring.fa-5x
+                        .col-9.text-right
+                            .text-lg 13
+                            p.m-0 Support Tickets!
+                a(href='#').card-footer.bg-gray-dark.bt0.clearfix.btn-block.d-flex
+                    span View Details
+                    span.ml-auto
+                        em.fa.fa-chevron-circle-right
+            // END card
+    // END row
+    // START card tab
+    .card(role='tabpanel')
+        // Nav tabs
+        ul.nav.nav-tabs.nav-fill(role='tablist')
+            li.nav-item(role='presentation')
+                a.nav-link.active(href='#home', aria-controls='home', role='tab', data-toggle='tab')
+                    em.far.fa-clock.fa-fw
+                    | Tasks Card
+            li.nav-item(role='presentation')
+                a.nav-link(href='#profile', aria-controls='profile', role='tab', data-toggle='tab')
+                    em.far.fa-money-bill-alt.fa-fw
+                    | Transactions Card
+        // Tab panes
+        .tab-content.p-0
+            #home.tab-pane.active(role='tabpanel')
+                // START list group
+                .list-group.mb-0
+                    a.list-group-item.list-group-item-action(href='#')
+                        span.badge.badge-purple.float-right just now
+                        em.fa-fw.fas.fa-calendar-alt.mr-2
+                        | Calendar updated
+                    a.list-group-item.list-group-item-action(href='#')
+                        span.badge.badge-purple.float-right 4 minutes ago
+                        em.fa-fw.fa.fa-comment.mr-2
+                        | Commented on a post
+                    a.list-group-item.list-group-item-action(href='#')
+                        span.badge.badge-purple.float-right 23 minutes ago
+                        em.fa-fw.fa.fa-truck.mr-2
+                        | Order 392 shipped
+                    a.list-group-item.list-group-item-action(href='#')
+                        span.badge.badge-purple.float-right 46 minutes ago
+                        em.fa-fw.far.fa-money-bill-alt.mr-2
+                        | Invoice 653 has been paid
+                    a.list-group-item.list-group-item-action(href='#')
+                        span.badge.badge-purple.float-right 1 hour ago
+                        em.fa-fw.fa.fa-user.mr-2
+                        | A new user has been added
+                    a.list-group-item.list-group-item-action(href='#')
+                        span.badge.badge-purple.float-right 2 hours ago
+                        em.fa-fw.fa.fa-check.mr-2
+                        | Completed task: "pick up dry cleaning"
+                    a.list-group-item.list-group-item-action(href='#')
+                        span.badge.badge-purple.float-right yesterday
+                        em.fa-fw.fa.fa-globe.mr-2
+                        | Saved the world
+                    a.list-group-item.list-group-item-action(href='#')
+                        span.badge.badge-purple.float-right two days ago
+                        em.fa-fw.fa.fa-check.mr-2
+                        | Completed task: "fix error on sales page"
+                    a.list-group-item.list-group-item-action(href='#')
+                        span.badge.badge-purple.float-right two days ago
+                        em.fa-fw.fa.fa-check.mr-2
+                        | Completed task: "fix error on sales page"
+                // END list group
+                .card-footer.text-right
+                    a.btn.btn-secondary.btn-sm(href='#') View All Activity
+            #profile.tab-pane(role='tabpanel')
+                // START table responsive
+                .table-responsive
+                    table.table.table-bordered.table-hover.table-striped
+                        thead
+                            tr
+                                th Order #
+                                th Order Date
+                                th Order Time
+                                th Amount (USD)
+                        tbody
+                            tr
+                                td 3326
+                                td 10/21/2013
+                                td 3:29 PM
+                                td $321.33
+                            tr
+                                td 3325
+                                td 10/21/2013
+                                td 3:20 PM
+                                td $234.34
+                            tr
+                                td 3324
+                                td 10/21/2013
+                                td 3:03 PM
+                                td $724.17
+                            tr
+                                td 3323
+                                td 10/21/2013
+                                td 3:00 PM
+                                td $23.71
+                            tr
+                                td 3322
+                                td 10/21/2013
+                                td 2:49 PM
+                                td $8345.23
+                            tr
+                                td 3321
+                                td 10/21/2013
+                                td 2:23 PM
+                                td $245.12
+                            tr
+                                td 3320
+                                td 10/21/2013
+                                td 2:15 PM
+                                td $5663.54
+                            tr
+                                td 3319
+                                td 10/21/2013
+                                td 2:13 PM
+                                td $943.45
+                // END table responsive
+                .card-footer.text-right
+                    a.btn.btn-secondary.btn-sm(href='#') View All Transactions
+
+    // END card tab
+
+block vendor_js
+    // SPARKLINE
+    script(src='vendor/jquery-sparkline/jquery.sparkline.js')
+    // GOOGLE MAPS
+    script(src='//maps.google.com/maps/api/js')
+    script(src='vendor/jquery.gmap/jquery.gmap.js')

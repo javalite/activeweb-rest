@@ -1,0 +1,222 @@
+extends ../../_layout
+
+block active
+  - sidebar_active = 'grid.html'
+
+block content
+    .content-heading Grid
+
+    .container-fluid.grid-example
+        p Bootstrap includes a powerful mobile-first flexbox grid system for building layouts of all shapes and sizes. It’s based on a 12 column layout and has multiple tiers, one for each media query range. You can use it with Sass mixins or our predefined classes.
+        .card.mb-3
+            .card-header Auto-layout columns
+            .card-body
+                p.my-4.text-bold#equal-width Equal-width
+                .container
+                    .row
+                        .col
+                            | 1 of 2
+                        .col
+                            | 1 of 2
+                    .row
+                        .col
+                            | 1 of 3
+                        .col
+                            | 1 of 3
+                        .col
+                            | 1 of 3
+                p.my-4.text-bold#setting-one-column-width Setting one column width
+                .container
+                    .row
+                        .col
+                            | 1 of 3
+                        .col-6
+                            | 2 of 3 (wider)
+                        .col
+                            | 3 of 3
+                    .row
+                        .col
+                            | 1 of 3
+                        .col-5
+                            | 2 of 3 (wider)
+                        .col
+                            | 3 of 3
+                p.my-4.text-bold#variable-width-content Variable width content
+                .container
+                    .row.justify-content-md-center
+                        .col.col-xl-2
+                            | 1 of 3
+                        .col-12.col-xl-auto
+                            | Variable width content
+                        .col.col-xl-2
+                            | 3 of 3
+                    .row
+                        .col
+                            | 1 of 3
+                        .col-12.col-xl-auto
+                            | Variable width content
+                        .col.col-xl-2
+                            | 3 of 3
+                p.my-4.text-bold#equal-width-multi-row Equal-width multi-row
+                .row
+                    .col col
+                    .col col
+                    .w-100
+                    .col col
+                    .col col
+        .card.mb-3
+            .card-header Responsive classes
+            .card-body
+                p.my-4.text-bold#all-breakpoints All breakpoints
+                .row
+                    .col col
+                    .col col
+                    .col col
+                    .col col
+                .row
+                    .col-8 col-8
+                    .col-4 col-4
+                p.my-4.text-bold#stacked-to-horizontal Stacked to horizontal
+                .row
+                    .col-md-8 col-sm-8
+                    .col-md-4 col-sm-4
+                .row
+                    .col-md col-sm
+                    .col-md col-sm
+                    .col-md col-sm
+                p.my-4.text-bold#mix-and-match Mix and match
+                // Stack the columns on mobile by making one full-width and the other half-width
+                .row
+                    .col.col-xl-8 .col .col-xl-8
+                    .col-6.col-xl-4 .col-6 .col-xl-4
+                // Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop
+                .row
+                    .col-6.col-xl-4 .col-6 .col-xl-4
+                    .col-6.col-xl-4 .col-6 .col-xl-4
+                    .col-6.col-xl-4 .col-6 .col-xl-4
+                // Columns are always 50% wide, on mobile and desktop
+                .row
+                    .col-6 .col-6
+                    .col-6 .col-6
+        .card.mb-3
+            .card-header Alignment
+            .card-body
+                p.my-4.text-bold#vertical-alignment Vertical alignment
+                .container
+                    .row.align-items-start
+                        .col
+                            | One of three columns
+                        .col
+                            | One of three columns
+                        .col
+                            | One of three columns
+                    .row.align-items-center
+                        .col
+                            | One of three columns
+                        .col
+                            | One of three columns
+                        .col
+                            | One of three columns
+                    .row.align-items-end
+                        .col
+                            | One of three columns
+                        .col
+                            | One of three columns
+                        .col
+                            | One of three columns
+                .container
+                    .row
+                        .col.align-self-start
+                            | One of three columns
+                        .col.align-self-center
+                            | One of three columns
+                        .col.align-self-end
+                            | One of three columns
+                p.my-4.text-bold#horizontal-alignment Horizontal alignment
+                .container
+                    .row.justify-content-start
+                        .col-4
+                            | One of two columns
+                        .col-4
+                            | One of two columns
+                    .row.justify-content-center
+                        .col-4
+                            | One of two columns
+                        .col-4
+                            | One of two columns
+                    .row.justify-content-end
+                        .col-4
+                            | One of two columns
+                        .col-4
+                            | One of two columns
+                    .row.justify-content-around
+                        .col-4
+                            | One of two columns
+                        .col-4
+                            | One of two columns
+                    .row.justify-content-between
+                        .col-4
+                            | One of two columns
+                        .col-4
+                            | One of two columns
+                p.my-4.text-bold#no-gutters No gutters
+                .row.no-gutters
+                    .col-12.col-md-6.col-xl-8 .col-12 .col-md-6 .col-xl-8
+                    .col-6.col-xl-4 .col-6 .col-xl-4
+                p.my-4.text-bold#column-wrapping Column wrapping
+                .row
+                    .col-9 .col-9
+                    .col-4
+                        | .col-4
+                        br
+                        | Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.
+                    .col-6
+                        | .col-6
+                        br
+                        | Subsequent columns continue along the new line.
+                p.my-4.text-bold#column-resets Column resets
+                .row
+                    .col-6.col-md-3 .col-6 .col-md-3
+                    .col-6.col-md-3 .col-6 .col-md-3
+                    // Add the extra clearfix for only the required viewport
+                    .clearfix.d-sm-none
+                    .col-6.col-md-3 .col-6 .col-md-3
+                    .col-6.col-md-3 .col-6 .col-md-3
+                .row
+                    .col-md-5.col-xl-6 .col-md-5 .col-xl-6
+                    .col-md-5.offset-sm-2.col-xl-6.offset-md-0 .col-md-5 .offset-sm-2 .col-xl-6 .offset-md-0
+                .row
+                    .col-md-6.col-xl-5.col-xl-6 .col.col-md-6.col-xl-5.col-xl-6
+                    .col-md-6.col-xl-5.offset-md-2.col-xl-6.offset-lg-0 .col-md-6 .col-xl-5 .offset-md-2 .col-xl-6 .offset-lg-0
+        .card.mb-3
+            .card-header Reordering
+            .card-body
+                p.my-4.text-bold#flex-order Flex order
+                p.my-4.text-bold#offsetting-columns Offsetting columns
+                .row
+                    .col-xl-4 .col-xl-4
+                    .col-xl-4.offset-md-4 .col-xl-4 .offset-md-4
+                .row
+                    .col-xl-3.offset-md-3 .col-xl-3 .offset-md-3
+                    .col-xl-3.offset-md-3 .col-xl-3 .offset-md-3
+                .row
+                    .col-xl-6.offset-md-3 .col-xl-6 .offset-md-3
+        .card.mb-3
+            .card-header Nesting
+            .card-body
+                .row
+                    .col-md-9
+                        | Level 1: .col-md-9
+                        .row
+                            .col-8.col-md-6
+                                | Level 2: .col-8 .col-md-6
+                            .col-4.col-md-6
+                                | Level 2: .col-4 .col-md-6
+block vendor_css
+    style.
+        .grid-example .row>.col, .grid-example .row>[class^=col-] {
+            padding-top: 1.25rem;
+            padding-bottom: 1.25rem;
+            background-color: rgba(241,242,243,.15);
+            border: 1px dashed rgba(0,0,0,.15);
+        }

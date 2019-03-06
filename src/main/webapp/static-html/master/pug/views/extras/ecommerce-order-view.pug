@@ -1,0 +1,213 @@
+extends ../../_layout
+
+block active
+    - sidebar_active = 'ecommerce-order-view.html'
+
+block content
+    .content-heading Order #987654
+
+    .card.card-default
+        .card-header Order Information
+        .card-body
+            .row
+                .col-lg-6
+                    p.lead.bb Details
+                    form.form-horizontal
+                        .form-group.row
+                            .col-md-4 Order ID:
+                            .col-md-8
+                                strong 987654
+                        .form-group.row
+                            .col-md-4 Purchased On:
+                            .col-md-8
+                                strong 03/11/2015 10:10
+                        .form-group.row
+                            .col-md-4 Client Name:
+                            .col-md-8
+                                strong Addison Nichols
+                        .form-group.row
+                            .col-md-4 Items:
+                            .col-md-8
+                                strong 547
+                        .form-group.row
+                            .col-md-4 Amount:
+                            .col-md-8
+                                strong $515.20
+                        .form-group.row
+                            .col-md-4 Shipment:
+                            .col-md-8
+                                strong 04/10/2015
+                        .form-group.row
+                            .col-md-4 Status
+                            .col-md-8
+                                .badge.badge-info Shipped
+
+                .col-lg-6
+                    p.lead.bb Client
+                    form.form-horizontal
+                        .form-group.row
+                            .col-md-4 Client ID:
+                            .col-md-8
+                                strong #32654
+                        .form-group.row
+                            .col-md-4 Name:
+                            .col-md-8
+                                strong Addison Nichols
+                        .form-group.row
+                            .col-md-4 Email:
+                            .col-md-8
+                                strong addisong@mail.com
+                        .form-group.row
+                            .col-md-4 Company:
+                            .col-md-8
+                                strong Addison co.
+                        .form-group.row
+                            .col-md-4 Phone:
+                            .col-md-8
+                                strong (123) 123 456465
+                        .form-group.row
+                            .col-md-4 Status
+                            .col-md-8
+                                .badge.badge-success Active
+            .row
+                .col-lg-6
+                    p.lead.bb Billing Address
+                    form.form-horizontal
+                        .form-group.row
+                            .col-md-4 First Name
+                            .col-md-8
+                                strong John
+                        .form-group.row
+                            .col-md-4 Last Name:
+                            .col-md-8
+                                strong Johnson
+                        .form-group.row
+                            .col-md-4 Company:
+                            .col-md-8
+                                strong John co.
+                        .form-group.row
+                            .col-md-4 Address:
+                            .col-md-8
+                                strong 2125 Chesterfield
+                        .form-group.row
+                            .col-md-4 City:
+                            .col-md-8
+                                strong San Francisco
+                        .form-group.row
+                            .col-md-4 State
+                            .col-md-8
+                                strong N/a
+                        .form-group.row
+                            .col-md-4 ZIP/Post Code
+                            .col-md-8
+                                strong 1324
+                        .form-group.row
+                            .col-md-4 Country
+                            .col-md-8
+                                strong Neverland
+                        .form-group.row
+                            .col-md-4 Phone
+                            .col-md-8
+                                strong (123) 132 456789
+                .col-lg-6
+                    p.lead.bb Shipping Address
+                    form.form-horizontal
+                        .form-group.row
+                            .col-md-4 First Name
+                            .col-md-8
+                                strong John
+                        .form-group.row
+                            .col-md-4 Last Name:
+                            .col-md-8
+                                strong Johnson
+                        .form-group.row
+                            .col-md-4 Company:
+                            .col-md-8
+                                strong John co.
+                        .form-group.row
+                            .col-md-4 Address:
+                            .col-md-8
+                                strong 2125 Chesterfield
+                        .form-group.row
+                            .col-md-4 City:
+                            .col-md-8
+                                strong San Francisco
+                        .form-group.row
+                            .col-md-4 State
+                            .col-md-8
+                                strong N/a
+                        .form-group.row
+                            .col-md-4 ZIP/Post Code
+                            .col-md-8
+                                strong 1324
+                        .form-group.row
+                            .col-md-4 Country
+                            .col-md-8
+                                strong Neverland
+                        .form-group.row
+                            .col-md-4 Phone
+                            .col-md-8
+                                strong (123) 132 456789
+
+            .alert.alert-warning
+                em.fa.fa-exclamation-circle.fa-lg.fa-fw
+                | Shipping address is different than billing address
+
+    .card
+        .card-header Products in order
+        .table-responsive
+            table.table.table-hover.table-bordered.table-striped
+                thead
+                    tr
+                        th Product ID
+                        th Price
+                        th Quantity
+                        th Tax
+                        th.text-center Status
+                        th Total
+                tbody
+                    tr
+                        td
+                            a(href='') Product #123
+                        td $ 100.00
+                        td 5
+                        td 21%
+                        td.text-center
+                            span.badge.badge-success In Stock
+                        td $ 605.00
+                    tr
+                        td
+                            a(href='') Product #123
+                        td $ 100.00
+                        td 5
+                        td 21%
+                        td.text-center
+                            span.badge.badge-success In Stock
+                        td $ 605.00
+                    tr
+                        td
+                            a(href='') Product #123
+                        td $ 100.00
+                        td 5
+                        td 21%
+                        td.text-center
+                            span.badge.badge-warning N/A
+                        td $ 605.00
+                    tr
+                        td
+                            a(href='') Product #123
+                        td $ 100.00
+                        td 5
+                        td 21%
+                        td.text-center
+                            span.badge.badge-danger Out Stock
+                        td $ 605.00
+                    tr
+                        td
+                            a(href='') Product #123
+                        td $ 100.00
+                        td 5
+                        td 21%
+                        td.text-center
+                            span.badge.badge-success In Stock
+                        td $ 605.00

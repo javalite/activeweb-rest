@@ -1,0 +1,196 @@
+extends ../../_layout
+
+block active
+  - sidebar_active = 'social-board.html'
+
+block content
+    .card.b.text-white
+        .card-body.bg-cover.clearfix(style="background-image: url(img/profile-bg.jpg)")
+            .media.mt-0.align-items-center
+                img.mr-3.img-thumbnail.rounded-circle.thumb96(src='img/user/06.jpg', alt="Image")
+                .media-body
+                    .d-flex
+                        div
+                            h4.m-0 Claire Beck
+                            p Team lead
+                            button.btn.btn-info.btn-xs(type="button") "Following"
+                        .ml-auto
+                            .inline.text-center.mr-2
+                                .h3.m-0: strong 1.4k
+                                small followers
+                            .inline.text-center.mr-2
+                                .h3.m-0: strong 350
+                                small pictures
+    .card-columns.card-columns-2
+        .card.b
+            .card-body
+                form.mb-2(method='post', action='#').mt-2
+                    textarea.form-control(rows="4", placeholder="Post a new comment..")
+                .clearfix
+                    .float-left
+                        ul.nav.nav-pills
+                            li.nav-item: a.nav-link(href='#'): em.fa.fa-location-arrow
+                            li.nav-item: a.nav-link(href='#'): em.far.fa-image
+                            li.nav-item: a.nav-link(href='#'): em.fas.fa-video
+                    .float-right
+                        button(type="button").btn.btn-success Post
+        .card.b
+            .card-header
+                .float-right
+                    .btn-group.dropdown
+                        button.btn.btn-link(data-toggle="dropdown"): em.fa.fa-ellipsis-v.fa-lg.text-muted
+                        .dropdown-menu.dropdown-menu-right(role='menu')
+                            a.dropdown-item(href='#')
+                                span Hide this
+                            a.dropdown-item(href='#')
+                                span Share
+                            a.dropdown-item(href='#')
+                                span Block user
+                .media.mt-0
+                    img.mr-2.img-thumbnail.rounded-circle.thumb32(src='img/user/03.jpg', alt="Image")
+                    .media-body
+                        h5.m-0.text-bold Raymond Clark
+                        .text-sm.text-muted yesterday
+            .card-body
+                .row
+                    .col-xl-4.text-center.mb-3
+                        a(href="#"): img.img-fluid.img-thumbnail(src='img/bg8.jpg', alt="Image")
+                    .col-xl-8
+                        h4 Lorem Ipsum
+                        p Fusce at enim eget nibh convallis elementum. Duis a neque odio, at varius elit. Suspendisse ullamcorper eros eget augue ultrices feugiat. Phasellus dictum nisi eu ipsum fermentum rhoncus. Mauris eu lacus massa, vel condimentum lectus..
+            .card-body
+                form(method='post', action='#').mt-2
+                    textarea.form-control.no-resize(placeholder='Comment...', rows="1")
+        .card.b
+            .card-header
+                .float-right
+                    a(href="#").text-muted
+                        em.far.fa-thumbs-up.fa-fw
+                        span (32)
+                .media.mt-0
+                    img.mr-2.img-thumbnail.rounded-circle.thumb32(src='img/user/08.jpg', alt="Image")
+                    .media-body
+                        h5.m-0.text-bold Kelly Vargas
+                        .text-sm.text-muted 3 days
+            .card-body
+                p Curabitur dignissim dapibus nisl sed iaculis.
+                p: a(href="#"): img.img-fluid.img-thumbnail(src='img/bg10.jpg', alt="Image")
+                p
+                    em.far.fa-comment.fa-fw
+                    span (9)
+                .media.mb-2
+                    img.mr-2.rounded-circle.thumb32(src='img/user/05.jpg', alt='Image')
+                    .media-body
+                        div
+                            p.m-0: a(href="#"): strong Aiden Curtis
+                            p.m-0.text-muted Hey looks great!
+                    small.ml-auto.text-muted 12m ago
+                .media.mb-2
+                    img.mr-2.rounded-circle.thumb32(src='img/user/08.jpg', alt='Image')
+                    .media-body
+                        div
+                            p.m-0: a(href="#"): strong William Stevens
+                            p.m-0.text-muted Excellento shot!
+                    small.ml-auto.text-muted 30m ago
+                .media.mb-2
+                    img.mr-2.rounded-circle.thumb32(src='img/user/04.jpg', alt='Image')
+                    .media-body
+                        div
+                            p.m-0: a(href="#"): strong James Payne
+                            p.m-0.text-muted Nice shot!
+                    small.ml-auto.text-muted 30m ago
+            .card-body.bg-gray-lighter
+                a(href="#").link-unstyled Load (6) more comments
+            .card-body
+                form(method='post', action='#').mt-2
+                    textarea.form-control.no-resize(placeholder='Comment...', rows="1")
+        .card.b
+            .card-header
+                .float-right
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/05.jpg", alt="member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/06.jpg", alt="member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/07.jpg", alt="member")
+                .media.mt-0
+                    img.mr-2.img-thumbnail.rounded-circle.thumb32(src='img/user/04.jpg', alt="Image")
+                    .media-body
+                        h5.m-0.text-bold Travis Horton
+                        .text-sm.text-muted 3 minutes
+            .card-body
+                blockquote
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu odio vitae augue elementum molestie sed quis turpis.
+                    footer
+                        | Someone famous in
+                        cite(title='Source Title') Source Title
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        .card.b
+            .card-header
+                .media
+                    img.mr-2.img-thumbnail.rounded-circle.thumb32(src='img/user/08.jpg', alt="Image")
+                    .media-body
+                        h5.m-0.text-bold Kelly Vargas
+                        .text-sm.text-muted 3 days
+            .card-body
+                p: a(href="#"): img.img-fluid.img-thumbnail(src='img/bg3.jpg', alt="Image")
+                p Curabitur dignissim dapibus nisl sed iaculis.
+        .card.b
+            .card-header
+                .float-right
+                    .btn-group.dropdown
+                        button.btn.btn-link(data-toggle="dropdown"): em.fa.fa-ellipsis-v.fa-lg.text-muted
+                        .dropdown-menu.dropdown-menu-right(role='menu')
+                            a.dropdown-item(href='#')
+                                span Hide this
+                            a.dropdown-item(href='#')
+                                span Share
+                            a.dropdown-item(href='#')
+                                span Block user
+                .media.mt-0
+                    img.mr-2.img-thumbnail.rounded-circle.thumb32(src='img/user/03.jpg', alt="Image")
+                    .media-body
+                        h5.m-0.text-bold Elmer Thomas
+                        .text-sm.text-muted 3 minutes
+            .card-body
+                p I'm the big picture guy! xD
+            .card-body
+                    a.inline(href="#"): img.rounded-circle.thumb48(src="img/user/03.jpg", alt="member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/02.jpg", alt="member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/06.jpg", alt="member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/07.jpg", alt="member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/08.jpg", alt="member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/09.jpg", alt="member")
+            .card-body
+                form.mb-2(method='post', action='#').mt-2
+                    textarea.form-control.no-resize(placeholder='Comment...', rows="1")
+                .clearfix
+                    .float-left
+                        ul.nav.nav-pills
+                            li.nav-item: a.nav-link(href='#'): em.fa.fa-location-arrow
+                            li.nav-item: a.nav-link(href='#'): em.far.fa-image
+                            li.nav-item: a.nav-link(href='#'): em.fas.fa-video
+                    .float-right
+                        button(type="button").btn.btn-success.btn-sm Post
+        .card.b
+            .card-header
+                .media
+                    img.mr-2.img-thumbnail.rounded-circle.thumb32(src='img/user/08.jpg', alt="Image")
+                    .media-body
+                        h5.m-0.text-bold Kelly Vargas
+                        .text-sm.text-muted 3 days
+            .card-body
+                p Sharing some ideas of what we could do with flexbox
+                .row.row-flush
+                    .col-6
+                        .row.row-flush
+                            .row.row-flush
+                                .col-6: a(href="#"): img.img-fluid.img-thumbnail(src='img/bg7.jpg', alt="Image")
+                                .col-6: a(href="#"): img.img-fluid.img-thumbnail(src='img/bg8.jpg', alt="Image")
+                            .col-12: a(href="#"): img.img-fluid.img-thumbnail(src='img/lock-bg.jpg', alt="Image")
+                    .col-6
+                        .row.row-flush
+                            .col-12: a(href="#"): img.img-fluid.img-thumbnail(src='img/lock-bg.jpg', alt="Image")
+                            .row.row-flush
+                                .col-6: a(href="#"): img.img-fluid.img-thumbnail(src='img/bg4.jpg', alt="Image")
+                                .col-6: a(href="#"): img.img-fluid.img-thumbnail(src='img/bg5.jpg', alt="Image")
+
+    .text-center.my-3
+        button(type="button").btn.btn-secondary.btn-oval.btn-lg Load more..

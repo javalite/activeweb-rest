@@ -1,0 +1,201 @@
+extends ../../_layout
+
+block active
+    - sidebar_active = 'form-validation.html'
+
+block content
+    .content-heading
+        div
+            | Form Validation
+            small Validating forms frontend have never been so powerful and easy.
+
+    // START row
+    .row
+        .col-xl-6
+            form(method='post', action="#", data-parsley-validate='', novalidate='')
+                // START card
+                .card.card-default
+                    .card-header
+                        .card-title Form Register
+                    .card-body
+                        .form-group
+                            label.col-form-label
+                                | Email Address *
+                            input.form-control(type='text', name='email', required)
+                        .form-group
+                            label.col-form-label
+                                | Password *
+                            input#id-password.form-control(type='password', name='password', required)
+                        .form-group
+                            label.col-form-label
+                                | Confirm Password *
+                            input.form-control(type='password', name='confirmPassword', required, data-parsley-equalto="#id-password")
+                        .required * Required fields
+                    .card-footer
+                        .clearfix
+                            .float-left
+                                .checkbox.c-checkbox
+                                    label
+                                        input(type='checkbox', name="agreements", required, data-parsley-error-message='Please read and agree the terms')
+                                        span.fa.fa-check
+                                        |  I agree with the
+                                        a.ml-2(href="#") terms
+                            .float-right
+                                button.btn.btn-primary(type='submit') Register
+                // END card
+        .col-xl-6
+            form(method='post', data-parsley-validate='', novalidate='')
+                // START card
+                .card.card-default
+                    .card-header
+                        .card-title Form Login
+                    .card-body
+                        .form-group
+                            label.col-form-label
+                                | Email Address *
+                            input.form-control(type='text', name='email', required)
+                        .form-group
+                            label.col-form-label
+                                | Password *
+                            input.form-control(type='password', name='password', required)
+                        .required * Required fields
+                    .card-footer
+                        button.btn.btn-primary(type='submit') Login
+                // END card
+    // END row
+    // START row
+    .row
+        .col-lg-12
+            form.form-horizontal(action='#', data-parsley-validate='', novalidate='')
+                // START card
+                .card.card-default
+                    .card-header
+                        .card-title Fields validation
+                    .bg-gray-lighter.px-3.py-2.my-3 Type validation
+                    .card-body
+                        fieldset
+                            .form-group.row
+                                label.col-md-2.col-form-label Required Text
+                                .col-md-6
+                                    input.form-control(type='text', name='required', required="required")
+                                .col-md-4
+                                    code required
+                        fieldset
+                            .form-group.row
+                                label.col-md-2.col-form-label Email
+                                .col-md-6
+                                    input.form-control(type='email', name='email', data-parsley-type='email')
+                                .col-md-4
+                                    code data-parsley-type="email"
+                        fieldset
+                            .form-group.row
+                                label.col-md-2.col-form-label Number
+                                .col-md-6
+                                    input.form-control(type='text', name='number', data-parsley-type='number')
+                                .col-md-4
+                                    code data-parsley-type="number"
+                        fieldset
+                            .form-group.row
+                                label.col-md-2.col-form-label Integer
+                                .col-md-6
+                                    input.form-control(type='text', name='integer', data-parsley-type='integer')
+                                .col-md-4
+                                    code data-parsley-type="integer"
+                        fieldset
+                            .form-group.row
+                                label.col-md-2.col-form-label Digits
+                                .col-md-6
+                                    input.form-control(type='text', name='digits', data-parsley-type='digits')
+                                .col-md-4
+                                    code data-parsley-type="digits"
+                        fieldset
+                            .form-group.row
+                                label.col-md-2.col-form-label Alphanum
+                                .col-md-6
+                                    input.form-control(type='text', name='alphanum', data-parsley-type='alphanum')
+                                .col-md-4
+                                    code data-parsley-type="alphanum"
+                        fieldset
+                            .form-group.row
+                                label.col-md-2.col-form-label Url
+                                .col-md-6
+                                    input.form-control(type='text', name='url', data-parsley-type='url')
+                                .col-md-4
+                                    code data-parsley-type="url"
+                        fieldset.m-0
+                            .form-group.row
+                                label.col-md-2.col-form-label Equal to
+                                .col-md-3
+                                    input.form-control#id-source(type='text', placeholder="#id-source")
+                                .col-md-3
+                                    input.form-control(type='text', data-parsley-equalto='#id-source')
+                                .col-md-4
+                                    code data-parsley-equalto='#id-source'
+                    .bg-gray-lighter.px-3.py-2.mb-3 Range validation
+                    .card-body
+                        fieldset
+                            .form-group.row
+                                label.col-md-2.col-form-label Minlength
+                                .col-md-6
+                                    input.form-control(type='text', name='minlength', data-parsley-minlength='6')
+                                .col-md-4
+                                    code data-parsley-minlength="6"
+                        fieldset
+                            .form-group.row
+                                label.col-md-2.col-form-label Maxlength
+                                .col-md-6
+                                    input.form-control(type='text', name='maxlength', data-parsley-maxlength='10')
+                                .col-md-4
+                                    code data-parsley-maxlength="10"
+                        fieldset
+                            .form-group.row
+                                label.col-md-2.col-form-label Length
+                                .col-md-6
+                                    input.form-control(type='text', name='length', data-parsley-length='[6, 10]')
+                                .col-md-4
+                                    code data-parsley-length="[6, 10]"
+                        fieldset
+                            .form-group.row
+                                label.col-md-2.col-form-label Min
+                                .col-md-6
+                                    input.form-control(type='text', name='min', data-parsley-min='6')
+                                .col-md-4
+                                    code data-parsley-min="6"
+                        fieldset
+                            .form-group.row
+                                label.col-md-2.col-form-label Max
+                                .col-md-6
+                                    input.form-control(type='text', name='max', data-parsley-max='6')
+                                .col-md-4
+                                    code data-parsley-max="6"
+                        fieldset
+                            .form-group.row
+                                label.col-md-2.col-form-label Min words
+                                .col-md-6
+                                    input.form-control(type='text', data-minwords='6')
+                                .col-md-4
+                                    code data-minwords='6'
+                        fieldset
+                            .form-group.row
+                                label.col-md-2.col-form-label Max words
+                                .col-md-6
+                                    input.form-control(type='text', data-maxwords='6')
+                                .col-md-4
+                                    code data-maxwords='6'
+
+                        fieldset
+                            .form-group.row
+                                label.col-md-2.col-form-label Range of words
+                                .col-md-6
+                                    input.form-control(type='text', data-rangewords='[6,10]')
+                                .col-md-4
+                                    code data-rangewords='[6,10]'
+
+                    .card-footer.text-center
+                        button.btn.btn-info(type='submit') Run validation
+                // END card
+    // END row
+
+block vendor_js
+    // PARSLEY
+    script(src='vendor/parsleyjs/dist/parsley.js')

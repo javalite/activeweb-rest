@@ -1,0 +1,25 @@
+extends ../../_layout_page
+
+block content
+    .abs-center.wd-xl
+        // START card
+        .d-flex.justify-content-center
+            .p-2
+                img.img-fluid.img-thumbnail.rounded-circle(src="img/user/02.jpg", alt="Avatar", width="60", height="60")
+        .card.b0
+            .card-body
+                p.text-center Please login to unlock your screen.
+                form
+                    .form-group
+                        .input-group.with-focus
+                            input#exampleInputEmail1.form-control.border-right-0(type='email', placeholder='Enter email', autocomplete="off",required)
+                            .input-group-append
+                                span.input-group-text.text-muted.bg-transparent.border-left-0
+                                    em.fa.fa-lock
+                    .d-flex
+                        .mt-1
+                            a(href="recover.html").text-muted: small Forgot your password?
+                        .ml-auto
+                            a.btn.btn-sm.btn-primary(href="dashboard.html") Unlock
+        // END card
+        include ../_partials/_footer_page

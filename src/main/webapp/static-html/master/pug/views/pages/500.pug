@@ -1,0 +1,22 @@
+extends ../../_layout_page
+
+block content
+    .abs-center.wd-xl
+        // START card
+        .text-center.mb-4
+            .mb-3
+                em.fa.fa-wrench.fa-5x.text-muted
+            .text-lg.mb-3 500
+            p.lead.m-0 Oh! Something went wrong :(
+
+            p Don't worry, we're now checking this.
+            p In the meantime, please try one of those links below or come back in a moment
+
+        ul.list-inline.text-center.text-sm.mb-4
+            li.list-inline-item: a.text-muted(href="dashboard.html") Go to App
+            li.text-muted.list-inline-item |
+            li.list-inline-item: a.text-muted(href="login.html") Login
+            li.text-muted.list-inline-item |
+            li.list-inline-item: a.text-muted(href="register.html") Register
+
+        include ../_partials/_footer_page

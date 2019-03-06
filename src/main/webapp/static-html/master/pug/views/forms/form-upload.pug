@@ -1,0 +1,27 @@
+extends ../../_layout
+
+block active
+  - sidebar_active = 'form-upload.html'
+
+block content
+    .content-heading Dropzone File Upload
+    .container.container-lg
+        .mb-3
+            p.m-0.text-center
+                | DropzoneJS is an open source library that provides drag&apos;n&apos;drop file uploads with image previews.
+                br
+                | It’s lightweight, doesn’t depend on any other library (like jQuery) and is
+                a.ml-2(href='http://www.dropzonejs.com/', target='_blank') highly customizable
+        form#dropzone-area.dropzone.mb-3.card.d-flex.flex-row.justify-content-center.flex-wrap(action='#')
+            #dropzone-previews
+            .text-right.w-100
+                button.btn.btn-primary.btn-lg(type='submit'): strong Send
+        p: small.text-muted This demo does not upload files to any server.
+
+block vendor_css
+    // Dropzone
+    link(rel='stylesheet', href='vendor/dropzone/dist/basic.css')
+    link(rel='stylesheet', href='vendor/dropzone/dist/dropzone.css')
+block vendor_js
+    // Dropzone
+    script(src='vendor/dropzone/dist/dropzone.js')

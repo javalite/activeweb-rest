@@ -1,0 +1,111 @@
+block active
+    //- This block is used to set the active view name
+    //- then we check it against the sidebar configuration
+    //- to set as active the current sidebar item
+
+// START Top Navbar
+nav.navbar.topnavbar.navbar-expand-lg.navbar-light
+        // START navbar header
+        .navbar-header
+            a.navbar-brand(href='#/')
+                .brand-logo
+                    img.img-fluid(src="img/logo.png", alt="App Logo")
+                .brand-logo-collapsed
+                    img.img-fluid(src="img/logo-single.png", alt="App Logo")
+            button.navbar-toggler(type='button' data-toggle='collapse' data-target='#topnavbar')
+                span.navbar-toggler-icon
+        // END navbar header
+
+        // START Nav wrapper
+        .navbar-collapse.collapse#topnavbar
+            // START Left navbar
+            ul.nav.navbar-nav.mr-auto.flex-column.flex-lg-row
+                each item, index in sidebar
+                    //- limit the items for demo. Bootstrap navbar doesn't not support too much elements
+                    - if (index < 3)
+                        - item.active = (sidebar_active==item.href)
+                        - if (item.submenu)
+                            li.nav-item.dropdown(class=item.active?'active':'')
+                                a.nav-link.dropdown-toggle.dropdown-toggle-nocaret(href=item.href, data-toggle="dropdown")= item.text
+                                .dropdown-menu(class="animated fadeIn")
+                                    each subitem in item.submenu
+                                        a.dropdown-item(href=subitem.href)= subitem.text
+                        - else if (!item.heading)
+                            li.nav-item
+                                a.nav-link(href=item.href)= item.text
+            // END Left navbar
+
+            // START Right Navbar
+            ul.navbar-nav.flex-row
+                // START lock screen
+                li.nav-item
+                    a.nav-link(href="lock.html", title="Lock screen")
+                        em.icon-lock
+                // END lock screen
+                // Search icon
+                li.nav-item
+                    a.nav-link(href='#', data-search-open="")
+                        em.icon-magnifier
+                // Fullscreen (only desktops)
+                li.nav-item.d-none.d-md-block
+                    a.nav-link(href='#', data-toggle-fullscreen="")
+                        em.fa.fa-expand
+                // START Alert menu
+                li.nav-item.dropdown.dropdown-list
+                    a.nav-link.dropdown-toggle.dropdown-toggle-nocaret(href="#", data-toggle="dropdown")
+                        em.icon-bell
+                        span.badge.badge-danger 11
+                    // START Dropdown menu
+                    .dropdown-menu.dropdown-menu-right(class="animated flipInX")
+                        .dropdown-item
+                            // START list group
+                            .list-group
+                                // list item
+                                .list-group-item.list-group-item-action
+                                    .media
+                                        .align-self-start.mr-2
+                                            em.fab.fa-twitter.fa-2x.text-info
+                                        .media-body
+                                                p.m-0 New followers
+                                                p.m-0.text-muted.text-sm 1 new follower
+                                // list item
+                                .list-group-item.list-group-item-action
+                                    .media
+                                        .align-self-start.mr-2
+                                            em.fa.fa-envelope.fa-2x.text-warning
+                                        .media-body
+                                                p.m-0 New e-mails
+                                                p.m-0.text-muted.text-sm You have 10 new emails
+                                // list item
+                                .list-group-item.list-group-item-action
+                                    .media
+                                        .align-self-start.mr-2
+                                            em.fa.fa-tasks.fa-2x.text-success
+                                        .media-body
+                                                p.m-0 Pending Tasks
+                                                p.m-0.text-muted.text-sm 11 pending task
+                                // last list item
+                                .list-group-item.list-group-item-action
+                                    span.d-flex.align-items-center
+                                            span.text-sm More notifications
+                                            span.badge.badge-danger.ml-auto 14
+                            // END list group
+                    // END Dropdown menu
+                // END Alert menu
+                // START Offsidebar button
+                li.nav-item
+                    a.nav-link(href='#', data-toggle-state="offsidebar-open", data-no-persist="true")
+                        em.icon-notebook
+                // END Offsidebar menu
+            // END Right Navbar
+        // END Nav wrapper
+
+        // START Search form
+        form.navbar-form(role='search', action="search.html")
+            .form-group
+                input.form-control(type='text', placeholder="Type and hit enter ...")
+                .fa.fa-times.navbar-form-close(data-search-dismiss="")
+            button.d-none(type='submit') Submit
+        // END Search form
+
+// END Top Navbar

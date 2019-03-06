@@ -1,0 +1,182 @@
+extends ../../_layout
+
+block active
+  - sidebar_active = 'vote-links.html'
+
+block content
+    .content-heading
+        div
+            | User links
+            small Vestibulum pretium aliquam scelerisque.
+
+    ul.nav.nav-pills.my-3
+        li.nav-item: a.nav-link.active.py-1(href='') Popular
+        li.nav-item: a.nav-link.py-1(href='') New
+        li.nav-item: a.nav-link.py-1(href='') Recent
+
+    // Vote card
+    .card
+        .table-responsive
+            table.table: tbody: tr
+                td.b0.wd-xxs.text-center
+                    p: a(href="#"): em.fa.fa-angle-up.fa-lg
+                    p 10
+                    p.mb-0: a(href="#"): em.fa.fa-angle-down.fa-lg
+                td.b0.wd-xs.d-none.d-md-table-cell
+                    a(href="#"): img.img-fluid.thumb64(src="img/dummy.png", alt='dummy')
+                td.b0
+                    p.h4.mt-0
+                        span.rounded.badge.bg-gray-lighter.px-4.mr-2.text-sm.d-none.d-lg-inline: span.text-muted question
+                        a(href="#").align-middle.text-bold.link-unstyled [Lorem Ipsum] Phasellus ullamcorper rhoncus sagittis.
+                    .text-sm.text-muted
+                        | In ac turpis vitae ante pretium cursus. Suspendisse nisl arcu, venenatis elementum lacinia sed.
+                        br
+                        | 5 hours ago -
+                        a(href="#").text-bold harperray
+    // end Vote card
+    // Vote card
+    .card
+        .table-responsive
+            table.table: tbody: tr
+                td.b0.wd-xxs.text-center
+                    p: a(href="#"): em.fa.fa-angle-up.fa-lg
+                    p 20
+                    p.mb-0: a(href="#"): em.fa.fa-angle-down.fa-lg
+                td.b0.wd-xs.d-none.d-md-table-cell
+                    a(href="#"): img.img-fluid.thumb64(src="img/dummy.png", alt='dummy')
+                td.b0
+                    p.h4.mt-0
+                        span.rounded.badge.bg-gray-lighter.px-4.mr-2.text-sm.d-none.d-lg-inline: span.text-muted culture
+                        a(href="#").align-middle.text-bold.link-unstyled Donec volutpat tristique laoreet Pellentesque sed purus libero.
+                    .text-sm.text-muted
+                        | In ac turpis vitae ante pretium cursus. Suspendisse nisl arcu, venenatis elementum lacinia sed.
+                        br
+                        | yesterday -
+                        a(href="#").text-bold harperray
+    // end Vote card
+    // Vote card
+    .card
+        .table-responsive
+            table.table: tbody: tr
+                td.b0.wd-xxs.text-center
+                    p: a(href="#"): em.fa.fa-angle-up.fa-lg
+                    p 27
+                    p.mb-0: a(href="#"): em.fa.fa-angle-down.fa-lg
+                td.b0.wd-xs.d-none.d-md-table-cell
+                    a(href="#"): img.img-fluid.thumb64(src="img/dummy.png", alt='dummy')
+                td.b0
+                    p.h4.mt-0
+                        span.rounded.badge.bg-gray-lighter.px-4.mr-2.text-sm.d-none.d-lg-inline: span.text-muted peding
+                        a(href="#").align-middle.text-bold.link-unstyled Suspendisse ullamcorper eros eget augue ultrices feugiat.
+                    .text-sm.text-muted
+                        | In ac turpis vitae ante pretium cursus. Suspendisse nisl arcu, venenatis elementum lacinia sed.
+                        br
+                        | 3 days ago -
+                        a(href="#").text-bold harperray
+    // end Vote card
+    // Vote card
+    .card
+        .table-responsive
+            table.table: tbody: tr
+                td.b0.wd-xxs.text-center
+                    p: a(href="#"): em.fa.fa-angle-up.fa-lg
+                    p 10
+                    p.mb-0: a(href="#"): em.fa.fa-angle-down.fa-lg
+                td.b0.wd-xs.d-none.d-md-table-cell
+                    a(href="#"): img.img-fluid.thumb64(src="img/dummy.png", alt='dummy')
+                td.b0
+                    p.h4.mt-0
+                        span.rounded.badge.bg-gray-lighter.px-4.mr-2.text-sm.d-none.d-lg-inline: span.text-muted news
+                        a(href="#").align-middle.text-bold.link-unstyled Sed porta fermentum felis in molestie.
+                    .text-sm.text-muted
+                        | In ac turpis vitae ante pretium cursus. Suspendisse nisl arcu, venenatis elementum lacinia sed.
+                        br
+                        | last week -
+                        a(href="#").text-bold harperray
+    // end Vote card
+    // Vote card
+    .card
+        .table-responsive
+            table.table: tbody: tr
+                td.b0.wd-xxs.text-center
+                    p: a(href="#"): em.fa.fa-angle-up.fa-lg
+                    p 5
+                    p.mb-0: a(href="#"): em.fa.fa-angle-down.fa-lg
+                td.b0.wd-xs.d-none.d-md-table-cell
+                    a(href="#"): img.img-fluid.thumb64(src="img/dummy.png", alt='dummy')
+                td.b0
+                    p.h4.mt-0
+                        span.rounded.badge.bg-gray-lighter.px-4.mr-2.text-sm.d-none.d-lg-inline: span.text-muted education
+                        a(href="#").align-middle.text-bold.link-unstyled Aenean eu odio vitae augue elementum molestie sed quis turpis.
+                    .text-sm.text-muted
+                        | In ac turpis vitae ante pretium cursus. Suspendisse nisl arcu, venenatis elementum lacinia sed.
+                        br
+                        | 2 weeks ago -
+                        a(href="#").text-bold harperray
+    // end Vote card
+    // Vote card
+    .card
+        .table-responsive
+            table.table: tbody: tr
+                td.b0.wd-xxs.text-center
+                    p: a(href="#"): em.fa.fa-angle-up.fa-lg
+                    p 10
+                    p.mb-0: a(href="#"): em.fa.fa-angle-down.fa-lg
+                td.b0.wd-xs.d-none.d-md-table-cell
+                    a(href="#"): img.img-fluid.thumb64(src="img/dummy.png", alt='dummy')
+                td.b0
+                    p.h4.mt-0
+                        span.rounded.badge.bg-gray-lighter.px-4.mr-2.text-sm.d-none.d-lg-inline: span.text-muted programming
+                        a(href="#").align-middle.text-bold.link-unstyled Sed tempor lacinia tempus. Curabitur sit amet lacus id odio volutpat faucibus nec quis enim.
+                    .text-sm.text-muted
+                        | In ac turpis vitae ante pretium cursus. Suspendisse nisl arcu, venenatis elementum lacinia sed.
+                        br
+                        | 2 months ago -
+                        a(href="#").text-bold harperray
+    // end Vote card
+    // Vote card
+    .card
+        .table-responsive
+            table.table: tbody: tr
+                td.b0.wd-xxs.text-center
+                    p: a(href="#"): em.fa.fa-angle-up.fa-lg
+                    p -1
+                    p.mb-0: a(href="#"): em.fa.fa-angle-down.fa-lg
+                td.b0.wd-xs.d-none.d-md-table-cell
+                    a(href="#"): img.img-fluid.thumb64(src="img/dummy.png", alt='dummy')
+                td.b0
+                    p.h4.mt-0
+                        span.rounded.badge.bg-gray-lighter.px-4.mr-2.text-sm.d-none.d-lg-inline: span.text-muted tech
+                        a(href="#").align-middle.text-bold.link-unstyled Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi in leo odio.
+                    .text-sm.text-muted
+                        | In ac turpis vitae ante pretium cursus. Suspendisse nisl arcu, venenatis elementum lacinia sed.
+                        br
+                        | 2 months ago -
+                        a(href="#").text-bold harperray
+    // end Vote card
+    // Vote card
+    .card
+        .table-responsive
+            table.table: tbody: tr
+                td.b0.wd-xxs.text-center
+                    p: a(href="#"): em.fa.fa-angle-up.fa-lg
+                    p 300
+                    p.mb-0: a(href="#"): em.fa.fa-angle-down.fa-lg
+                td.b0.wd-xs.d-none.d-md-table-cell
+                    a(href="#"): img.img-fluid.thumb64(src="img/dummy.png", alt='dummy')
+                td.b0
+                    p.h4.mt-0
+                        span.rounded.badge.bg-gray-lighter.px-4.mr-2.text-sm.d-none.d-lg-inline: span.text-muted question
+                        a(href="#").align-middle.text-bold.link-unstyled Quisque risus ante, laoreet a sagittis quis, dignissim luctus purus.
+                    .text-sm.text-muted
+                        | In ac turpis vitae ante pretium cursus. Suspendisse nisl arcu, venenatis elementum lacinia sed.
+                        br
+                        | 5 months ago -
+                        a(href="#").text-bold harperray
+    // end Vote card
+
+    ul.pagination.pagination-sm
+        li.page-item.active: a.page-link(href='#') 1
+        li.page-item: a.page-link(href='#') 2
+        li.page-item: a.page-link(href='#') 3
+        li.page-item: a.page-link(href='#') »

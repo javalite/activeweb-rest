@@ -1,0 +1,160 @@
+extends ../../_layout
+
+block active
+  - sidebar_active = 'file-manager.html'
+
+block content
+
+    //- Mixins definition
+    //- -----------------------
+
+    mixin filebox-code(name, size, time)
+        +filebox('code','fa-file-code', 'text-purple', name, size, time, 'edit')
+
+    mixin filebox-archive(name, size, time)
+        +filebox('archive','fa-file-archive', 'text-warning', name, size, time, 'edit')
+
+    mixin filebox-movie(name, size, time)
+        +filebox('movie','fa-file-video', 'text-danger', name, size, time, 'play')
+
+    mixin filebox-image(name, size, time)
+        +filebox('image','fa-file-image', 'text-success', name, size, time, 'view')
+
+    mixin filebox-audio(name, size, time)
+        +filebox('audio','fa-file-audio', 'text-primary', name, size, time, 'play')
+
+    mixin filebox(type, icon, color, name, size, time, mode)
+        .card(data-filter-group=type)
+            .card-body.text-center
+                .d-flex
+                    .ml-auto
+                        a(href="#", title="Download").text-muted.mr-1
+                            em.fa.fa-download.fa-fw
+                a(href="#").px-4
+                    em.fa-5x.far(class=icon + ' ' + color)
+                p: small.text-dark= name
+                .d-flex.m-0.text-muted
+                    small= size
+                    small.ml-auto= time + ' ago'
+
+
+    //- Page start
+    //- -----------------------
+
+    .content-heading
+        | File manager
+        .ml-auto
+            .dropdown
+                a(href="#", data-toggle="dropdown"): img.thumb32.rounded-circle(src="img/user/02.jpg", alt="user")
+                .dropdown-menu.dropdown-menu-right-forced.animated.fadeInUp(role='menu')
+                    a.dropdown-item(href='#')
+                        span Settings
+                    a.dropdown-item(href='#')
+                        span Get more Storage
+                    a.dropdown-item(href='#')
+                        span Manage permissions
+
+    .row
+        .col-lg-3
+
+            .mb-3
+                input.form-control.filestyle(type='file', data-input="false", data-btnClass='btn btn-info', data-text="UPLOAD", data-icon="<span class='fa fa-upload mr-2'></span>")
+
+            .card.b
+                .card-body
+                    strong.text-muted FOLDERS
+                .list-group
+                    a(href='#').active.list-group-item.list-group-item-action.d-flex.justify-content-between.align-items-center.rounded-0
+                        span.circle.bg-white.mr-2
+                        span All
+                        span.ml-auto.badge 49
+                    a(href='#').list-group-item.list-group-item-action.d-flex.justify-content-between.align-items-center
+                        span.circle.bg-green.mr-2
+                        span Audio
+                        span.ml-auto.badge 5
+                    a(href='#').list-group-item.list-group-item-action.d-flex.justify-content-between.align-items-center
+                        span.circle.bg-danger.mr-2
+                        span Movie
+                        span.ml-auto.badge 12
+                    a(href='#').list-group-item.list-group-item-action.d-flex.justify-content-between.align-items-center
+                        span.circle.bg-warning.mr-2
+                        span Image
+                        span.ml-auto.badge 22
+                    a(href='#').list-group-item.list-group-item-action.d-flex.justify-content-between.align-items-center.rounded-0
+                        span.circle.bg-purple.mr-2
+                        span Code
+                        span.ml-auto.badge 9
+                .card-body
+                    .d-flex.text-sm
+                        p Storage
+                        p.ml-auto: strong 25 GB / 100 GB
+                    .progress.progress-xs.m-0: .progress-bar.bg-info(style='width:25%')
+
+        .col-lg-9
+            .row
+                .col-lg-4.col-md-6
+                    +filebox-audio('A good song.ogg','6.3MB','10m')
+                .col-lg-4.col-md-6
+                    +filebox-movie('Movie.avi','6.3GB','50m')
+                .col-lg-4.col-md-6
+                    +filebox-audio('Similar - Chosen.mp3', '12MB', '20h')
+                .col-lg-4.col-md-6
+                    +filebox-image('El-Capitan.jpg','300KB','1d')
+
+                .col-lg-4.col-md-6
+                    +filebox-archive('report-2016.txt', '1MB', '15h')
+                .col-lg-4.col-md-6
+                    +filebox-audio('Song for you.ogg','4.5MB','5m')
+                .col-lg-4.col-md-6
+                    +filebox-code('bypass.c','3KB','2h')
+                .col-lg-4.col-md-6
+                    +filebox-image('Sunset_red.png','450KB','3d')
+
+                .col-lg-4.col-md-6
+                    +filebox-image('Sunset_red.png','450KB','3d')
+                .col-lg-4.col-md-6
+                    +filebox-code('angular.controller.js','5KB','23h')
+                .col-lg-4.col-md-6
+                    +filebox-audio('Song 4 you.ogg','4.5MB','5m')
+                .col-lg-4.col-md-6
+                    +filebox-audio('Similar - Chosen.mp3', '12MB', '20h')
+
+                .col-lg-4.col-md-6
+                    +filebox-audio('Song 4 you.ogg','4.5MB','5m')
+                .col-lg-4.col-md-6
+                    +filebox-code('ng.components.css','78KB','12h')
+                .col-lg-4.col-md-6
+                    +filebox-image('Sunset_red.png','450KB','3d')
+                .col-lg-4.col-md-6
+                    +filebox-archive('report-2016.txt', '1MB', '15h')
+
+                .col-lg-4.col-md-6
+                    +filebox-audio('A good song.ogg','6.3MB','10m')
+                .col-lg-4.col-md-6
+                    +filebox-movie('Movie.avi','6.3GB','50m')
+                .col-lg-4.col-md-6
+                    +filebox-audio('Similar - Chosen.mp3', '12MB', '20h')
+                .col-lg-4.col-md-6
+                    +filebox-image('El-Capitan.jpg','300KB','1d')
+
+                .col-lg-4.col-md-6
+                    +filebox-audio('Song 4 you.ogg','4.5MB','5m')
+                .col-lg-4.col-md-6
+                    +filebox-code('ng.components.css','78KB','12h')
+                .col-lg-4.col-md-6
+                    +filebox-image('Sunset_red.png','450KB','3d')
+                .col-lg-4.col-md-6
+                    +filebox-archive('report-2016.txt', '1MB', '15h')
+
+                .col-lg-4.col-md-6
+                    +filebox-image('Sunset_red.png','450KB','3d')
+                .col-lg-4.col-md-6
+                    +filebox-code('angular.controller.js','5KB','23h')
+                .col-lg-4.col-md-6
+                    +filebox-audio('Song 4 you.ogg','4.5MB','5m')
+                .col-lg-4.col-md-6
+                    +filebox-audio('Similar - Chosen.mp3', '12MB', '20h')
+
+block vendor_js
+  // FILESTYLE
+  script(src='vendor/bootstrap-filestyle/src/bootstrap-filestyle.js')

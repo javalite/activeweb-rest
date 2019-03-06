@@ -1,0 +1,228 @@
+extends ../../_layout
+
+block active
+  - sidebar_active = 'plans.html'
+
+block content
+    .container.container-md.py-4
+        .text-center.mb-3.pb-3
+            .h2.text-bold Launch your business today
+            p Select the plan in different options that best fit your project
+
+    .container.container-md
+        // START PLAN TABLE
+        .row
+            // PLAN
+            .col-lg-4
+                .plan
+                    h3.plan-header Single
+                    .plan-price
+                        .text-lg
+                            sup: small $
+                            | 18
+                            // span.plan-period /mo
+                    ul.plan-features
+                        li
+                            em.fa.fa-check
+                            | Unlimited Styles
+                        li
+                            em.fa.fa-check
+                            | RTL &amp; Translation
+                        li
+                            em.fa.fa-check
+                            | Customer support
+                        li
+                            em.fa.fa-check
+                            | Free Updates
+                        li
+                            em.fa.fa-check
+                            | Limited to one client
+                        li
+                            em.fa.fa-times.plan-feature-disable
+                            | Multiple installation
+                        li
+                            em.fa.fa-times.plan-feature-disable
+                            | Not ready for resale
+                    hr
+                    .text-center
+                        a.btn.btn-info(href="") Choose
+            // PLAN
+            .col-lg-4
+                .plan
+                    h3.plan-header Multiple
+                    .plan-price
+                        .text-lg
+                            sup: small $
+                            | 60
+                            // span.plan-period /mo
+                    ul.plan-features
+                        li
+                            em.fa.fa-check
+                            | Unlimited Styles
+                        li
+                            em.fa.fa-check
+                            | RTL &amp; Translation
+                        li
+                            em.fa.fa-check
+                            | Customer support
+                        li
+                            em.fa.fa-check
+                            | Free Updates
+                        li
+                            em.fa.fa-check
+                            | Unlimited clients
+                        li
+                            em.fa.fa-check
+                            | Multiple installation
+                        li
+                            em.fa.fa-times.plan-feature-disable
+                            | Not ready for resale
+                    hr
+                    p.plan-description The perfect price for all your project solutions.
+                    .text-center
+                        a.btn.btn-info(href="") Choose
+            // PLAN
+            .col-lg-4
+                .plan
+                    h3.plan-header Extended
+                    .plan-price
+                        .text-lg
+                            sup: small $
+                            | 900
+                            // span.plan-period /mo
+                    ul.plan-features
+                        li
+                            em.fa.fa-check
+                            | Unlimited Styles
+                        li
+                            em.fa.fa-check
+                            | RTL &amp; Translation
+                        li
+                            em.fa.fa-check
+                            | Customer support
+                        li
+                            em.fa.fa-check
+                            | Free Updates
+                        li
+                            em.fa.fa-check
+                            | Unlimited clients
+                        li
+                            em.fa.fa-check
+                            | Multiple installation
+                        li
+                            em.fa.fa-check
+                            | Ready for resale
+                    hr
+                    .text-center
+                        a.btn.btn-info(href="") Choose
+                p.text-center.text-muted: small * Subject to specific license terms. Price and features listed for demo only.
+        // END PLAN TABLE
+
+
+        .text-center.my-3.py-4
+            .h2.text-bold Native styles
+            p Example plan table using card for demonstration
+
+        // START PLAN TABLE
+        .row
+            // PLAN
+            .col-lg-4
+                .card.b
+                    .card-body.text-center.bb
+                        .text-bold STARTER
+                        h3.my-3
+                            sup $
+                            span.text-lg 17
+                            span /mo
+                    .card-body
+                        p
+                            em.fa.fa-check.fa-fw.text-green.mr-2
+                            span Unlimited Styles
+                        p
+                            em.fa.fa-check.fa-fw.text-green.mr-2
+                            span RTL &amp; Translation
+                        p
+                            em.fa.fa-check.fa-fw.text-green.mr-2
+                            span Customer support
+                        p
+                            em.fa.fa-check.fa-fw.text-green.mr-2
+                            span Free Updates
+                        p
+                            em.fa.fa-check.fa-fw.text-green.mr-2
+                            span Limited to one client
+                        p
+                            em.fa.fa-times.fa-fw.text-warning.mr-2
+                            span Multiple installation
+                        p
+                            em.fa.fa-times.fa-fw.text-warning.mr-2
+                            span Not ready for resale
+                    .card-body.text-center
+                        a.btn.btn-secondary.btn-lg(href="") Select this plan
+            // PLAN
+            .col-lg-4
+                .card.b
+                    .card-body.text-center.bg-green
+                        .text-bold IDEAL
+                        h3.my-3
+                            sup $
+                            span.text-lg 49
+                            span /mo
+                    .card-body
+                        p
+                            em.fa.fa-check.fa-fw.text-green.mr-2
+                            span Unlimited Styles
+                        p
+                            em.fa.fa-check.fa-fw.text-green.mr-2
+                            span RTL &amp; Translation
+                        p
+                            em.fa.fa-check.fa-fw.text-green.mr-2
+                            span Customer support
+                        p
+                            em.fa.fa-check.fa-fw.text-green.mr-2
+                            span Free Updates
+                        p
+                            em.fa.fa-check.fa-fw.text-green.mr-2
+                            span Limited to one client
+                        p
+                            em.fa.fa-check.fa-fw.text-green.mr-2
+                            span Multiple installation
+                        p
+                            em.fa.fa-times.fa-fw.text-warning.mr-2
+                            span Not ready for resale
+                    .card-body.text-center
+                        a.btn.btn-danger.btn-lg(href="") Select this plan
+            // PLAN
+            .col-lg-4
+                .card.b
+                    .card-body.text-center.bb
+                        .text-bold PREMIUM
+                        h3.my-3
+                            sup $
+                            span.text-lg 95
+                            span /mo
+                    .card-body
+                        p
+                            em.fa.fa-check.fa-fw.text-green.mr-2
+                            span Unlimited Styles
+                        p
+                            em.fa.fa-check.fa-fw.text-green.mr-2
+                            span RTL &amp; Translation
+                        p
+                            em.fa.fa-check.fa-fw.text-green.mr-2
+                            span Customer support
+                        p
+                            em.fa.fa-check.fa-fw.text-green.mr-2
+                            span Free Updates
+                        p
+                            em.fa.fa-check.fa-fw.text-green.mr-2
+                            span Limited to one client
+                        p
+                            em.fa.fa-check.fa-fw.text-green.mr-2
+                            span Multiple installation
+                        p
+                            em.fa.fa-check.fa-fw.text-green.mr-2
+                            span Ready for resale*
+                    .card-body.text-center
+                        a.btn.btn-secondary.btn-lg(href="") Select this plan
+
+        p.text-center.text-muted: small * Subject to specific license terms. Price and features listed for demo only.

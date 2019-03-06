@@ -1,0 +1,47 @@
+extends ../../_layout
+
+block active
+    - sidebar_active = 'sweetalert.html'
+
+block content
+    .content-heading
+        div
+            | SweetAlert
+            small A Beautiful Replacement For Javascript's "alert"
+
+    .container-fluid
+        h4.page-header.mt-0 Usage examples
+        .row
+            .col-lg-9.col-xl-6
+                p A basic message
+            .col-lg-3.col-xl-6
+                p
+                    a.btn.btn-primary#swal-demo1(href='') Try me!
+        .row
+            .col-lg-9.col-xl-6
+                p A title with a text under
+            .col-lg-3.col-xl-6
+                p
+                    a.btn.btn-primary#swal-demo2(href='') Try me!
+        .row
+            .col-lg-9.col-xl-6
+                p A success message!
+            .col-lg-3.col-xl-6
+                p
+                    a.btn.btn-primary#swal-demo3(href='') Try me!
+        .row
+            .col-lg-9.col-xl-6
+                p A warning message, with a function attached to the &quot;Confirm&quot;-button
+            .col-lg-3.col-xl-6
+                p
+                    a.btn.btn-primary#swal-demo4(href='') Try me!
+        .row
+            .col-lg-9.col-xl-6
+                p ... and by passing a parameter, you can execute something else for &quot;Cancel&quot;.
+            .col-lg-3.col-xl-6
+                p
+                    a.btn.btn-primary#swal-demo5(href='') Try me!
+
+block vendor_js
+    // SWEET ALERT
+    script(src='vendor/sweetalert/dist/sweetalert.min.js')

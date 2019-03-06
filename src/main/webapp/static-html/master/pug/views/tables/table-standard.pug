@@ -1,0 +1,235 @@
+extends ../../_layout
+
+block active
+    - sidebar_active = 'table-standard.html'
+
+block content
+    .content-heading
+        div
+            | Tables
+            small Bootstrap Responsive tables
+
+    // START row
+    .row
+        .col-xl-6
+            // START card
+            .card.card-default
+                .card-header
+                    | Kitchen Sink
+                .card-body
+                    // START table-responsive
+                    .table-responsive
+                        table.table.table-striped.table-bordered.table-hover
+                            thead
+                                tr
+                                    th #
+                                    th First Name
+                                    th Last Name
+                                    th Username
+                            tbody
+                                tr
+                                    td 1
+                                    td Mark
+                                    td Otto
+                                    td @mdo
+                                tr
+                                    td 2
+                                    td Jacob
+                                    td Thornton
+                                    td @fat
+                                tr
+                                    td 3
+                                    td Larry
+                                    td the Bird
+                                    td @twitter
+                    // END table-responsive
+            // END card
+        .col-xl-6
+            // START card
+            .card.card-default
+                .card-header
+                    | Basic Table
+                .card-body
+                    // START table-responsive
+                    .table-responsive
+                        table.table
+                            thead
+                                tr
+                                    th #
+                                    th First Name
+                                    th Last Name
+                                    th Username
+                            tbody
+                                tr
+                                    td 1
+                                    td Mark
+                                    td Otto
+                                    td @mdo
+                                tr
+                                    td 2
+                                    td Jacob
+                                    td Thornton
+                                    td @fat
+                                tr
+                                    td 3
+                                    td Larry
+                                    td the Bird
+                                    td @twitter
+                    // END table-responsive
+            // END card
+    // END row
+    // START row
+    .row
+        .col-xl-6
+            .card.card-default
+                .card-header
+                    | Striped Rows
+                .card-body
+                    .table-responsive
+                        table.table.table-striped
+                            thead
+                                tr
+                                    th #
+                                    th First Name
+                                    th Last Name
+                                    th Username
+                            tbody
+                                tr
+                                    td 1
+                                    td Mark
+                                    td Otto
+                                    td @mdo
+                                tr
+                                    td 2
+                                    td Jacob
+                                    td Thornton
+                                    td @fat
+                                tr
+                                    td 3
+                                    td Larry
+                                    td the Bird
+                                    td @twitter
+        .col-xl-6
+            .card.card-default
+                .card-header
+                    | Bordered Table
+                .card-body
+                    .table-responsive.table-bordered
+                        table.table
+                            thead
+                                tr
+                                    th #
+                                    th First Name
+                                    th Last Name
+                                    th Username
+                            tbody
+                                tr
+                                    td 1
+                                    td Mark
+                                    td Otto
+                                    td @mdo
+                                tr
+                                    td 2
+                                    td Jacob
+                                    td Thornton
+                                    td @fat
+                                tr
+                                    td 3
+                                    td Larry
+                                    td the Bird
+                                    td @twitter
+    // END row
+
+    .card.card-default
+        .card-header
+            | Dark Table
+        table.table.table-dark
+                thead
+                        tr
+                                th(scope='col') #
+                                th(scope='col') First
+                                th(scope='col') Last
+                                th(scope='col') Handle
+                tbody
+                        tr
+                                th(scope='row') 1
+                                td Mark
+                                td Otto
+                                td @mdo
+                        tr
+                                th(scope='row') 2
+                                td Jacob
+                                td Thornton
+                                td @fat
+                        tr
+                                th(scope='row') 3
+                                td Larry
+                                td the Bird
+                                td @twitter
+
+    // START row
+    .row
+        .col-xl-6
+            .card.card-default
+                .card-header
+                    | Hover Rows
+                .card-body
+                    .table-responsive
+                        table.table.table-hover
+                            thead
+                                tr
+                                    th #
+                                    th First Name
+                                    th Last Name
+                                    th Username
+                            tbody
+                                tr
+                                    td 1
+                                    td Mark
+                                    td Otto
+                                    td @mdo
+                                tr
+                                    td 2
+                                    td Jacob
+                                    td Thornton
+                                    td @fat
+                                tr
+                                    td 3
+                                    td Larry
+                                    td the Bird
+                                    td @twitter
+        .col-xl-6
+            .card.card-default
+                .card-header
+                    | Context Classes
+                .card-body
+                    .table-responsive
+                        table.table
+                            thead
+                                tr
+                                    th #
+                                    th First Name
+                                    th Last Name
+                                    th Username
+                            tbody
+                                tr.table-success
+                                    td 1
+                                    td Mark
+                                    td Otto
+                                    td @mdo
+                                tr.table-info
+                                    td 2
+                                    td Jacob
+                                    td Thornton
+                                    td @fat
+                                tr.table-warning
+                                    td 3
+                                    td Larry
+                                    td the Bird
+                                    td @twitter
+                                tr.table-danger
+                                    td 4
+                                    td John
+                                    td Smith
+                                    td @jsmith
+    // END row

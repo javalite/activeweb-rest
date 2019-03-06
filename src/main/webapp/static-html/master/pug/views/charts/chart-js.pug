@@ -1,0 +1,40 @@
+extends ../../_layout
+
+block active
+    - sidebar_active = 'chart-js.html'
+
+block content
+    .content-heading Chart JS
+
+    .container-fluid.container-md
+        .row.mb-3
+            .col-xl-6
+                h3.mb-3.py-2 Line Chart
+                div
+                    canvas#chartjs-linechart
+            .col-xl-6
+                h3.mb-3.py-2 Bar Chart
+                div
+                    canvas#chartjs-barchart
+        .row.mb-3
+            .col-lg-6
+                h3.mb-3.py-2 Polar Area Chart
+                div
+                    canvas#chartjs-polarchart
+            .col-lg-6
+                h3.mb-3.py-2 Radar Chart
+                div
+                    canvas#chartjs-radarchart
+        .row.mb-3
+            .col-lg-6
+                h3.mb-3.py-2 Pie Chart
+                div
+                    canvas#chartjs-piechart
+            .col-lg-6
+                h3.mb-3.py-2 Doughnut Chart
+                div
+                    canvas#chartjs-doughnutchart
+
+block vendor_js
+    // CHART.JS
+    script(src='vendor/chart.js/dist/Chart.js')

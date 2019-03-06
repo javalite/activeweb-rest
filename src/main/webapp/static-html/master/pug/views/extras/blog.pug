@@ -1,0 +1,202 @@
+extends ../../_layout
+
+block active
+    - sidebar_active = 'blog.html'
+
+block content
+
+    .row
+        // Blog Content
+        .col-xl-9
+            .card-columns
+                .card
+                    a(href="#")
+                        img.img-fluid(src="img/bg1.jpg", alt='demo')
+                    .card-body
+                        p.d-flex
+                            span
+                                small.mr-1 By
+                                    a.ml-1(href="#") Erica Castro
+                                small.mr-1 May 03, 2015
+                            span.ml-auto
+                                small
+                                    strong 56
+                                    span Comments
+                        h4
+                            a(href="#") Trip down the river
+                        p Aenean in sollicitudin velit. Nam sem magna, tristique non facilisis a, porta ut elit. Aliquam luctus nulla in justo euismod blandit. Aliquam condimentum enim a risus cursus blandit.
+                .card
+                    .card-body.bg-primary
+                        h3.my-3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    .card-body
+                        p.d-flex
+                            span
+                                small.mr-1 By
+                                    a.ml-1(href="#") Erica Castro
+                                small.mr-1 May 03, 2015
+                            span.ml-auto
+                                small
+                                    strong 56
+                                    span Comments
+                .card
+                    a(href="#")
+                        img.img-fluid(src="img/bg10.jpg", alt='demo')
+                    .card-body
+                        p.d-flex
+                            span
+                                small.mr-1 By
+                                    a.ml-1(href="#") Erin Clark
+                                small.mr-1 Apr 13, 2015
+                            span.ml-auto
+                                small
+                                    strong 1000
+                                    span Comments
+                        h4
+                            a(href="#") New camera
+                        p Nullam posuere euismod volutpat. Quisque in ligula eget libero tristique varius sed euismod dolor. Sed ultrices, diam varius pellentesque porta, nulla neque auctor elit, quis tempus orci massa eget odio. Duis eleifend elementum commodo. Donec volutpat tristique laoreet. Cras vitae turpis enim, eget malesuada erat. Suspendisse quam leo, gravida a ullamcorper a, interdum id odio. Nullam eu lacus in nibh rutrum ornare at eget tellus.
+                .card
+                    a(href="#")
+                        img.img-fluid(src="img/bg2.jpg", alt='demo')
+                    .card-body
+                        p.d-flex
+                            span
+                                small.mr-1 By
+                                    a.ml-1(href="#") Erica Castro
+                                small.mr-1 May 03, 2015
+                            span.ml-auto
+                                small
+                                    strong 56
+                                    span Comments
+                        h4
+                            a(href="#") Reviewing latests phones
+                        p Aenean in sollicitudin velit. Nam sem magna, tristique non facilisis a, porta ut elit. Aliquam luctus nulla in justo euismod blandit. Aliquam condimentum enim a risus cursus blandit.
+                .card
+                    a(href="#")
+                        img.img-fluid(src="img/bg8.jpg", alt='demo')
+                    .card-body
+                        p.d-flex
+                            span
+                                small.mr-1 By
+                                    a.ml-1(href="#") Allen Stephens
+                                small.mr-1 May 03, 2015
+                            span.ml-auto
+                                small
+                                    strong 5600
+                                    span Comments
+                        h4
+                            a(href="#") Workspace showcase
+                        p Aenean iaculis diam lectus. Morbi quis purus velit. Maecenas tincidunt tempus sapien id ultrices. Vivamus fermentum libero vel felis aliquet interdum.
+                .card
+                    a(href="#")
+                        img.img-fluid(src="img/bg3.jpg", alt='demo')
+                    .card-body
+                        p.d-flex
+                            span
+                                small.mr-1 By
+                                    a.ml-1(href="#") Erica Castro
+                                small.mr-1 May 03, 2015
+                            span.ml-auto
+                                small
+                                    strong 56
+                                    span Comments
+                        h4
+                            a(href="#") Incredible panoramic
+                        p Aenean in sollicitudin velit. Nam sem magna, tristique non facilisis a, porta ut elit. Aliquam luctus nulla in justo euismod blandit. Aliquam condimentum enim a risus cursus blandit.
+                .card
+                    .card-body.bg-purple
+                        h3.my-3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    .card-body
+                        p.d-flex.m-0
+                            span
+                                small.mr-1 By
+                                    a.ml-1(href="#") Ava Chavez
+                                small.mr-1 May 03, 2015
+                            span.ml-auto
+                                small
+                                    strong 999
+                                    span Comments
+                .card
+                    a(href="#")
+                        img.img-fluid(src="img/bg4.jpg", alt='demo')
+                    .card-body
+                        p.d-flex
+                            span
+                                small.mr-1 By
+                                    a.ml-1(href="#") Danny Ford
+                                small.mr-1 May 03, 2015
+                            span.ml-auto
+                                small
+                                    strong 1000
+                                    span Comments
+                        h4
+                            a(href="#") Sunset in the forest
+                .card
+                    a(href="#")
+                        img.img-fluid(src="img/bg5.jpg", alt='demo')
+                    .card-body
+                        p.d-flex
+                            span
+                                small.mr-1 By
+                                    a.ml-1(href="#") Danny Ford
+                                small.mr-1 May 03, 2015
+                            span.ml-auto
+                                small
+                                    strong 1000
+                                    span Comments
+                        h4
+                            a(href="#") Tech review
+        // Blog Sidebar
+        .col-xl-3
+            // Search
+            .card.card-default
+                .card-header Search
+                .card-body
+                    form.form-horizontal
+                        .input-group
+                            input.form-control(type='text', placeholder='Search for...')
+                            span.input-group-btn
+                                button.btn.btn-secondary(type='button')
+                                    em.fa.fa-search
+            // Categories
+            .card.card-default
+                .card-header Categories
+                .card-body
+                    ul.list-unstyled
+                        li
+                            a(href="#")
+                                em.fa.fa-angle-right.fa-fw
+                                | Smartphones
+                        li
+                            a(href="#")
+                                em.fa.fa-angle-right.fa-fw
+                                | Mobiles
+                        li
+                            a(href="#")
+                                em.fa.fa-angle-right.fa-fw
+                                | Tech
+                        li
+                            a(href="#")
+                                em.fa.fa-angle-right.fa-fw
+                                | Inpiration
+                        li
+                            a(href="#")
+                                em.fa.fa-angle-right.fa-fw
+                                | Workspace
+            // Tag Cloud
+            .card.card-default
+                .card-header Tag Cloud
+                .card-body
+                    #jqcloud.mw-100
+            // Ads
+            .card.card-default
+                .card-header Ads
+                .card-body.ie-fix-flex
+                    a(href="#")
+                        img.img-fluid.img-thumbnail(src="img/mockup.png", alt='demo')
+
+block vendor_css
+    // JQCLOUD
+    link(rel='stylesheet', href='vendor/jqcloud2/dist/jqcloud.css')
+block vendor_js
+    // JQCLOUD
+    script(src='vendor/jqcloud2/dist/jqcloud.js')

@@ -1,0 +1,40 @@
+extends ../../_layout
+
+block active
+    - sidebar_active = 'chart-morris.html'
+
+block content
+    .content-heading Morris JS
+
+    .container-fluid
+        .row
+            .col-lg-6
+                .card.card-default
+                    .card-header Line
+                    .card-body
+                        #morris-line
+            .col-lg-6
+                .card.card-default
+                    .card-header Area
+                    .card-body
+                        #morris-area
+        .row
+            .col-lg-6
+                .card.card-default
+                    .card-header Bar
+                    .card-body
+                        #morris-bar
+            .col-lg-6
+                .card.card-default
+                    .card-header Donut
+                    .card-body
+                        #morris-donut
+
+block vendor_css
+    // MORRIS
+    link(rel='stylesheet', href='vendor/morris.js.so/morris.css')
+block vendor_js
+    // RAPHAEL
+    script(src="vendor/raphael/raphael.js")
+    // MORRIS
+    script(src="vendor/morris.js.so/morris.js")

@@ -1,0 +1,44 @@
+extends ../../_layout
+
+block active
+    - sidebar_active = 'chart-chartist.html'
+
+block content
+    .content-heading Chartist
+
+    .container-fluid
+        .row
+            .col-lg-4
+                .card.card-default
+                    .card-header Bar bipolar
+                    .card-body
+                        #ct-bar1
+            .col-lg-4
+                .card.card-default
+                    .card-header Bar Horizontal
+                    .card-body
+                        #ct-bar2
+            .col-lg-4
+                .card.card-default
+                    .card-header Line
+                    .card-body
+                        #ct-line1
+        .row
+            .col-lg-6
+                .card.card-default
+                    .card-header Smil Animations
+                    .card-body
+                        #ct-line2
+            .col-lg-6
+                .card.card-default
+                    .card-header SVG Path Animations
+                    .card-body
+                        #ct-line3
+
+
+block vendor_css
+    // CHARTIST
+    link(rel='stylesheet', href='vendor/chartist/dist/chartist.css')
+block vendor_js
+    // CHARTIST
+    script(src='vendor/chartist/dist/chartist.js')

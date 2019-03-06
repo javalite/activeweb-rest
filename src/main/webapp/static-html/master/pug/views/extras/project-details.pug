@@ -1,0 +1,227 @@
+extends ../../_layout
+
+block active
+  - sidebar_active = 'project-details.html'
+
+block content
+    .content-heading
+        div
+            | Project #1 Management
+            small In lacinia tellus vitae nisl consectetur pellentesque.
+
+    .row
+
+        .col-xl-8
+            // Main card
+            .card.b
+                .card-header
+                    .float-right.mt-2
+                        .badge.badge-info started
+                    h4.my-2
+                        span Project #1
+                .card-body.bb.bt
+                    a.inline(href="#", data-toggle="tooltip", data-title="Team leader"): img.rounded-circle.thumb48(src="img/user/03.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/02.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/04.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/05.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/06.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/07.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/08.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/09.jpg", alt="project member")
+                    .float-right.mt-2
+                        button(type="button").btn.btn-secondary Add Member
+                .card-body
+                    h4 Description
+                    p Nam eget risus tellus. Vestibulum pretium mollis ligula, at ultrices quam egestas et. Sed mattis tincidunt ligula, ac porttitor lectus porttitor condimentum. Ut et ligula ante, nec mollis lacus. Aliquam erat volutpat. Aliquam auctor diam ut urna lacinia faucibus. Proin est sapien, convallis non hendrerit nec, laoreet ut ipsum. Aenean vehicula, nulla vel pharetra accumsan, elit risus pretium arcu, nec ultrices urna ligula vel nunc. Cras porttitor orci eget nibh pharetra mollis.
+                    p Maecenas at porta purus. Ut eu aliquam orci. Praesent in libero at neque gravida venenatis auctor nec arcu.
+                    p.text-right
+                        button.btn.btn-secondary(type="button") View all documents
+
+                .card-body
+                    p
+                        small.float-left Activity over time
+                        span.text-center(data-sparkline="",data-type='line', data-height='100', data-width='100%', data-line-width='3', data-line-color="#23b7e5", data-chart-range-min="0",data-spot-color='#888', data-min-spot-color="#23b7e5", data-max-spot-color="#23b7e5", data-fill-color="#e5f2fa", data-highlight-line-color='#fff', data-spot-radius='5', data-values="2,4,5,6,10,7,8,5,7,7,11,8,6,9,11,9,13,14,12,16", data-resize="true")
+                .card-body
+                    .row.text-center
+                        .col-4
+                            .inline(data-sparkline="", data-values="20,80", data-type='pie', data-height="60", data-slice-colors='["#edf1f2", "#23b7e5"]')
+                            p.mt-3 Issues
+                        .col-4
+                            .inline(data-sparkline="", data-values="60,40", data-type='pie', data-height="60", data-slice-colors='["#edf1f2", "#27c24c"]')
+                            p.mt-3 Commits
+                        .col-4
+                            .inline(data-sparkline="", data-values="90,10", data-type='pie', data-height="60", data-slice-colors='["#edf1f2", "#ff902b"]')
+                            p.mt-3 Files
+            // End Main card
+
+            // Team messages
+            .card.card-default
+                .card-header
+                    .px-2.float-right.badge.badge-danger 5
+                    .px-2.mr-2.float-right.badge.badge-success 12
+                    .card-title Team messages
+
+                // START list group
+                .list-group(data-height="180", data-scrollable="")
+                    // START list group item
+                    .list-group-item.list-group-item-action
+                        .media
+                            img.align-self-start.mx-2.circle.thumb32(src="img/user/02.jpg", alt="Image")
+                            .media-body.text-truncate
+                                p.mb-1
+                                    strong.text-primary
+                                        span.circle.bg-success.circle-lg.text-left
+                                        span Catherine Ellis
+                                p.mb-1.text-sm Cras sit amet nibh libero, in gravida nulla. Nulla...
+                            .ml-auto
+                                small.text-muted.ml-2 2h
+                    // END list group item
+                    // START list group item
+                    .list-group-item.list-group-item-action
+                        .media
+                            img.align-self-start.mx-2.circle.thumb32(src="img/user/03.jpg", alt="Image")
+                            .media-body.text-truncate
+                                p.mb-1
+                                    strong.text-primary
+                                        span.circle.bg-success.circle-lg.text-left
+                                        span Jessica Silva
+                                p.mb-1.text-sm Cras sit amet nibh libero, in gravida nulla. Nulla...
+                            .ml-auto
+                                small.text-muted.ml-2 3h
+                    // END list group item
+                    // START list group item
+                    .list-group-item.list-group-item-action
+                        .media
+                            img.align-self-start.mx-2.circle.thumb32(src="img/user/09.jpg", alt="Image")
+                            .media-body.text-truncate
+                                p.mb-1
+                                    strong.text-primary
+                                        span.circle.bg-danger.circle-lg.text-left
+                                        span Jessie Wells
+                                p.mb-1.text-sm Cras sit amet nibh libero, in gravida nulla. Nulla...
+                            .ml-auto
+                                small.text-muted.ml-2 4h
+                    // END list group item
+                    // START list group item
+                    .list-group-item.list-group-item-action
+                        .media
+                            img.align-self-start.mx-2.circle.thumb32(src="img/user/12.jpg", alt="Image")
+                            .media-body.text-truncate
+                                p.mb-1
+                                    strong.text-primary
+                                        span.circle.bg-danger.circle-lg.text-left
+                                        span Rosa Burke
+                                p.mb-1.text-sm Cras sit amet nibh libero, in gravida nulla. Nulla...
+                            .ml-auto
+                                small.text-muted.ml-2  1d
+                    // END list group item
+                    // START list group item
+                    .list-group-item.list-group-item-action
+                        .media
+                            img.align-self-start.mx-2.circle.thumb32(src="img/user/10.jpg", alt="Image")
+                            .media-body.text-truncate
+                                p.mb-1
+                                    strong.text-primary
+                                        span.circle.bg-danger.circle-lg.text-left
+                                        span Michelle Lane
+                                p.mb-1.text-sm Mauris eleifend, libero nec cursus lacinia...
+                            .ml-auto
+                                small.text-muted.ml-2  2d
+                    // END list group item
+                // END list group
+                // START card footer
+                .card-footer
+                    .input-group
+                        input.form-control.form-control-sm(type='text', placeholder='Search message ..')
+                        span.input-group-btn
+                            button.btn.btn-secondary.btn-sm(type='submit')
+                                i.fa.fa-search
+                // END card-footer
+            // End Team messages
+
+        .col-xl-4
+            // Aside card
+            .card.b
+                .card-body.bb
+                    .clearfix
+                        .float-left
+                            button(type="button").btn.btn-secondary.btn-oval
+                                em.fa.fa-play.fa-fw.text-muted
+                                span Start
+                            button(type="button").btn.btn-secondary.btn-oval
+                                em.fa.fa-pause.fa-fw.text-muted
+                                span Pause
+                        .float-right
+                            button(type="button").btn.btn-danger.btn-oval Cancel
+                .card-body.bb
+                    .d-flex.align-items-center
+                        .w-100: .progress.progress-xs.m-0: .progress-bar.bg-info(style="width:48%")
+                        .wd-xxs.text-right: .text-bold.text-muted 48%
+                .card-body
+                    ul.list-inline.my-2
+                        li.list-inline-item: .badge.p-1.bg-warning priority
+                        li.list-inline-item: .badge.p-1.bg-gray angularjs
+                        li.list-inline-item: .badge.p-1.bg-gray jquery
+                        li.list-inline-item: .badge.p-1.bg-gray gulp
+                        li.list-inline-item: .badge.p-1.bg-gray git
+                        li.list-inline-item: .badge.p-1.bg-gray ios
+                table.table: tbody
+                    tr
+                        td: strong Start date
+                        td 02/01/2016
+                    tr
+                        td: strong Estimated Hours
+                        td 122hs
+                    tr
+                        td: strong Time Consumed
+                        td 62hs
+                    tr
+                        td: strong Commits
+                        td 140
+                    tr
+                        td: strong Issues
+                        td 39
+                    tr
+                        td: strong Files
+                        td 87
+                    tr
+                        td: strong Members
+                        td
+                            p Tara Sanders
+                            p Alan Smith
+                            p Priscilla Peters
+                            p Madison Willis
+                            p Lesa Marshall
+                            p Kylie Freeman
+                    tr
+                        td: strong Recent files
+                        td
+                            .list-group(data-height="110", data-scrollable="")
+                                table.table.table-bordered.bg-transparent: tbody
+                                    tr
+                                        td: em.fa-lg.far.fa-file-code
+                                        td: a(href="#").text-muted database.controller.js
+                                    tr
+                                        td: em.fa-lg.far.fa-file-image
+                                        td: a(href="#").text-muted baground-lg.png
+                                    tr
+                                        td: em.fa-lg.far.fa-file-code
+                                        td: a(href="#").text-muted picture.controller.js
+                                    tr
+                                        td: em.fa-lg.far.fa-file-word
+                                        td: a(href="#").text-muted applicat-diagrams.docx
+                                    tr
+                                        td: em.fa-lg.far.fa-file-code
+                                        td: a(href="#").text-muted database.controller.js
+                                    tr
+                                        td: em.fa-lg.far.fa-file-code
+                                        td: a(href="#").text-muted database.controller.js
+                p.text-right
+                    a(href="#").btn.btn-link Open repository
+            // end Aside card
+
+block vendor_js
+    // SLIMSCROLL
+    script(src='vendor/jquery-slimscroll/jquery.slimscroll.js')
+    // SPARKLINE
+    script(src='vendor/jquery-sparkline/jquery.sparkline.js')

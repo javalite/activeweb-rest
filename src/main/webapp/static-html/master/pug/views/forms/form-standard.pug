@@ -1,0 +1,466 @@
+extends ../../_layout
+
+block active
+    - sidebar_active = 'form-standard.html'
+
+block content
+    .content-heading
+        div
+            | Form Elements
+            small Standard and custom elements for any form
+
+    // START card
+    .card.card-default
+        .card-header  Inline form
+        .card-body
+            form
+                .form-row.align-items-center
+                    .col-auto
+                        label.sr-only(for='inlineFormInput') Name
+                        input#inlineFormInput.form-control.mb-2(type='text' placeholder='Jane Doe')
+                    .col-auto
+                        label.sr-only(for='inlineFormInputGroup') Username
+                        .input-group.mb-2
+                            .input-group-prepend
+                                .input-group-text @
+                            input#inlineFormInputGroup.form-control(type='text' placeholder='Username')
+                    .col-auto
+                        .form-check.mb-2
+                            input#autoSizingCheck.form-check-input(type='checkbox')
+                            label.form-check-label(for='autoSizingCheck')
+                                | Remember me
+                    .col-auto
+                        button.btn.btn-primary.mb-2(type='submit') Submit
+
+    // END card
+    // START row
+    .row
+        .col-md-6
+            // START card
+            .card.card-default
+                .card-header Stacked form
+                .card-body
+                    form
+                        .form-group
+                            label Email address
+                            input.form-control(type='email', placeholder='Enter email')
+                        .form-group
+                            label Password
+                            input.form-control(type='password', placeholder='Password')
+                        .checkbox.c-checkbox
+                            label
+                                input(type='checkbox', checked='')
+                                span.fa.fa-times
+                                | Check me out
+                        button.btn.btn-sm.btn-secondary(type='submit') Submit
+            // END card
+        .col-md-6
+            // START card
+            .card.card-default
+                .card-header Horizontal form
+                .card-body
+                    form.form-horizontal
+                        .form-group.row
+                            label.col-xl-2.col-form-label Email
+                            .col-xl-10
+                                input.form-control(type='email', placeholder='Email')
+                        .form-group.row
+                            label.col-xl-2.col-form-label Password
+                            .col-xl-10
+                                input.form-control(type='password', placeholder='Password')
+                        .form-group.row
+                            .col-xl-10
+                                .checkbox.c-checkbox
+                                    label
+                                        input(type='checkbox', checked='')
+                                        span.fa.fa-check
+                                        |  Remember me
+                        .form-group.row
+                            .col-xl-10
+                                button.btn.btn-sm.btn-secondary(type='submit') Sign in
+            // END card
+    // END row
+    // START card
+    .card.card-default
+        .card-header  Form elements
+        .card-body
+            form.form-horizontal(method='get', action="/")
+                fieldset
+                    legend Classic inputs
+                    .form-group.row
+                        label.col-md-2.col-form-label Rounded Corners
+                        .col-md-10
+                            input.form-control.form-control-rounded(type='text')
+                fieldset
+                    .form-group.row
+                        label.col-md-2.col-form-label With help
+                        .col-md-10
+                            input.form-control(type='text')
+                            span.form-text A block of help text that breaks onto a new line and may extend beyond one line.
+                fieldset
+                    .form-group.row
+                        label.col-md-2.col-form-label(for='input-id-1') Label focus
+                        .col-md-10
+                            input#input-id-1.form-control(type='text')
+                fieldset
+                    .form-group.row
+                        label.col-md-2.col-form-label Password
+                        .col-md-10
+                            input.form-control(type='password', name='password')
+                fieldset
+                    .form-group.row
+                        label.col-md-2.col-form-label Placeholder
+                        .col-md-10
+                            input.form-control(type='text', placeholder='placeholder')
+                fieldset
+                    .form-group.row
+                        label.col-md-2.col-form-label Disabled
+                        .col-md-10
+                            input.form-control(type='text', placeholder='Disabled input here...', disabled='')
+                fieldset
+                    .form-group.row
+                        label.col-md-2.col-form-label Static control
+                        .col-md-10
+                            p.form-control-plaintext email@example.com
+                fieldset
+                    .form-group.row
+                        label.col-md-2.col-form-label Checkboxes and radios
+                        .col-md-10
+                            .form-check
+                                input#defaultCheck1.form-check-input(type='checkbox' value='')
+                                label.form-check-label(for='defaultCheck1')
+                                    | Default checkbox
+                            .form-check
+                                input#defaultCheck2.form-check-input(type='checkbox' value='' disabled='')
+                                label.form-check-label(for='defaultCheck2')
+                                    | Disabled checkbox
+                            .form-check
+                                input#exampleRadios1.form-check-input(type='radio' name='exampleRadios' value='option1' checked='')
+                                label.form-check-label(for='exampleRadios1')
+                                    | Default radio
+                            .form-check
+                                input#exampleRadios2.form-check-input(type='radio' name='exampleRadios' value='option2')
+                                label.form-check-label(for='exampleRadios2')
+                                    | Second default radio
+                            .form-check.disabled
+                                input#exampleRadios3.form-check-input(type='radio' name='exampleRadios' value='option3' disabled='')
+                                label.form-check-label(for='exampleRadios3')
+                                    | Disabled radio
+                fieldset
+                    .form-group.row
+                        label.col-md-2.col-form-label Inline checkboxes and Radios
+                        .col-md-10
+                            .form-check.form-check-inline
+                                input#inlineCheckbox1.form-check-input(type='checkbox' value='option1')
+                                label.form-check-label(for='inlineCheckbox1') 1
+                            .form-check.form-check-inline
+                                input#inlineCheckbox2.form-check-input(type='checkbox' value='option2')
+                                label.form-check-label(for='inlineCheckbox2') 2
+                            .form-check.form-check-inline
+                                input#inlineCheckbox3.form-check-input(type='checkbox' value='option3' disabled='')
+                                label.form-check-label(for='inlineCheckbox3') 3 (disabled)
+                            .form-check.form-check-inline
+                                input#inlineRadio1.form-check-input(type='radio' name='inlineRadioOptions' value='option1')
+                                label.form-check-label(for='inlineRadio1') 1
+                            .form-check.form-check-inline
+                                input#inlineRadio2.form-check-input(type='radio' name='inlineRadioOptions' value='option2')
+                                label.form-check-label(for='inlineRadio2') 2
+                            .form-check.form-check-inline
+                                input#inlineRadio3.form-check-input(type='radio' name='inlineRadioOptions' value='option3' disabled='')
+                                label.form-check-label(for='inlineRadio3') 3 (disabled)
+
+                fieldset.last-child
+                    .form-group.row
+                        label.col-md-2.col-form-label Select
+                        .col-md-10
+                            select.custom-select.custom-select-lg.mb-3
+                                option(selected='') Open this select menu
+                                option(value='1') One
+                                option(value='2') Two
+                                option(value='3') Three
+                            select.custom-select.custom-select-sm
+                                option(selected='') Open this select menu
+                                option(value='1') One
+                                option(value='2') Two
+                                option(value='3') Three
+                            .row.mt-3
+                                .col-xl-4
+                                    select.custom-select(multiple='')
+                                        option(selected='') Open this select menu
+                                        option(value='1') One
+                                        option(value='2') Two
+                                        option(value='3') Three
+
+                fieldset
+                    legend Input variants
+                    .form-group.row
+                        label.col-md-2.col-form-label Custom Checkboxes &amp; radios
+                        .col-md-10
+                            .checkbox.c-checkbox
+                                label
+                                    input(type='checkbox', value='')
+                                    span.fa.fa-check
+                                    |  Option one
+                            .checkbox.c-checkbox
+                                label
+                                    input(type='checkbox', checked='', value='')
+                                    span.fa.fa-check
+                                    |  Option two checked
+                            .checkbox.c-checkbox
+                                label
+                                    input(type='checkbox', checked='', disabled='', value='')
+                                    span.fa.fa-check
+                                    |  Option three checked and disabled
+                            .checkbox.c-checkbox
+                                label
+                                    input(type='checkbox', disabled='', value='')
+                                    span.fa.fa-check
+                                    |  Option four disabled
+                            .c-radio
+                                label
+                                    input(type='radio', name='a', value='option1')
+                                    span.fa.fa-circle
+                                    |  Option one
+                            .c-radio
+                                label
+                                    input(type='radio', name='a', value='option2', checked='')
+                                    span.fa.fa-circle
+                                    |  Option two checked
+                            .c-radio
+                                label
+                                    input(type='radio', value='option2', checked='', disabled='')
+                                    span.fa.fa-circle
+                                    |  Option three checked and disabled
+                            .c-radio
+                                label
+                                    input(type='radio', name='a', disabled='')
+                                    span.fa.fa-circle
+                                    |  Option four disabled
+                fieldset
+                    .form-group.row
+                        label.col-md-2.col-form-label Inline checkboxes
+                        .col-md-10
+                            label.c-checkbox
+                                input#inlineCheckbox10(type='checkbox', value='option1')
+                                span.fa.fa-check
+                                |  a
+                            label.c-checkbox
+                                input#inlineCheckbox20(type='checkbox', value='option2')
+                                span.fa.fa-check
+                                |  b
+                            label.c-checkbox
+                                input#inlineCheckbox30(type='checkbox', value='option3')
+                                span.fa.fa-check
+                                |  c
+                fieldset
+                    .form-group.row
+                        label.col-md-2.col-form-label Rounded
+                        .col-md-10
+                            label.checkbox.c-checkbox.c-checkbox-rounded
+                                input#roundedcheckbox10(type='checkbox', checked)
+                                span.fa.fa-check
+                                |  Lorem
+                            label.checkbox.c-checkbox.c-checkbox-rounded
+                                input#roundedcheckbox20(type='checkbox')
+                                span.fa.fa-check
+                                |  Ipsum
+                fieldset
+                    .form-group.row
+                        label.col-md-2.col-form-label Inline radios
+                        .col-md-10
+                            label.c-radio
+                                input#inlineradio1(type='radio', name="i-radio", value='option1', checked)
+                                span.fa.fa-circle
+                                |  a
+                            label.c-radio
+                                input#inlineradio2(type='radio', name="i-radio", value='option2')
+                                span.fa.fa-circle
+                                |  b
+                            label.c-radio
+                                input#inlineradio3(type='radio', name="i-radio", value='option3')
+                                span.fa.fa-circle
+                                |  c
+                fieldset
+                    .form-group.row
+                        label.col-md-2.col-form-label Custom icons
+                        .col-md-10
+                            label.c-radio
+                                input#inlineradio10(type='radio', name="i-radio", value='option1', checked)
+                                span.fa.fa-check
+                                |  a
+                            label.c-radio
+                                input#inlineradio20(type='radio', name="i-radio", value='option2', checked)
+                                span.fa.fa-user
+                                |  b
+                            label.c-radio
+                                input#inlineradio30(type='radio', name="i-radio", value='option3', checked)
+                                span.fa.fa-tint
+                                |  c
+                            br
+                            label.c-checkbox
+                                input#inlinecheckbox10(type='checkbox', value='option1', checked)
+                                span.fa.fa-star
+                                |  a
+                            label.c-checkbox
+                                input#inlinecheckbox20(type='checkbox', value='option2', checked)
+                                span.fa.fa-heart
+                                |  b
+                            label.c-checkbox
+                                input#inlinecheckbox30(type='checkbox', value='option3', checked)
+                                span.fa.fa-bell
+                                |  c
+                fieldset
+                    .form-group.row
+                        label.col-md-2.col-form-label Input validation
+                        .col-md-10
+                            .form-row
+                                .col-lg-4.mb-3
+                                    label(for='validationServer01') First name
+                                    input#validationServer01.form-control.is-valid(type='text' placeholder='First name' value='Mark' required='')
+                                    .valid-feedback
+                                        | Looks good!
+                                .col-lg-4.mb-3
+                                    label(for='validationServer02') Last name
+                                    input#validationServer02.form-control.is-valid(type='text' placeholder='Last name' value='Otto' required='')
+                                    .valid-feedback
+                                        | Looks good!
+                                .col-lg-4.mb-3
+                                    label(for='validationServerUsername') Username
+                                    .input-group
+                                        .input-group-prepend
+                                            span#inputGroupPrepend3.input-group-text @
+                                        input#validationServerUsername.form-control.is-invalid(type='text' placeholder='Username' aria-describedby='inputGroupPrepend3' required='')
+                                        .invalid-feedback
+                                            | Please choose a username.
+                            .form-row
+                                .col-lg-6.mb-3
+                                    label(for='validationServer03') City
+                                    input#validationServer03.form-control.is-invalid(type='text' placeholder='City' required='')
+                                    .invalid-feedback
+                                        | Please provide a valid city.
+                                .col-lg-3.mb-3
+                                    label(for='validationServer04') State
+                                    input#validationServer04.form-control.is-invalid(type='text' placeholder='State' required='')
+                                    .invalid-feedback
+                                        | Please provide a valid state.
+                                .col-lg-3.mb-3
+                                    label(for='validationServer05') Zip
+                                    input#validationServer05.form-control.is-invalid(type='text' placeholder='Zip' required='')
+                                    .invalid-feedback
+                                        | Please provide a valid zip.
+                            .form-group
+                                .form-check
+                                    input#invalidCheck3.form-check-input.is-invalid(type='checkbox' value='' required='')
+                                    label.form-check-label(for='invalidCheck3')
+                                        | Agree to terms and conditions
+                                    .invalid-feedback
+                                        | You must agree before submitting.
+                            button.btn.btn-primary(type='submit') Submit form
+
+                fieldset
+                    .form-group.row
+                        label.col-md-2.col-form-label Column sizing
+                        .col-md-10
+                            .row
+                                .col-lg-2
+                                    input.form-control(type='text', placeholder='.col-lg-2')
+                                .col-lg-3
+                                    input.form-control(type='text', placeholder='.col-lg-3')
+                                .col-lg-4
+                                    input.form-control(type='text', placeholder='.col-lg-4')
+                fieldset
+                    .form-group.row
+                        label.col-md-2.col-form-label Input groups
+                        .col-md-10
+                            .input-group.mb-3
+                                .input-group-prepend
+                                    span#basic-addon1.input-group-text @
+                                input.form-control(type='text' placeholder='Username' aria-label='Username' aria-describedby='basic-addon1')
+                            .input-group.mb-3
+                                input.form-control(type='text' placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby='basic-addon2')
+                                .input-group-append
+                                    span#basic-addon2.input-group-text @example.com
+                            label(for='basic-url') Your vanity URL
+                            .input-group.mb-3
+                                .input-group-prepend
+                                    span#basic-addon3.input-group-text https://example.com/users/
+                                input#basic-url.form-control(type='text' aria-describedby='basic-addon3')
+                            .input-group.mb-3
+                                .input-group-prepend
+                                    span.input-group-text $
+                                input.form-control(type='text' aria-label='Amount (to the nearest dollar)')
+                                .input-group-append
+                                    span.input-group-text .00
+                            .input-group
+                                .input-group-prepend
+                                    span.input-group-text With textarea
+                                textarea.form-control(aria-label='With textarea')
+
+                fieldset
+                    .form-group.row
+                        label.col-md-2.col-form-label Button addons
+                        .col-md-10
+                            .input-group.mb-3
+                                .input-group-prepend
+                                    button.btn.btn-outline-secondary(type='button') Button
+                                input.form-control(type='text' placeholder='' aria-label='' aria-describedby='basic-addon1')
+                            .input-group.mb-3
+                                input.form-control(type='text' placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby='basic-addon2')
+                                .input-group-append
+                                    button.btn.btn-outline-secondary(type='button') Button
+
+                fieldset
+                    .form-group.row
+                        label.col-md-2.col-form-label With dropdowns
+                        .col-md-10
+                            .input-group.mb-3
+                                .input-group-prepend
+                                    button.btn.btn-outline-secondary.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Dropdown
+                                    .dropdown-menu
+                                        a.dropdown-item(href='#') Action
+                                        a.dropdown-item(href='#') Another action
+                                        a.dropdown-item(href='#') Something else here
+                                        .dropdown-divider(role='separator')
+                                        a.dropdown-item(href='#') Separated link
+                                input.form-control(type='text' aria-label='Text input with dropdown button')
+                            .input-group
+                                input.form-control(type='text' aria-label='Text input with dropdown button')
+                                .input-group-append
+                                    button.btn.btn-outline-secondary.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Dropdown
+                                    .dropdown-menu
+                                        a.dropdown-item(href='#') Action
+                                        a.dropdown-item(href='#') Another action
+                                        a.dropdown-item(href='#') Something else here
+                                        .dropdown-divider(role='separator')
+                                        a.dropdown-item(href='#') Separated link
+
+                fieldset
+                    .form-group.row
+                        label.col-md-2.col-form-label Segmented
+                        .col-md-10
+                            .input-group.mb-3
+                                .input-group-prepend
+                                    button.btn.btn-outline-secondary(type='button') Action
+                                    button.btn.btn-outline-secondary.dropdown-toggle.dropdown-toggle-split(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                        span.sr-only Toggle Dropdown
+                                    .dropdown-menu
+                                        a.dropdown-item(href='#') Action
+                                        a.dropdown-item(href='#') Another action
+                                        a.dropdown-item(href='#') Something else here
+                                        .dropdown-divider(role='separator')
+                                        a.dropdown-item(href='#') Separated link
+                                input.form-control(type='text' aria-label='Text input with segmented dropdown button')
+                            .input-group
+                                input.form-control(type='text' aria-label='Text input with segmented dropdown button')
+                                .input-group-append
+                                    button.btn.btn-outline-secondary(type='button') Action
+                                    button.btn.btn-outline-secondary.dropdown-toggle.dropdown-toggle-split(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                        span.sr-only Toggle Dropdown
+                                    .dropdown-menu
+                                        a.dropdown-item(href='#') Action
+                                        a.dropdown-item(href='#') Another action
+                                        a.dropdown-item(href='#') Something else here
+                                        .dropdown-divider(role='separator')
+                                        a.dropdown-item(href='#') Separated link
+
+    // END card

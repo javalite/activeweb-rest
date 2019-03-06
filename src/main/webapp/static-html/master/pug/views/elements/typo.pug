@@ -1,0 +1,199 @@
+extends ../../_layout
+
+block active
+    - sidebar_active = 'typo.html'
+
+block content
+    .content-heading Typography
+
+    // START row
+    .row
+        .col-xl-4
+            // START card
+            .card.card-default
+                .card-header
+                    | Headings
+                .card-body
+                    h1
+                        | Heading 1
+                        small Sub-heading
+                    h2
+                        | Heading 2
+                        small Sub-heading
+                    h3
+                        | Heading 3
+                        small Sub-heading
+                    h4
+                        | Heading 4
+                        small Sub-heading
+                    h5
+                        | Heading 5
+                        small Sub-heading
+                    h6
+                        | Heading 6
+                        small Sub-heading
+            // END card
+        .col-xl-4
+            // START card
+            .card.card-default
+                .card-header
+                    | Paragraphs
+                .card-body
+                    p.lead This is an example of lead body copy.
+                    p
+                        | This is an example of standard paragraph text. This is an example of
+                        a(href='#') link anchor text
+                        | within body copy.
+                    p
+                        small This is an example of small, fine print text.
+                    p
+                        strong This is an example of strong, bold text.
+                    p
+                        em This is an example of emphasized, italic text.
+                    br
+                    h4 Alignment Helpers
+                    p.text-left Left aligned text.
+                    p.text-center Center aligned text.
+                    p.text-right Right aligned text.
+            // END card
+        .col-xl-4
+            // START card
+            .card.card-default
+                .card-header
+                    | Emphasis Classes
+                .card-body
+                    p.text-muted This is an example of muted text.
+                    p.text-primary This is an example of primary text.
+                    p.text-success This is an example of success text.
+                    p.text-info This is an example of info text.
+                    p.text-warning This is an example of warning text.
+                    p.text-danger This is an example of danger text.
+            // END card
+    // END row
+    // START row
+    .row
+        .col-xl-4
+            // START card
+            .card.card-default
+                .card-header
+                    | Abbreviations
+                .card-body
+                    p
+                        | The abbreviation of the word attribute is
+                        abbr(title='attribute') attr
+                        | .
+                    p
+                        abbr.initialism(title='HyperText Markup Language') HTML
+                        | is an abbreviation for a programming language.
+                    br
+                    h4 Addresses
+                    address
+                        strong Twitter, Inc.
+                        br
+                        | 795 Folsom Ave, Suite 600
+                        br
+                        | San Francisco, CA 94107
+                        br
+                        abbr(title='Phone') P:
+                        | (123) 456-7890
+                    address
+                        strong Full Name
+                        br
+                        a(href='mailto:#') first.last@example.com
+            // END card
+        .col-xl-4
+            // START card
+            .card.card-default
+                .card-header
+                    | Blockquotes
+                .card-body
+                    h4 Default Blockquote
+                    blockquote
+                        p
+                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                    h4 Blockquote with Citation
+                    blockquote
+                        p
+                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                        small
+                            | Someone famous in
+                            cite(title='Source Title') Source Title
+                    h4 Right Aligned Blockquote
+                    blockquote.float-right
+                        p
+                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+            // END card
+        .col-xl-4
+            // START card
+            .card.card-default
+                .card-header
+                    | Lists
+                .card-body
+                    h4 Unordered List
+                    ul
+                        li List Item
+                        li List Item
+                        li
+                            ul
+                                li List Item
+                                li List Item
+                                li List Item
+                        li List Item
+                    h4 Ordered List
+                    ol
+                        li List Item
+                        li List Item
+                        li List Item
+                    h4 Unstyled List
+                    ul.list-unstyled
+                        li List Item
+                        li List Item
+                        li List Item
+                    h4 Inline List
+                    ul.list-inline
+                        li List Item
+                        li List Item
+                        li List Item
+            // END card
+    // END row
+    // START row
+    .row
+        .col-xl-4
+            // START card
+            .card.card-default
+                .card-header
+                    | Description Lists
+                .card-body
+                    dl.row
+                        dt.col-sm-3 Description lists
+                        dd.col-sm-9 A description list is perfect for defining terms.
+                        dt.col-sm-3 Euismod
+                        dd.col-sm-9
+                            p Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.
+                            p Donec id elit non mi porta gravida at eget metus.
+                        dt.col-sm-3 Malesuada porta
+                        dd.col-sm-9 Etiam porta sem malesuada magna mollis euismod.
+                        dt.col-sm-3.text-truncate Truncated term is truncated
+                        dd.col-sm-9
+                            | Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                        dt.col-sm-3 Nesting
+                        dd.col-sm-9
+                            dl.row
+                                dt.col-sm-4 Nested definition list
+                                dd.col-sm-8 Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc.
+
+            // END card
+        .col-xl-4
+            // START card
+            .card.card-default
+                .card-header
+                    | Code
+                .card-body
+                    p
+                        | This is an example of an inline code element within body copy. Wrap inline code within a
+                        code <code>...</code>
+                        | tag.
+                    pre.
+                        \nThis is an example of preformatted text.
+            // END card
+    // END row

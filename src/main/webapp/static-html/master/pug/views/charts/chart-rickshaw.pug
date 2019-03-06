@@ -1,0 +1,38 @@
+extends ../../_layout
+
+block active
+    - sidebar_active = 'chart-rickshaw.html'
+
+block content
+    .content-heading Rickshaw
+
+    .container-fluid
+        .card.card-default
+            .card-header Rickshaw graph
+            .card-body
+                #rickshaw1
+        .row
+            .col-lg-4
+                .card.card-default
+                    .card-header Stacked Area
+                    .card-body
+                        #rickshaw2
+            .col-lg-4
+                .card.card-default
+                    .card-header Line
+                    .card-body
+                        #rickshaw3
+            .col-lg-4
+                .card.card-default
+                    .card-header Stacked Bars
+                    .card-body
+                        #rickshaw4
+
+block vendor_css
+    // RICKSHAW
+    link(rel='stylesheet', href='vendor/rickshaw/rickshaw.css')
+block vendor_js
+    // D3
+    script(src='vendor/d3/d3.js')
+    // RICKSHAW
+    script(src='vendor/rickshaw/rickshaw.js')

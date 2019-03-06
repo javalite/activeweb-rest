@@ -1,0 +1,156 @@
+extends ../../_layout
+
+block active
+    - sidebar_active = 'blog-post.html'
+
+block content
+    .row
+        // Blog Content
+        .col-xl-9
+            .card.card-default
+                .card-header
+                    .bb
+                        h2.text-lg.mt-3 Maecenas rutrum fringilla vehicula.
+                        p.d-flex
+                            span
+                                small.mr-1 By
+                                    a.ml-1(href="") Erica Castro
+                                small.mr-1 May 03, 2015
+                            span.ml-auto
+                                small
+                                    strong 56
+                                    span Comments
+                .card-body.text-md
+                    p Praesent bibendum eros urna, in mattis est. Curabitur a purus urna, sit amet auctor erat. Praesent pellentesque augue eu tellus facilisis pretium. Aenean sollicitudin facilisis tortor eu mollis. Vivamus feugiat faucibus enim. Sed ut semper leo. Etiam feugiat risus massa. Nunc et magna in metus pharetra ultricies ac sit amet justo. Donec eu dolor sem, non auctor sapien. Suspendisse nisl nulla, interdum at fermentum eget, adipiscing in elit.
+                    p Proin est sapien, convallis non hendrerit nec, laoreet ut ipsum. Praesent blandit venenatis mauris ac cursus. Nulla commodo interdum magna consectetur lacinia. Maecenas vitae adipiscing mauris. Nam sodales sollicitudin adipiscing.
+                    br
+                    .row
+                        .col-3
+                            a(href=""): img.img-fluid(src="img/bg4.jpg", alt='demo')
+                        .col-3
+                            a(href=""): img.img-fluid(src="img/bg5.jpg", alt='demo')
+                        .col-3
+                            a(href=""): img.img-fluid(src="img/bg7.jpg", alt='demo')
+                        .col-3
+                            a(href=""): img.img-fluid(src="img/bg8.jpg", alt='demo')
+                    br
+                    p Praesent tristique dui eu nunc fringilla et iaculis magna ornare. Proin sed erat sit amet metus rhoncus tincidunt. Vivamus commodo, tortor ut interdum posuere, urna risus aliquet purus, eu fringilla dui neque quis nisi. Proin posuere gravida ipsum, a pretium augue commodo eget. In id elit nulla. Donec nec magna a diam eleifend facilisis non in urna. Nam enim libero, lacinia a tristique a, accumsan sed purus. Phasellus ullamcorper rhoncus sagittis.
+                    p Sed eu rhoncus magna. Morbi non dui elementum nisl ultrices tincidunt. Nullam sagittis hendrerit erat, sit amet gravida ante tristique non. Nam arcu quam, aliquet eget varius sed, placerat et elit. Morbi nec luctus eros. Cras rutrum scelerisque auctor. Praesent malesuada erat ut tellus egestas sagittis. Etiam feugiat risus massa. Aliquam eget turpis eget dui eleifend suscipit ac sed dolor. Sed accumsan adipiscing enim. Sed auctor dignissim fringilla. Sed id turpis tellus. Nam vel tristique dolor. Ut scelerisque ligula tellus. Duis accumsan, est vel convallis dignissim, est massa pharetra ipsum, eu auctor nunc mi ac libero. Integer fermentum molestie massa at congue. Vestibulum congue tempus odio ac posuere. Integer lorem metus, rutrum non rhoncus sed, fringilla interdum urna.
+                    hr.my-4
+                    .btn-group(role='group', aria-label='...')
+                        button.btn.btn-secondary(type='button')
+                            em.fab.fa-facebook-f.text-muted
+                        button.btn.btn-secondary(type='button')
+                            em.fab.fa-twitter.text-muted
+                        button.btn.btn-secondary(type='button')
+                            em.fab.fa-google-plus-g.text-muted
+                        button.btn.btn-secondary(type='button')
+                            em.fa.fa-tumblr.text-muted
+                        button.btn.btn-secondary(type='button')
+                            em.fa.fa-pinterest.text-muted
+                        button.btn.btn-secondary(type='button')
+                            em.fa.fa-share-alt.text-muted
+            .card
+                .card-header 3 Comments
+                .card-body
+                    .media
+                        img.mr-3.rounded-circle.thumb64(src="img/user/01.jpg", alt='demo')
+                        .media-body
+                            h4
+                                a(href="") Susan Grant
+                                small 10 min
+                            p Donec ac massa tortor. In hac habitasse platea dictumst. Nam blandit fringilla faucibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae nisi eget metus semper congue.
+                            p Fusce ullamcorper placerat tortor, placerat consequat diam cursus posuere.
+                    hr
+                    .media
+                        img.mr-3.rounded-circle.thumb64(src="img/user/03.jpg", alt='demo')
+                        .media-body.mb-3
+                            h4
+                                a(href="") Dustin Dunn
+                                small 20 min
+                            | Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                            hr
+                            .media
+                                img.mr-3.rounded-circle.thumb64(src="img/user/06.jpg", alt='demo')
+                                .media-body
+                                    h4#nested-media-heading
+                                        a(href="") Marcus Gomez
+                                        small 1 hour
+                                    | Integer ac nisl et urna gravida malesuada. Vivamus fermentum libero vel felis aliquet interdum.
+            .card
+                .card-header
+                    em.fas.fa-pencil-alt.mr-2
+                    | Add your Comment
+                .card-body
+                    form.form-horizontal(action='/')
+                        .form-group.row
+                            .col-6
+                                input#post-firstname.form-control(type='text', name='post-firstname', placeholder='Your firstname')
+                            .col-6
+                                input#post-lastname.form-control(type='text', name='post-lastname', placeholder='Your lastname')
+                        .form-group.row
+                            .col-12
+                                textarea#post-comment.form-control(name='post-comment', rows='4', placeholder='Comment here..')
+                        .form-group.row
+                            .col-12
+                                button.btn.btn-primary(type='button') Send Comment
+        // Blog Sidebar
+        .col-xl-3
+            .row
+                .col-12
+                    // Search
+                    .card.card-default
+                        .card-header Search
+                        .card-body
+                            form.form-horizontal
+                                .input-group
+                                    input.form-control(type='text', placeholder='Search for...')
+                                    span.input-group-btn
+                                        button.btn.btn-secondary(type='button')
+                                            em.fa.fa-search
+                .col-4.col-xl-12
+                    // Categories
+                    .card.card-default
+                        .card-header Categories
+                        .card-body
+                            ul.list-unstyled
+                                li
+                                    a(href="")
+                                        em.fa.fa-angle-right.fa-fw
+                                        | Smartphones
+                                li
+                                    a(href="")
+                                        em.fa.fa-angle-right.fa-fw
+                                        | Mobiles
+                                li
+                                    a(href="")
+                                        em.fa.fa-angle-right.fa-fw
+                                        | Tech
+                                li
+                                    a(href="")
+                                        em.fa.fa-angle-right.fa-fw
+                                        | Inpiration
+                                li
+                                    a(href="")
+                                        em.fa.fa-angle-right.fa-fw
+                                        | Workspace
+                .col-4.col-xl-12
+                    // Tag Cloud
+                    .card.card-default
+                        .card-header Tag Cloud
+                        .card-body
+                            #jqcloud.mw-100
+                .col-4.col-xl-12
+                    // Ads
+                    .card.card-default
+                        .card-header Ads
+                        .card-body.ie-fix-flex
+                            a(href="")
+                                img.img-fluid.img-thumbnail(src="img/mockup.png", alt='demo')
+
+block vendor_css
+    // JQCLOUD
+    link(rel='stylesheet', href='vendor/jqcloud2/dist/jqcloud.css')
+block vendor_js
+    // JQCLOUD
+    script(src='vendor/jqcloud2/dist/jqcloud.js')

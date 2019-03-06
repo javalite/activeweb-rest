@@ -1,0 +1,132 @@
+extends ../../_layout
+
+block active
+  - sidebar_active = 'contacts.html'
+
+block content
+    .content-heading
+        | Contacts
+        .ml-auto
+            .btn-group
+                button.btn.btn-link(data-toggle="dropdown"): em.fa.fa-ellipsis-v.fa-lg
+                .dropdown-menu.dropdown-menu-right-forced.animated.fadeInLeft(role='menu')
+                    a.dropdown-item(href='')
+                        em.fa-fw.fa.fa-plus.mr-2
+                        span New contact
+                    a.dropdown-item(href='')
+                        em.fa-fw.fas.fa-share.mr-2
+                        span Import contact
+                    a.dropdown-item(href='')
+                        em.fa-fw.fas.fa-reply.mr-2
+                        span Export contacts
+
+    .row
+        .col-lg-4.col-sm-6
+            .card.card-default
+                .card-header
+                .card-body.text-center
+                    img.mb-2.img-fluid.rounded-circle.thumb64(src="img/user/02.jpg", alt="Contact")
+                    h4 Audrey Hunt
+                    p Hello, I'm a just a dummy contact in your contact list and this is my presentation text. Have fun!
+                .card-footer.d-flex
+                    div
+                        a(href="#").btn.btn-xs.btn-primary Send message
+                    .ml-auto
+                        a(href="#").btn.btn-xs.btn-secondary View
+        .col-lg-4.col-sm-6
+            .card.card-default
+                .card-header
+                .card-body.text-center
+                    img.mb-2.img-fluid.rounded-circle.thumb64(src="img/user/03.jpg", alt="Contact")
+                    h4 Leonard Price
+                    p Hello, I'm a just a dummy contact in your contact list and this is my presentation text. Have fun!
+                .card-footer.d-flex
+                    div
+                        a(href="#").btn.btn-xs.btn-primary Send message
+                    .ml-auto
+                        a(href="#").btn.btn-xs.btn-secondary View
+        .col-lg-4.col-sm-6
+            .card.card-default
+                .card-header
+                .card-body.text-center
+                    img.mb-2.img-fluid.rounded-circle.thumb64(src="img/user/04.jpg", alt="Contact")
+                    h4 Jamie Stephens
+                    p Hello, I'm a just a dummy contact in your contact list and this is my presentation text. Have fun!
+                .card-footer.d-flex
+                    div
+                        a(href="#").btn.btn-xs.btn-primary Send message
+                    .ml-auto
+                        a(href="#").btn.btn-xs.btn-secondary View
+        .col-lg-4.col-sm-6
+            .card.card-default
+                .card-header
+                .card-body.text-center
+                    img.mb-2.img-fluid.rounded-circle.thumb64(src="img/user/05.jpg", alt="Contact")
+                    h4 Tara Nelson
+                    p Hello, I'm a just a dummy contact in your contact list and this is my presentation text. Have fun!
+                .card-footer.d-flex
+                    div
+                        a(href="#").btn.btn-xs.btn-primary Send message
+                    .ml-auto
+                        a(href="#").btn.btn-xs.btn-secondary View
+        .col-lg-4.col-sm-6
+            .card.card-default
+                .card-header
+                .card-body.text-center
+                    img.mb-2.img-fluid.rounded-circle.thumb64(src="img/user/06.jpg", alt="Contact")
+                    h4 Constance Cook
+                    p Hello, I'm a just a dummy contact in your contact list and this is my presentation text. Have fun!
+                .card-footer.d-flex
+                    div
+                        a(href="#").btn.btn-xs.btn-primary.mr-1 Send message
+                        .ml-auto
+                    .float-right
+                        a(href="#").btn.btn-xs.btn-secondary View
+        .col-lg-4.col-sm-6
+            .card.card-default
+                .card-header
+                .card-body.text-center
+                    img.mb-2.img-fluid.rounded-circle.thumb64(src="img/user/07.jpg", alt="Contact")
+                    h4 Laura Palmr
+                    p Hello, I'm a just a dummy contact in your contact list and this is my presentation text. Have fun!
+                .card-footer.d-flex
+                    div
+                        a(href="#").btn.btn-xs.btn-primary Send message
+                    .ml-auto
+                        a(href="#").btn.btn-xs.btn-secondary View
+        .col-lg-4.col-sm-6
+            .card.card-default
+                .card-header
+                .card-body.text-center
+                    img.mb-2.img-fluid.rounded-circle.thumb64(src="img/user/08.jpg", alt="Contact")
+                    h4 Audrey Hunt
+                    p Hello, I'm a just a dummy contact in your contact list and this is my presentation text. Have fun!
+                .card-footer.d-flex
+                    div
+                        a(href="#").btn.btn-xs.btn-primary Call
+                    .ml-auto
+                        a(href="#").btn.btn-xs.btn-secondary View
+        .col-lg-4.col-sm-6
+            .card.card-default
+                .card-header
+                .card-body.text-center
+                    img.mb-2.img-fluid.rounded-circle.thumb64(src="img/user/09.jpg", alt="Contact")
+                    h4 Leslie Mckinney
+                    p Hello, I'm a just a dummy contact in your contact list and this is my presentation text. Have fun!
+                .card-footer.d-flex
+                    div
+                        a(href="#").btn.btn-xs.btn-primary Send message
+                    .ml-auto
+                        a(href="#").btn.btn-xs.btn-secondary View
+        .col-lg-4.col-sm-6
+            .card.card-default
+                .card-header
+                .card-body.text-center
+                    img.mb-2.img-fluid.rounded-circle.thumb64(src="img/user/04.jpg", alt="Contact")
+                    h4 Brian Mills
+                    p Hello, I'm a just a dummy contact in your contact list and this is my presentation text. Have fun!
+                .card-footer.d-flex
+                    div
+                        a(href="#").btn.btn-xs.btn-primary Send message
+                    .ml-auto
+                        a(href="#").btn.btn-xs.btn-secondary View

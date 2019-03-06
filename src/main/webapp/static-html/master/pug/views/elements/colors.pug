@@ -1,0 +1,34 @@
+extends ../../_layout
+
+block active
+    - sidebar_active = 'colors.html'
+
+block content
+    mixin paletteColor(colorClass)
+        .box-placeholder.b0.w-100(class=colorClass)= ('.'+colorClass)
+    mixin palette(brand)
+        .row.row-flush
+            .col-12.col-md-4
+                +paletteColor('bg-'+brand+'-light')
+            .col-12.col-md-4
+                +paletteColor('bg-'+brand)
+            .col-12.col-md-4
+                +paletteColor('bg-'+brand+'-dark')
+
+    .content-heading
+        div
+            | Colors
+            small Color swatches
+
+    - var brands = ['primary', 'success', 'info', 'warning', 'danger', 'inverse', 'green', 'pink', 'purple', 'yellow']
+    - var mono = ['gray-darker', 'gray-dark', 'gray', 'gray-light', 'gray-lighter']
+
+    .card.card-default
+        .card-body
+            each val in brands
+                +palette(val)
+
+            .row.row-flush
+                each col in mono
+                    .col.text-center.d-flex
+                        +paletteColor('bg-'+col)
