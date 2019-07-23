@@ -14,9 +14,8 @@
         <filter-name>dispatcher</filter-name>
         <filter-class>org.javalite.activeweb.RequestDispatcher</filter-class>
         <init-param>
-
             <param-name>exclusions</param-name>
-            <param-value>img,images,.jsp,.css,.js,.map,.ico,.html,.png,.jpg,.jpeg,.gif,downloads,assets,fancybox,themes,fonts,.otf,.ttf,.svg,.eot,.woff</param-value>
+            <param-value>css,images,js,ico</param-value>
         </init-param>
         <init-param>
             <param-name>root_controller</param-name>
