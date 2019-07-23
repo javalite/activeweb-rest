@@ -20,7 +20,7 @@
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>9.3.4.RC1</version>
                 <configuration>
-                    <scanIntervalSeconds>0</scanIntervalSeconds>
+                    <scanIntervalSeconds>1000000</scanIntervalSeconds>
                     <systemProperties>
                         <systemProperty>
                             <name>activejdbc.log</name>
