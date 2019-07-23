@@ -1,2 +1,6 @@
+*.iml
+*.iws
+*.ipr
+target
 .idea/
-activeweb-rest.iml
+.DS_Store
