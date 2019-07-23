@@ -9,7 +9,7 @@
     <name>JavaLite REST Example</name>
 
     <properties>
-        <javalite.version>2.3</javalite.version>
+        <javalite.version>2.2</javalite.version>
         <environments>development,test</environments>
     </properties>
 
@@ -123,7 +123,7 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>1.7.25</version>
+            <version>1.7.7</version>
         </dependency>
         <dependency>
             <groupId>org.codehaus.jackson</groupId>
