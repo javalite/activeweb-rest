@@ -1,0 +1,27 @@
+extends ../../_layout
+
+block active
+    - sidebar_active = 'sortable.html'
+
+block content
+    .content-heading
+        div
+            | Sortable
+            small Lightweight jQuery plugin to create sortable lists and grids using native HTML5 drag and drop API.
+
+    ul.list-group.sortable
+        li.list-group-item
+            em.fas.fa-bars.fa-fw.text-muted.mr-3
+            | Donald Hoffman
+        li.list-group-item
+            em.fas.fa-bars.fa-fw.text-muted.mr-3
+            | Wallace Barrett
+        li.list-group-item
+            em.fas.fa-bars.fa-fw.text-muted.mr-3
+            | Marsha Hicks
+        li.list-group-item
+            em.fas.fa-bars.fa-fw.text-muted.mr-3
+            | Roland Brown
+
+block vendor_js
+    script(src='vendor/html5sortable/dist/html5sortable.js')

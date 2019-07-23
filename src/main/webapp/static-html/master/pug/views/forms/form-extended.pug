@@ -1,0 +1,502 @@
+extends ../../_layout
+
+block active
+    - sidebar_active = 'form-extended.html'
+
+block content
+    .content-heading
+        div
+            | Form Extended
+            small New elements to extend the classic functions
+    // START card
+    .card.card-default
+        .card-header  Form elements
+        .card-body
+            form.form-horizontal(method='get', action="#")
+
+                fieldset
+                    legend.border-bottom.mb-4 New Components
+                    .form-group.row
+                        label.col-md-2.col-form-label
+                            | Slider
+                            br
+                            small Classic, range and vertical
+                        .col-md-4
+                            input.slider.slider-vertical(data-ui-slider="", type='text', value='', data-slider-min='5', data-slider-max='35', data-slider-step='1', data-slider-value='5', data-slider-orientation='vertical')
+                            input.slider.slider-vertical(data-ui-slider="", type='text', value='', data-slider-min='5', data-slider-max='35', data-slider-step='1', data-slider-value='10', data-slider-orientation='vertical')
+                            input.slider.slider-vertical(data-ui-slider="", type='text', value='', data-slider-min='5', data-slider-max='35', data-slider-step='1', data-slider-value='15', data-slider-orientation='vertical')
+                            input.slider.slider-vertical(data-ui-slider="", type='text', value='', data-slider-min='5', data-slider-max='35', data-slider-step='1', data-slider-value='20', data-slider-orientation='vertical')
+                            input.slider.slider-vertical(data-ui-slider="", type='text', value='', data-slider-min='5', data-slider-max='35', data-slider-step='1', data-slider-value='25', data-slider-orientation='vertical')
+                            input.slider.slider-vertical(data-ui-slider="", type='text', value='', data-slider-min='5', data-slider-max='35', data-slider-step='1', data-slider-value='30', data-slider-orientation='vertical')
+                            br
+                            br
+                            input.slider.slider-horizontal(data-ui-slider="", type='text', value='', data-slider-min='5', data-slider-max='20', data-slider-step='1', data-slider-value='10', data-slider-orientation='horizontal')
+                            br
+                            br
+                            input#sl2.slider(data-ui-slider="", type='text', value='', data-slider-min='10', data-slider-max='1000', data-slider-step='5', data-slider-value='[250,750]')
+
+                fieldset
+                    .form-group.row
+                        label.col-md-2.col-form-label Switch Small
+                        .col-md-10
+                            label.switch.switch-sm
+                                input(type='checkbox', checked="checked")
+                                span
+                    .form-group.row
+                        label.col-md-2.col-form-label Switch
+                        .col-md-10
+                            label.switch
+                                input(type='checkbox', checked="checked")
+                                span
+                    .form-group.row
+                        label.col-md-2.col-form-label Switch Large
+                        .col-md-10
+                            label.switch.switch-lg
+                                input(type='checkbox', checked="checked")
+                                span
+                    .form-group.row
+                        label.col-md-2.col-form-label Switch Radio
+                        .col-md-10
+                            label.switch.switch-lg
+                                input(type='radio', checked="checked", name="radioSwitch")
+                                span
+                            label.switch.switch-lg
+                                input(type='radio', name="radioSwitch")
+                                span
+                fieldset
+                    .form-group.row.mb-2
+                        label.col-md-2.col-form-label Color picker
+                        .col-md-8
+                            .row
+                                .col-12
+                                    p Automatically switches from hex to rgba format when transparency is selected:
+                                    input.form-control.demo-colorpicker(type='text', value='#5367ce')
+                                .col-12
+                                    p.mt-3 As a component:
+                                    .input-group.demo-colorpicker
+                                        input.form-control(type='text', value='#00AABB')
+                                        .input-group-append.input-group-addon
+                                            .input-group-text: i
+                                .col-12
+                                    p.mt-3 Inline mode:
+                                    .row
+                                        .col-6
+                                            #demo_cont.demo-colorpicker(data-container='#demo_cont', data-color='rgba(150,216,62,0.55)', data-inline='true')
+                                        .col-6
+                                            .demo-colorpicker(data-container='true', data-color='rgb(50,216,62)', data-inline='true')
+                                .col-12
+                                    p.mt-3 Quick select Bootstrap colors:
+                                    input#demo_selectors.form-control(type='text', data-format='hex', value='success')
+                fieldset
+                    .form-group.row.mb-2
+                        label.col-md-2.col-form-label Chosen Groups
+                        .col-md-10
+                            select.chosen-select.form-control
+                                //- option(value='')
+                                optgroup(label='NFC EAST')
+                                    option Dallas Cowboys
+                                    option New York Giants
+                                    option Philadelphia Eagles
+                                    option Washington Redskins
+                                optgroup(label='NFC NORTH')
+                                    option Chicago Bears
+                                    option Detroit Lions
+                                    option Green Bay Packers
+                                    option Minnesota Vikings
+                                optgroup(label='NFC SOUTH')
+                                    option Atlanta Falcons
+                                    option Carolina Panthers
+                                    option New Orleans Saints
+                                    option Tampa Bay Buccaneers
+                                optgroup(label='NFC WEST')
+                                    option Arizona Cardinals
+                                    option St. Louis Rams
+                                    option San Francisco 49ers
+                                    option Seattle Seahawks
+                                optgroup(label='AFC EAST')
+                                    option Buffalo Bills
+                                    option Miami Dolphins
+                                    option New England Patriots
+                                    option New York Jets
+                                optgroup(label='AFC NORTH')
+                                    option Baltimore Ravens
+                                    option Cincinnati Bengals
+                                    option Cleveland Browns
+                                    option Pittsburgh Steelers
+                                optgroup(label='AFC SOUTH')
+                                    option Houston Texans
+                                    option Indianapolis Colts
+                                    option Jacksonville Jaguars
+                                    option Tennessee Titans
+                                optgroup(label='AFC WEST')
+                                    option Denver Broncos
+                                    option Kansas City Chiefs
+                                    option Oakland Raiders
+                                    option San Diego Chargers
+
+                    .form-group.row
+                        label.col-md-2.col-form-label Chosen Multiple
+                        .col-md-10
+                            select.chosen-select.form-control(multiple)
+                                //- option(value='')
+                                option Dallas Cowboys
+                                option New York Giants
+                                option Philadelphia Eagles
+                                option Washington Redskins
+                                option Chicago Bears
+                                option Detroit Lions
+                                option Green Bay Packers
+                                option Minnesota Vikings
+                                option Atlanta Falcons
+                                option Carolina Panthers
+                                option New Orleans Saints
+                                option Tampa Bay Buccaneers
+                                option Arizona Cardinals
+                                option St. Louis Rams
+                                option San Francisco 49ers
+                                option Seattle Seahawks
+                                option Buffalo Bills
+                                option Miami Dolphins
+                                option New England Patriots
+                                option New York Jets
+                                option Baltimore Ravens
+                                option Cincinnati Bengals
+                                option Cleveland Browns
+                                option Pittsburgh Steelers
+                                option Houston Texans
+                                option Indianapolis Colts
+                                option Jacksonville Jaguars
+                                option Tennessee Titans
+                                option Denver Broncos
+                                option Kansas City Chiefs
+                                option Oakland Raiders
+                                option San Diego Chargers
+                fieldset
+                    .form-group.row
+                        label.col-md-2.col-form-label Masked input
+                        .col-md-10
+                            .row
+                                .col-md-6.mb-3
+                                    input.form-control(type='text', data-masked="", data-inputmask="'mask': '999-99-999-9999-9'", placeholder="ISBN")
+                                    span.form-text data-inputmask="'mask': '999-99-999-9999-9"'
+                                .col-md-6.mb-3
+                                    input.form-control(type='text', data-masked="", data-inputmask="'mask': '99/99/9999'", placeholder="Date")
+                                    span.form-text data-inputmask="'mask': '99/99/9999"'
+                                .col-md-6.mb-3
+                                    input.form-control(type='text', data-masked="", data-inputmask="'mask': '(999) 999-9999'", placeholder="Phone number")
+                                    span.form-text data-inputmask="'mask': '(999) 999-9999"'
+                                .col-md-6.mb-3
+                                    input.form-control(type='text', data-masked="", data-inputmask="'mask': 'aaaa-9999-aa99-9999'", placeholder="Custom Key")
+                                    span.form-text data-inputmask="'mask': 'aaaa-9999-aa99-9999"'
+                                .col-md-6.mb-3
+                                    input.form-control(type='text', data-masked="", data-inputmask="'mask': '$ 999.999.999,99'", placeholder="Currency Dolar")
+                                    span.form-text data-inputmask="'mask': '$ 999.999.999,99"'
+                                .col-md-6.mb-3
+                                    input.form-control(type='text', data-masked="", data-inputmask="'mask': '€ 999.999.999,99'", placeholder="Currency Euro")
+                                    span.form-text data-inputmask="'mask': '€ 999.999.999,99"'
+
+                fieldset
+                    .form-group.row.mb-2
+                        label.col-md-2.col-form-label.mb-2 Select2
+                        .col-md-10
+                            // SELECT2
+                            select#select2-1.form-control
+                                option(value='AL') Alabama
+                                option(value='AR') Arkansas
+                                option(value='IL') Illinois
+                                option(value='IA') Iowa
+                                option(value='KS') Kansas
+                                option(value='KY') Kentucky
+                                option(value='LA') Louisiana
+                                option(value='MN') Minnesota
+                                option(value='MS') Mississippi
+                                option(value='MO') Missouri
+                                option(value='OK') Oklahoma
+                                option(value='SD') South Dakota
+                                option(value='TX') Texas
+                                option(value='TN') Tennessee
+                                option(value='WI') Wisconsin
+                            p.my-2 Multiple
+                            select#select2-2.form-control
+                                optgroup(label='Alaskan/Hawaiian Time Zone')
+                                    option(value='AK') Alaska
+                                    option(value='HI') Hawaii
+                                optgroup(label='Pacific Time Zone')
+                                    option(value='CA') California
+                                    option(value='NV') Nevada
+                                    option(value='OR') Oregon
+                                    option(value='WA') Washington
+                                optgroup(label='Mountain Time Zone')
+                                    option(value='AZ') Arizona
+                                    option(value='CO') Colorado
+                                    option(value='ID') Idaho
+                                    option(value='MT') Montana
+                                    option(value='NE') Nebraska
+                                    option(value='NM') New Mexico
+                                    option(value='ND') North Dakota
+                                    option(value='UT') Utah
+                                    option(value='WY') Wyoming
+                                optgroup(label='Central Time Zone')
+                                    option(value='AL') Alabama
+                                    option(value='AR') Arkansas
+                                    option(value='IL') Illinois
+                                    option(value='IA') Iowa
+                                    option(value='KS') Kansas
+                                    option(value='KY') Kentucky
+                                    option(value='LA') Louisiana
+                                    option(value='MN') Minnesota
+                                    option(value='MS') Mississippi
+                                    option(value='MO') Missouri
+                                    option(value='OK') Oklahoma
+                                    option(value='SD') South Dakota
+                                    option(value='TX') Texas
+                                    option(value='TN') Tennessee
+                                    option(value='WI') Wisconsin
+                                optgroup(label='Eastern Time Zone')
+                                    option(value='CT') Connecticut
+                                    option(value='DE') Delaware
+                                    option(value='FL') Florida
+                                    option(value='GA') Georgia
+                                    option(value='IN') Indiana
+                                    option(value='ME') Maine
+                                    option(value='MD') Maryland
+                                    option(value='MA') Massachusetts
+                                    option(value='MI') Michigan
+                                    option(value='NH') New Hampshire
+                                    option(value='NJ') New Jersey
+                                    option(value='NY') New York
+                                    option(value='NC') North Carolina
+                                    option(value='OH') Ohio
+                                    option(value='PA') Pennsylvania
+                                    option(value='RI') Rhode Island
+                                    option(value='SC') South Carolina
+                                    option(value='VT') Vermont
+                                    option(value='VA') Virginia
+                                    option(value='WV') West Virginia
+                            p.my-2 Multiple Pills
+                            select#select2-3.form-control(multiple='multiple')
+                                optgroup(label='Alaskan/Hawaiian Time Zone')
+                                    option(value='AK', selected="selected") Alaska
+                                    option(value='HI') Hawaii
+                                optgroup(label='Pacific Time Zone')
+                                    option(value='CA') California
+                                    option(value='NV') Nevada
+                                    option(value='OR') Oregon
+                                    option(value='WA') Washington
+                                optgroup(label='Mountain Time Zone')
+                                    option(value='AZ') Arizona
+                                    option(value='CO') Colorado
+                                    option(value='ID') Idaho
+                                    option(value='MT') Montana
+                                    option(value='NE') Nebraska
+                                    option(value='NM') New Mexico
+                                    option(value='ND') North Dakota
+                                    option(value='UT') Utah
+                                    option(value='WY') Wyoming
+                                optgroup(label='Central Time Zone')
+                                    option(value='AL') Alabama
+                                    option(value='AR') Arkansas
+                                    option(value='IL') Illinois
+                                    option(value='IA') Iowa
+                                    option(value='KS') Kansas
+                                    option(value='KY') Kentucky
+                                    option(value='LA') Louisiana
+                                    option(value='MN') Minnesota
+                                    option(value='MS') Mississippi
+                                    option(value='MO') Missouri
+                                    option(value='OK') Oklahoma
+                                    option(value='SD') South Dakota
+                                    option(value='TX') Texas
+                                    option(value='TN') Tennessee
+                                    option(value='WI') Wisconsin
+                                optgroup(label='Eastern Time Zone')
+                                    option(value='CT') Connecticut
+                                    option(value='DE') Delaware
+                                    option(value='FL') Florida
+                                    option(value='GA') Georgia
+                                    option(value='IN') Indiana
+                                    option(value='ME') Maine
+                                    option(value='MD') Maryland
+                                    option(value='MA') Massachusetts
+                                    option(value='MI') Michigan
+                                    option(value='NH') New Hampshire
+                                    option(value='NJ') New Jersey
+                                    option(value='NY') New York
+                                    option(value='NC') North Carolina
+                                    option(value='OH') Ohio
+                                    option(value='PA') Pennsylvania
+                                    option(value='RI') Rhode Island
+                                    option(value='SC') South Carolina
+                                    option(value='VT') Vermont
+                                    option(value='VA') Virginia
+                                    option(value='WV') West Virginia
+                            p.my-2 Placeholders
+                            select#select2-4.form-control
+                                optgroup(label='Alaskan/Hawaiian Time Zone')
+                                    option(value='AK') Alaska
+                                    option(value='HI') Hawaii
+                                optgroup(label='Pacific Time Zone')
+                                    option(value='CA') California
+                                    option(value='NV') Nevada
+                                    option(value='OR') Oregon
+                                    option(value='WA') Washington
+                                optgroup(label='Mountain Time Zone')
+                                    option(value='AZ') Arizona
+                                    option(value='CO') Colorado
+                                    option(value='ID') Idaho
+                                    option(value='MT') Montana
+                                    option(value='NE') Nebraska
+                                    option(value='NM') New Mexico
+                                    option(value='ND') North Dakota
+                                    option(value='UT') Utah
+                                    option(value='WY') Wyoming
+                            // END SELECT2
+                fieldset
+                    .form-group.row.mb-2
+                        label.col-md-2.col-form-label.mb-2 DateTimePicker
+                        .col-xl-6.col-10
+                            #datetimepicker1.input-group.date
+                                input.form-control(type='text')
+                                span.input-group-append.input-group-addon
+                                    span.input-group-text.fas.fa-calendar-alt
+                    .form-group.row.mb-2
+                        label.col-md-2.col-form-label.mb-2 Format: 'mm-dd-yyyy'
+                        .col-xl-6.col-10
+                            #datetimepicker2.input-group.date
+                                input.form-control(type='text')
+                                span.input-group-append.input-group-addon
+                                    span.input-group-text.far.fa-clock
+                fieldset
+                    .form-group.row
+                        label.col-md-2.col-form-label Tags input
+                            span.text-sm.text-muted Type and press Enter
+                        .col-md-10
+                            input.form-control(type='text',data-role="tagsinput", value="Amsterdam,Washington,Sydney,Beijing,Cairo")
+                fieldset
+                    .form-group.row
+                        label.col-md-2.col-form-label File input
+                        .col-md-10
+                            input.form-control.filestyle(type='file', data-classbutton='btn btn-secondary', data-classinput="form-control inline", data-icon="<span class='fa fa-upload mr-2'></span>")
+                fieldset
+                    .form-group.row
+                        label.col-md-2.col-form-label Block Note Editor
+                        .col-md-10
+                            .card
+                                .card-body
+                                    textarea.form-control.note-editor(rows="10")
+                            p With margin
+                            .card
+                                .card-body
+                                    textarea.form-control.note-editor.note-editor-margin(rows="10")
+                fieldset
+                    .form-group.row
+                        label.col-md-2.col-form-label Simple wysiwyg
+                        .col-md-10
+                            .btn-toolbar(data-role='editor-toolbar', data-target='#editor')
+                                .btn-group.dropdown
+                                    a.btn.btn-secondary.dropdown-toggle(data-toggle='dropdown', title='Font')
+                                        em.fa.fa-font
+                                    .dropdown-menu
+                                        a.dropdown-item(href='javacript:void', data-edit='fontName Arial', style="font-family:'Arial'") Arial
+                                        a.dropdown-item(href='javacript:void', data-edit='fontName Sans', style="font-family:'Sans'") Sans
+                                        a.dropdown-item(href='javacript:void', data-edit='fontName Serif', style="font-family:'Serif'") Serif
+                                .btn-group.dropdown
+                                    a.btn.btn-secondary.dropdown-toggle(data-toggle='dropdown', title='Font Size')
+                                        em.fa.fa-text-height
+                                        | &nbsp;
+                                    .dropdown-menu
+                                        a.dropdown-item(href='javacript:void', data-edit='fontSize 5', style='font-size:24px') Huge
+                                        a.dropdown-item(href='javacript:void', data-edit='fontSize 3', style='font-size:18px') Normal
+                                        a.dropdown-item(href='javacript:void', data-edit='fontSize 1', style='font-size:14px') Small
+                                .btn-group
+                                    a.btn.btn-secondary(data-edit='bold', data-toggle="tooltip", title='Bold (Ctrl/Cmd+B)')
+                                        em.fa.fa-bold
+                                    a.btn.btn-secondary(data-edit='italic', data-toggle="tooltip", title='Italic (Ctrl/Cmd+I)')
+                                        em.fa.fa-italic
+                                    a.btn.btn-secondary(data-edit='strikethrough', data-toggle="tooltip", title='Strikethrough')
+                                        em.fa.fa-strikethrough
+                                    a.btn.btn-secondary(data-edit='underline', data-toggle="tooltip", title='Underline (Ctrl/Cmd+U)')
+                                        em.fa.fa-underline
+                                .btn-group
+                                    a.btn.btn-secondary(data-edit='insertunorderedlist', data-toggle="tooltip", title='Bullet list')
+                                        em.fa.fa-list-ul
+                                    a.btn.btn-secondary(data-edit='insertorderedlist', data-toggle="tooltip", title='Number list')
+                                        em.fa.fa-list-ol
+                                    a.btn.btn-secondary(data-edit='outdent', data-toggle="tooltip", title='Reduce indent (Shift+Tab)')
+                                        em.fas.fa-outdent
+                                    a.btn.btn-secondary(data-edit='indent', data-toggle="tooltip", title='Indent (Tab)')
+                                        em.fa.fa-indent
+                                .btn-group
+                                    a.btn.btn-secondary(data-edit='justifyleft', data-toggle="tooltip", title='Align Left (Ctrl/Cmd+L)')
+                                        em.fa.fa-align-left
+                                    a.btn.btn-secondary(data-edit='justifycenter', data-toggle="tooltip", title='Center (Ctrl/Cmd+E)')
+                                        em.fa.fa-align-center
+                                    a.btn.btn-secondary(data-edit='justifyright', data-toggle="tooltip", title='Align Right (Ctrl/Cmd+R)')
+                                        em.fa.fa-align-right
+                                    a.btn.btn-secondary(data-edit='justifyfull', data-toggle="tooltip", title='Justify (Ctrl/Cmd+J)')
+                                        em.fa.fa-align-justify
+                                .btn-group.dropdown
+                                    a.btn.btn-secondary.dropdown-toggle(data-toggle='dropdown', title='Hyperlink')
+                                        em.fa.fa-link
+                                    .dropdown-menu
+                                        .input-group
+                                            input#LinkInput.form-control.form-control-sm(placeholder='URL', type='text', data-edit='createLink')
+                                            .input-group-btn
+                                                button.btn.btn-sm.btn-secondary(type='button') Add
+                                    a.btn.btn-secondary(data-edit='unlink', data-toggle="tooltip", title='Remove Hyperlink')
+                                        em.fa.fa-cut
+                                .btn-group
+                                    a#pictureBtn.btn.btn-secondary(data-toggle="tooltip", title='Insert picture (or just drag & drop)')
+                                        em.far.fa-image
+                                    input(type='file', data-edit='insertImage', style='position:absolute; opacity:0; width:41px; height:34px')
+                                .btn-group.ml-auto
+                                    a.btn.btn-secondary(data-edit='undo', data-toggle="tooltip", title='Undo (Ctrl/Cmd+Z)')
+                                        em.fa.fa-undo
+                                    a.btn.btn-secondary(data-edit='redo', data-toggle="tooltip", title='Redo (Ctrl/Cmd+Y)')
+                                        em.fas.fa-redo
+                            .form-control.wysiwyg.mt-3(style='overflow:scroll; height:250px;max-height:250px') Type something ...
+
+                fieldset
+                    .form-group.row
+                        .col-md-4
+                            button.btn.btn-secondary(type='submit') Cancel
+                            button.btn.btn-primary(type='submit') Save changes
+    // END card
+
+block vendor_css
+    // TAGS INPUT
+    link(rel='stylesheet', href='vendor/bootstrap-tagsinput/dist/bootstrap-tagsinput.css')
+    // SLIDER CTRL
+    link(rel='stylesheet', href='vendor/bootstrap-slider/dist/css/bootstrap-slider.css')
+    // CHOSEN
+    link(rel='stylesheet', href='vendor/chosen-js/chosen.css')
+    // DATETIMEPICKER
+    link(rel='stylesheet', href='vendor/bootstrap-datepicker/dist/css/bootstrap-datepicker.css')
+    // COLORPICKER
+    link(rel='stylesheet', href='vendor/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.css')
+    // SELECT2
+    link(rel='stylesheet', href='vendor/select2/dist/css/select2.css')
+    link(rel='stylesheet', href='vendor/@ttskch/select2-bootstrap4-theme/dist/select2-bootstrap4.css')
+    // WYSIWYG
+    link(rel='stylesheet', href='vendor/bootstrap-wysiwyg/css/style.css')
+block vendor_js
+    // FILESTYLE
+    script(src='vendor/bootstrap-filestyle/src/bootstrap-filestyle.js')
+    // TAGS INPUT
+    script(src='vendor/bootstrap-tagsinput/dist/bootstrap-tagsinput.js')
+    // CHOSEN
+    script(src='vendor/chosen-js/chosen.jquery.js')
+    // SLIDER CTRL
+    script(src='vendor/bootstrap-slider/dist/bootstrap-slider.js')
+    // INPUT MASK
+    script(src='vendor/inputmask/dist/jquery.inputmask.bundle.js')
+    // WYSIWYG
+    script(src='vendor/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js')
+    // MOMENT JS
+    script(src='vendor/moment/min/moment-with-locales.js')
+    // DATETIMEPICKER
+    script(src='vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.js')
+    // COLORPICKER
+    script(src='vendor/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.js')
+    // SELECT2
+    script(src='vendor/select2/dist/js/select2.full.js')

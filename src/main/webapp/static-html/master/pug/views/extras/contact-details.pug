@@ -1,0 +1,106 @@
+extends ../../_layout
+
+block active
+  - sidebar_active = 'contact-details.html'
+
+block content
+    .row
+        .col-lg-4
+            .card.card-default
+                .card-body.text-center
+                    .py-4
+                        img.img-fluid.rounded-circle.img-thumbnail.thumb96(src="img/user/02.jpg", alt="Contact")
+                    h3.m-0.text-bold Audrey Hunt
+                    .my-3
+                        p Hello, I'm a just a dummy contact in your contact list and this is my presentation text. Have fun!
+                    .text-center
+                        a(href="#").btn.btn-primary Send message
+
+            .card.card-default.d-none.d-lg-block
+                .card-header
+                    .card-title.text-center Recent contacts
+                .card-body
+                    .media
+                        img.align-self-center.mr-2.rounded-circle.img-thumbnail.thumb48(src='img/user/04.jpg', alt='Contact')
+                        .media-body.py-2
+                            .text-bold Floyd Ortiz
+                                .text-sm.text-muted 12m ago
+                    .media
+                        img.align-self-center.mr-2.rounded-circle.img-thumbnail.thumb48(src='img/user/05.jpg', alt='Contact')
+                        .media-body.py-2
+                            .text-bold Luis Vasquez
+                                .text-sm.text-muted 2h ago
+                    .media
+                        img.align-self-center.mr-2.rounded-circle.img-thumbnail.thumb48(src='img/user/06.jpg', alt='Contact')
+                        .media-body.py-2
+                            .text-bold Duane Mckinney
+                                .text-sm.text-muted yesterday
+                    .media
+                        img.align-self-center.mr-2.rounded-circle.img-thumbnail.thumb48(src='img/user/07.jpg', alt='Contact')
+                        .media-body.py-2
+                            .text-bold Connie Lambert
+                                .text-sm.text-muted 2 weeks ago
+        .col-lg-8
+            .card.card-default
+                .card-header.d-flex.align-items-center
+                    .d-flex.justify-content-center.col
+                        .h4.m-0.text-center Contact Information
+                    .d-flex.justify-content-end
+                        .btn-group
+                            button.btn.btn-link(data-toggle="dropdown"): em.fa.fa-ellipsis-v.fa-lg.text-muted
+                            .dropdown-menu.dropdown-menu-right-forced.animated.fadeInLeft(role='menu')
+                                a.dropdown-item(href='#')
+                                    span Send by message
+                                a.dropdown-item(href='#')
+                                    span Share contact
+                                a.dropdown-item(href='#')
+                                    span Block contact
+                                a.dropdown-item(href='#')
+                                    span.text-warning Delete contact
+                .card-body
+                    .row.py-4.justify-content-center
+                        .col-12.col-sm-10
+                            form.form-horizontal
+                                .form-group.row
+                                    label.text-bold.col-xl-2.col-md-3.col-4.col-form-label.text-right(for='inputContact1') Name
+                                    .col-xl-10.col-md-9.col-8
+                                        input#inputContact1.form-control(type='text', placeholder='', value="Audrey Hunt")
+                                .form-group.row
+                                    label.text-bold.col-xl-2.col-md-3.col-4.col-form-label.text-right(for='inputContact2') Email
+                                    .col-xl-10.col-md-9.col-8
+                                        input#inputContact2.form-control(type='email', value='mail@example.com')
+                                .form-group.row
+                                    label.text-bold.col-xl-2.col-md-3.col-4.col-form-label.text-right(for='inputContact3') Phone
+                                    .col-xl-10.col-md-9.col-8
+                                        input#inputContact3.form-control(type='text', value='(123) 465 789')
+                                .form-group.row
+                                    label.text-bold.col-xl-2.col-md-3.col-4.col-form-label.text-right(for='inputContact4') Mobile
+                                    .col-xl-10.col-md-9.col-8
+                                        input#inputContact4.form-control(type='text', value='(12) 123 987 465')
+                                .form-group.row
+                                    label.text-bold.col-xl-2.col-md-3.col-4.col-form-label.text-right(for='inputContact5') Website
+                                    .col-xl-10.col-md-9.col-8
+                                        input#inputContact5.form-control(type='text', value='http://some.wesbite.com')
+                                .form-group.row
+                                    label.text-bold.col-xl-2.col-md-3.col-4.col-form-label.text-right(for='inputContact6') Address
+                                    .col-xl-10.col-md-9.col-8
+                                        textarea#inputContact6.form-control(rows="4") Some nice Street, 1234
+                                .form-group.row
+                                    label.text-bold.col-xl-2.col-md-3.col-4.col-form-label.text-right(for='inputContact7') Social
+                                    .col-xl-10.col-md-9.col-8
+                                        input#inputContact7.form-control(type='text', value='@Social')
+                                .form-group.row
+                                    label.text-bold.col-xl-2.col-md-3.col-4.col-form-label.text-right(for='inputContact8') Company
+                                    .col-xl-10.col-md-9.col-8
+                                        input#inputContact8.form-control(type='text', placeholder='No Company')
+                                .form-group.row
+                                    .col-xl-2.col-md-3.col-4
+                                    .col-xl-10.col-md-9.col-8
+                                      .custom-control.custom-checkbox
+                                        input#customCheck1.custom-control-input(type='checkbox')
+                                        label.custom-control-label(for='customCheck1') Favorite contact?
+                                .form-group.row
+                                    .col-md-10
+                                        button.btn.btn-info(type='submit') Update
+                            .text-right
+                                a(href="#").text-muted Delete this contact?

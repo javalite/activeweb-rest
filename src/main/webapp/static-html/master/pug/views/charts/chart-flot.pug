@@ -1,0 +1,79 @@
+extends ../../_layout
+
+block active
+    - sidebar_active = 'chart-flot.html'
+
+block content
+    .content-heading
+        | Flot charts
+        .ml-auto.text-center
+            div(data-sparkline="", data-bar-color="#cfdbe2", data-height="20", data-bar-width="3", data-bar-spacing="2", data-values="1,0,4,9,5,7,8,9,5,7,8,4,7")
+
+    .container-fluid
+        // START row
+        .row
+            .col-xl-6
+                #cardChart1.card.card-default
+                    .card-header
+                        .card-title Area
+                    .card-body
+                        .chart-area.flot-chart
+            .col-xl-6
+                #cardChart9.card.card-default
+                    .card-header
+                        .card-title Area Spline
+                    .card-body
+                        .chart-spline.flot-chart
+        // END row
+        // START row
+        .row
+            .col-xl-6
+                #cardChart2.card.card-default
+                    .card-header
+                        .card-title Bar
+                    .card-body
+                        .chart-bar.flot-chart
+            .col-xl-6
+                #cardChart3.card.card-default
+                    .card-header
+                        .card-title Bar - Stacked
+                    .card-body
+                        .chart-bar-stacked.flot-chart
+        // END row
+        // START row
+        .row
+            .col-xl-12
+                #cardChart4.card.card-default
+                    .card-header
+                        .card-title Line
+                    .card-body
+                        .chart-line.flot-chart
+        // END row
+        // START row
+        .row
+            .col-lg-6
+                #cardChart5.card.card-default
+                    .card-header
+                        .card-title Pie
+                    .card-body
+                        .chart-pie.flot-chart
+            .col-lg-6
+                #cardChart6.card.card-default
+                    .card-header
+                        .card-title Donut
+                            small (loaded from json)
+                    .card-body
+                        .chart-donut.flot-chart
+        // END row
+
+block vendor_js
+    // SPARKLINE
+    script(src='vendor/jquery-sparkline/jquery.sparkline.js')
+    // FLOT CHART
+    script(src='vendor/flot/jquery.flot.js')
+    script(src='vendor/jquery.flot.tooltip/js/jquery.flot.tooltip.js')
+    script(src='vendor/flot/jquery.flot.resize.js')
+    script(src='vendor/flot/jquery.flot.pie.js')
+    script(src='vendor/flot/jquery.flot.time.js')
+    script(src='vendor/flot/jquery.flot.categories.js')
+    script(src='vendor/jquery.flot.spline/jquery.flot.spline.js')

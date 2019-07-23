@@ -1,0 +1,330 @@
+extends ../../_layout
+
+block active
+  - sidebar_active = 'projects.html'
+
+block content
+    .content-heading
+        | Projects
+        .ml-auto
+            button(type="button").btn.btn-secondary.btn-sm Create project
+
+    .row
+        .col-xl-4.col-lg-6
+            .card.b
+                .card-header
+                    .float-right
+                        .badge.badge-info started
+                    h4.m-0 Project #1
+                    small.text-muted Sed amet lectus id.
+                .card-body
+                    .d-flex.align-items-center
+                        .w-100(data-toggle="tooltip", data-title="Health"): .progress.progress-xs.m-0: .progress-bar.bg-warning(style="width:22%")
+                        .wd-xxs.text-right: .text-bold.text-muted 22%
+                table.table: tbody
+                    tr
+                        td: strong Start date
+                        td 01/01/2016
+                    tr
+                        td: strong  Members
+                        td
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/02.jpg", alt="project member")
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/04.jpg", alt="project member")
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/05.jpg", alt="project member")
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/06.jpg", alt="project member")
+                            a.inline(href="#"): strong +5
+                    tr
+                        td: strong  Leader
+                        td
+                            a(href="", data-toggle="tooltip", data-title="Team leader"): img.rounded-circle.thumb24(src="img/user/03.jpg", alt="project member")
+                    tr
+                        td: strong Metrics
+                        td
+                            .inline.mr-2(data-sparkline="", data-values="20,80", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#23b7e5"]')
+                            .inline.mr-2(data-sparkline="", data-values="60,40", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#27c24c"]')
+                            .inline(data-sparkline="", data-values="90,10", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#ff902b"]')
+                .card-footer.text-center
+                    button(type="button").btn.btn-secondary Manage project
+        .col-xl-4.col-lg-6
+            .card.b
+                .card-header
+                    .float-right
+                        .badge.badge-info started
+                    h4.m-0 Project #2
+                    small.text-muted Sed amet lectus id.
+                .card-body
+                    .d-flex.align-items-center
+                        .w-100(data-toggle="tooltip", data-title="Health"): .progress.progress-xs.m-0: .progress-bar.bg-success(style="width:80%")
+                        .wd-xxs.text-right: .text-bold.text-muted 80%
+                table.table: tbody
+                    tr
+                        td: strong Start date
+                        td 02/01/2016
+                    tr
+                        td: strong  Members
+                        td
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/02.jpg", alt="project member")
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/04.jpg", alt="project member")
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/05.jpg", alt="project member")
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/06.jpg", alt="project member")
+                            a.inline(href="#"): strong +6
+                    tr
+                        td: strong  Leader
+                        td
+                            a(href="", data-toggle="tooltip", data-title="Team leader"): img.rounded-circle.thumb24(src="img/user/03.jpg", alt="project member")
+                    tr
+                        td: strong Metrics
+                        td
+                            .inline.mr-2(data-sparkline="", data-values="20,80", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#23b7e5"]')
+                            .inline.mr-2(data-sparkline="", data-values="60,40", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#27c24c"]')
+                            .inline(data-sparkline="", data-values="90,10", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#ff902b"]')
+                .card-footer.text-center
+                    button(type="button").btn.btn-secondary Manage project
+        .col-xl-4.col-lg-6
+            .card.b
+                .card-header
+                    .float-right
+                        .badge.badge-info started
+                    h4.m-0 Project #3
+                    small.text-muted Sed amet lectus id.
+                .card-body
+                    .d-flex.align-items-center
+                        .w-100(data-toggle="tooltip", data-title="Health"): .progress.progress-xs.m-0: .progress-bar.bg-info(style="width:50%")
+                        .wd-xxs.text-right: .text-bold.text-muted 50%
+                table.table: tbody
+                    tr
+                        td: strong Start date
+                        td 03/01/2016
+                    tr
+                        td: strong  Members
+                        td
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/02.jpg", alt="project member")
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/04.jpg", alt="project member")
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/05.jpg", alt="project member")
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/06.jpg", alt="project member")
+                            a.inline(href="#"): strong +7
+                    tr
+                        td: strong  Leader
+                        td
+                            a(href="", data-toggle="tooltip", data-title="Team leader"): img.rounded-circle.thumb24(src="img/user/03.jpg", alt="project member")
+                    tr
+                        td: strong Metrics
+                        td
+                            .inline.mr-2(data-sparkline="", data-values="20,80", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#23b7e5"]')
+                            .inline.mr-2(data-sparkline="", data-values="60,40", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#27c24c"]')
+                            .inline(data-sparkline="", data-values="90,10", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#ff902b"]')
+                .card-footer.text-center
+                    button(type="button").btn.btn-secondary Manage project
+
+        .col-xl-4.col-lg-6
+            .card.b
+                .card-header
+                    .float-right
+                        .badge.badge-warning paused
+                    h4.m-0 Project #4
+                    small.text-muted Sed amet lectus id.
+                .card-body
+                    .d-flex.align-items-center
+                        .w-100(data-toggle="tooltip", data-title="Health"): .progress.progress-xs.m-0: .progress-bar.bg-warning(style="width:22%")
+                        .wd-xxs.text-right: .text-bold.text-muted 22%
+                table.table: tbody
+                    tr
+                        td: strong Start date
+                        td 04/01/2016
+                    tr
+                        td: strong  Members
+                        td
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/02.jpg", alt="project member")
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/04.jpg", alt="project member")
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/05.jpg", alt="project member")
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/06.jpg", alt="project member")
+                            a.inline(href="#"): strong +8
+                    tr
+                        td: strong  Leader
+                        td
+                            a(href="", data-toggle="tooltip", data-title="Team leader"): img.rounded-circle.thumb24(src="img/user/03.jpg", alt="project member")
+                    tr
+                        td: strong Metrics
+                        td
+                            .inline.mr-2(data-sparkline="", data-values="20,80", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#23b7e5"]')
+                            .inline.mr-2(data-sparkline="", data-values="60,40", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#27c24c"]')
+                            .inline(data-sparkline="", data-values="90,10", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#ff902b"]')
+                .card-footer.text-center
+                    button(type="button").btn.btn-secondary Manage project
+        .col-xl-4.col-lg-6
+            .card.b
+                .card-header
+                    .float-right
+                        .badge.bg-gray pending
+                    h4.m-0 Project #5
+                    small.text-muted Sed amet lectus id.
+                .card-body
+                    p.m-0.text-center This project does not register progress.
+                table.table: tbody
+                    tr
+                        td: strong Start date
+                        td 05/01/2016
+                    tr
+                        td: strong  Members
+                        td
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/02.jpg", alt="project member")
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/04.jpg", alt="project member")
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/05.jpg", alt="project member")
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/06.jpg", alt="project member")
+                            a.inline(href="#"): strong +9
+                    tr
+                        td: strong  Leader
+                        td
+                            a(href="", data-toggle="tooltip", data-title="Team leader"): img.rounded-circle.thumb24(src="img/user/03.jpg", alt="project member")
+                    tr
+                        td: strong Metrics
+                        td
+                            .inline.mr-2(data-sparkline="", data-values="20,80", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#23b7e5"]')
+                            .inline.mr-2(data-sparkline="", data-values="60,40", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#27c24c"]')
+                            .inline(data-sparkline="", data-values="90,10", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#ff902b"]')
+                .card-footer.text-center
+                    button(type="button").btn.btn-secondary Manage project
+        .col-xl-4.col-lg-6
+            .card.b
+                .card-header
+                    .float-right
+                        .badge.badge-success completed
+                    h4.m-0 Project #6
+                    small.text-muted Sed amet lectus id.
+                .card-body
+                    .d-flex.align-items-center
+                        .w-100(data-toggle="tooltip", data-title="Health"): .progress.progress-xs.m-0: .progress-bar.bg-success(style="width:100%")
+                        .wd-xxs.text-right: .text-bold.text-muted 100%
+                table.table: tbody
+                    tr
+                        td: strong Start date
+                        td 06/01/2016
+                    tr
+                        td: strong  Members
+                        td
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/02.jpg", alt="project member")
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/04.jpg", alt="project member")
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/05.jpg", alt="project member")
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/06.jpg", alt="project member")
+                            a.inline(href="#"): strong +10
+                    tr
+                        td: strong  Leader
+                        td
+                            a(href="", data-toggle="tooltip", data-title="Team leader"): img.rounded-circle.thumb24(src="img/user/03.jpg", alt="project member")
+                    tr
+                        td: strong Metrics
+                        td
+                            .inline.mr-2(data-sparkline="", data-values="20,80", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#23b7e5"]')
+                            .inline.mr-2(data-sparkline="", data-values="60,40", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#27c24c"]')
+                            .inline(data-sparkline="", data-values="90,10", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#ff902b"]')
+                .card-footer.text-center
+                    button(type="button").btn.btn-secondary Manage project
+
+        .col-xl-4.col-lg-6
+            .card.b
+                .card-header
+                    .float-right
+                        .badge.bg-gray-dark canceled
+                    h4.m-0 Project #7
+                    small.text-muted Sed amet lectus id.
+                .card-body
+                    .d-flex.align-items-center
+                        .w-100(data-toggle="tooltip", data-title="Health"): .progress.progress-xs.m-0: .progress-bar.bg-warning(style="width:30%")
+                        .wd-xxs.text-right: .text-bold.text-muted 30%
+                table.table: tbody
+                    tr
+                        td: strong Start date
+                        td 04/01/2016
+                    tr
+                        td: strong  Members
+                        td
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/02.jpg", alt="project member")
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/04.jpg", alt="project member")
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/05.jpg", alt="project member")
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/06.jpg", alt="project member")
+                            a.inline(href="#"): strong +8
+                    tr
+                        td: strong  Leader
+                        td
+                            a(href="", data-toggle="tooltip", data-title="Team leader"): img.rounded-circle.thumb24(src="img/user/03.jpg", alt="project member")
+                    tr
+                        td: strong Metrics
+                        td
+                            .inline.mr-2(data-sparkline="", data-values="20,80", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#23b7e5"]')
+                            .inline.mr-2(data-sparkline="", data-values="60,40", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#27c24c"]')
+                            .inline(data-sparkline="", data-values="90,10", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#ff902b"]')
+                .card-footer.text-center
+                    button(type="button").btn.btn-secondary Manage project
+        .col-xl-4.col-lg-6
+            .card.b
+                .card-header
+                    .float-right
+                        .badge.badge-info started
+                    h4.m-0 Project #8
+                    small.text-muted Sed amet lectus id.
+                .card-body
+                    .d-flex.align-items-center
+                        .w-100(data-toggle="tooltip", data-title="Health"): .progress.progress-xs.m-0: .progress-bar.bg-danger(style="width:10%")
+                        .wd-xxs.text-right: .text-bold.text-muted 10%
+                table.table: tbody
+                    tr
+                        td: strong Start date
+                        td 05/01/2016
+                    tr
+                        td: strong  Members
+                        td
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/02.jpg", alt="project member")
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/04.jpg", alt="project member")
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/05.jpg", alt="project member")
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/06.jpg", alt="project member")
+                            a.inline(href="#"): strong +9
+                    tr
+                        td: strong  Leader
+                        td
+                            a(href="", data-toggle="tooltip", data-title="Team leader"): img.rounded-circle.thumb24(src="img/user/03.jpg", alt="project member")
+                    tr
+                        td: strong Metrics
+                        td
+                            .inline.mr-2(data-sparkline="", data-values="20,80", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#23b7e5"]')
+                            .inline.mr-2(data-sparkline="", data-values="60,40", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#27c24c"]')
+                            .inline(data-sparkline="", data-values="90,10", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#ff902b"]')
+                .card-footer.text-center
+                    button(type="button").btn.btn-secondary Manage project
+        .col-xl-4.col-lg-6
+            .card.b
+                .card-header
+                    .float-right
+                        .badge.badge-success completed
+                    h4.m-0 Project #9
+                    small.text-muted Sed amet lectus id.
+                .card-body
+                    .d-flex.align-items-center
+                        .w-100(data-toggle="tooltip", data-title="Health"): .progress.progress-xs.m-0: .progress-bar.bg-success(style="width:100%")
+                        .wd-xxs.text-right: .text-bold.text-muted 100%
+                table.table: tbody
+                    tr
+                        td: strong Start date
+                        td 06/01/2016
+                    tr
+                        td: strong  Members
+                        td
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/02.jpg", alt="project member")
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/04.jpg", alt="project member")
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/05.jpg", alt="project member")
+                            a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/06.jpg", alt="project member")
+                            a.inline(href="#"): strong +10
+                    tr
+                        td: strong  Leader
+                        td
+                            a(href="", data-toggle="tooltip", data-title="Team leader"): img.rounded-circle.thumb24(src="img/user/03.jpg", alt="project member")
+                    tr
+                        td: strong Metrics
+                        td
+                            .inline.mr-2(data-sparkline="", data-values="20,80", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#23b7e5"]')
+                            .inline.mr-2(data-sparkline="", data-values="60,40", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#27c24c"]')
+                            .inline(data-sparkline="", data-values="90,10", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#ff902b"]')
+                .card-footer.text-center
+                    button(type="button").btn.btn-secondary Manage project
+block vendor_js
+  // SPARKLINE
+  script(src='vendor/jquery-sparkline/jquery.sparkline.js')

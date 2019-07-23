@@ -1,0 +1,392 @@
+extends ../../_layout
+
+block active
+    - sidebar_active = 'dashboard_v3.html'
+
+block content
+    .content-heading
+        div
+            | Dashboard
+            small(data-localize="dashboard.WELCOME")
+        // START Language list
+        .ml-auto
+            .btn-group
+                button.btn.btn-secondary.dropdown-toggle.dropdown-toggle-nocaret(type='button', data-toggle="dropdown") English
+                .dropdown-menu.dropdown-menu-right-forced.animated.fadeInUpShort(role='menu')
+                    a.dropdown-item(href='#', data-set-lang="en") English
+                    a.dropdown-item(href='#', data-set-lang="es") Spanish
+        // END Language list
+
+    // START cards box
+    .row
+        .col-xl-3.col-md-6
+            // START card
+            .card.bg-info-light.pt-2.b0
+                .px-2
+                    em.icon-cloud-upload.fa-lg.float-right
+                    .h2.mt-0 1700
+                    .text-uppercase Uploads
+                div(data-sparkline="", data-type="line", data-width="100%", data-height="75px", data-line-color="#23b7e5", data-chart-range-min="0", data-fill-color="#23b7e5", data-spot-color="#23b7e5", data-min-spot-color="#23b7e5", data-max-spot-color="#23b7e5", data-highlight-spot-color="#23b7e5", data-highlight-line-color="#23b7e5", data-values="2,5,3,7,4,5", style="margin-bottom: -2px", data-resize="true")
+        .col-xl-3.col-md-6
+            // START card
+            .card.bg-purple-light.pt-2.b0
+                .px-2
+                    em.icon-globe.fa-lg.float-right
+                    .h2.mt-0 700
+                        span.text-sm.text-white GB
+                    .text-uppercase Quota
+                div(data-sparkline="", data-type="line", data-width="100%", data-height="75px", data-line-color="#7266ba", data-chart-range-min="0", data-fill-color="#7266ba", data-spot-color="#7266ba", data-min-spot-color="#7266ba", data-max-spot-color="#7266ba", data-highlight-spot-color="#7266ba", data-highlight-line-color="#7266ba", data-values="1,4,5,4,8,7,10", style="margin-bottom: -2px", data-resize="true")
+        .col-xl-3.col-lg-6.col-md-12
+            // START card
+            .card.bg-info-light.pt-2.b0
+                .px-2
+                    em.icon-bubbles.fa-lg.float-right
+                    .h2.mt-0 500
+                    .text-uppercase Reviews
+                div(data-sparkline="", data-type="line", data-width="100%", data-height="75px", data-line-color="#23b7e5", data-chart-range-min="0", data-fill-color="#23b7e5", data-spot-color="#23b7e5", data-min-spot-color="#23b7e5", data-max-spot-color="#23b7e5", data-highlight-spot-color="#23b7e5", data-highlight-line-color="#23b7e5", data-values="4,5,3,10,7,15", style="margin-bottom: -2px", data-resize="true")
+        .col-xl-3.col-lg-6.col-md-12
+            // START card
+            .card.bg-purple-light.pt-2.b0
+                .px-2
+                    em.icon-pencil.fa-lg.float-right
+                    .h2.mt-0 35
+                    .text-uppercase Annotations
+                div(data-sparkline="", data-type="line", data-width="100%", data-height="75px", data-line-color="#7266ba", data-chart-range-min="0", data-fill-color="#7266ba", data-spot-color="#7266ba", data-min-spot-color="#7266ba", data-max-spot-color="#7266ba", data-highlight-spot-color="#7266ba", data-highlight-line-color="#7266ba", data-values="1,3,4,5,7,8", style="margin-bottom: -2px", data-resize="true")
+
+    // END cards box
+
+    // START chart
+    .row
+        .col-xl-12
+            // START card
+            #cardChart9.card.card-default
+                .card-header
+                    .card-title Website Performance
+                .card-wrapper
+                    .card-body
+                        .chart-splinev3.flot-chart
+            // END card
+    // END chart
+
+    .row
+        .col-xl-6
+            // START card tab
+            .card.card-transparent(role='tabpanel')
+                // Nav tabs
+                ul.nav.nav-tabs.nav-fill(role='tablist')
+                    li.nav-item(role='presentation')
+                        a.nav-link.active.bb0(href='#home', aria-controls='home', role='tab', data-toggle='tab')
+                            em.far.fa-clock.fa-fw
+                            | Tasks Card
+                    li.nav-item(role='presentation')
+                        a.nav-link.bb0(href='#profile', aria-controls='profile', role='tab', data-toggle='tab')
+                            em.far.fa-money-bill-alt.fa-fw
+                            | Transactions Card
+                // Tab panes
+                .tab-content.p-0.bg-white
+                    #home.tab-pane.active(role='tabpanel')
+                        // START list group
+                        .list-group.mb-0
+                            a.list-group-item.bt0(href='#')
+                                span.badge.badge-purple.float-right just now
+                                em.fa-fw.fas.fa-calendar-alt.mr-2
+                                | Calendar updated
+                            a.list-group-item(href='#')
+                                span.badge.badge-purple.float-right 4 minutes ago
+                                em.fa-fw.fa.fa-comment.mr-2
+                                | Commented on a post
+                            a.list-group-item(href='#')
+                                span.badge.badge-purple.float-right 23 minutes ago
+                                em.fa-fw.fa.fa-truck.mr-2
+                                | Order 392 shipped
+                            a.list-group-item(href='#')
+                                span.badge.badge-purple.float-right 46 minutes ago
+                                em.fa-fw.far.fa-money-bill-alt.mr-2
+                                | Invoice 653 has been paid
+                            a.list-group-item(href='#')
+                                span.badge.badge-purple.float-right 1 hour ago
+                                em.fa-fw.fa.fa-user.mr-2
+                                | A new user has been added
+                            a.list-group-item(href='#')
+                                span.badge.badge-purple.float-right 2 hours ago
+                                em.fa-fw.fa.fa-check.mr-2
+                                | Completed task: "pick up dry cleaning"
+                            a.list-group-item(href='#')
+                                span.badge.badge-purple.float-right yesterday
+                                em.fa-fw.fa.fa-globe.mr-2
+                                | Saved the world
+                            a.list-group-item(href='#')
+                                span.badge.badge-purple.float-right two days ago
+                                em.fa-fw.fa.fa-check.mr-2
+                                | Completed task: "fix error on sales page"
+                            a.list-group-item(href='#')
+                                span.badge.badge-purple.float-right two days ago
+                                em.fa-fw.fa.fa-check.mr-2
+                                | Completed task: "fix error on sales page"
+                        // END list group
+                        .card-footer.text-right
+                            button.btn.btn-secondary.btn-sm(type="button") View All Activity
+                    #profile.tab-pane(role='tabpanel')
+                        // START table responsive
+                        .table-responsive
+                            table.table.table-bordered.table-hover.table-striped
+                                thead
+                                    tr
+                                        th Order #
+                                        th Order Date
+                                        th Order Time
+                                        th Amount (USD)
+                                tbody
+                                    tr
+                                        td 3326
+                                        td 10/21/2013
+                                        td 3:29 PM
+                                        td $321.33
+                                    tr
+                                        td 3325
+                                        td 10/21/2013
+                                        td 3:20 PM
+                                        td $234.34
+                                    tr
+                                        td 3324
+                                        td 10/21/2013
+                                        td 3:03 PM
+                                        td $724.17
+                                    tr
+                                        td 3323
+                                        td 10/21/2013
+                                        td 3:00 PM
+                                        td $23.71
+                                    tr
+                                        td 3322
+                                        td 10/21/2013
+                                        td 2:49 PM
+                                        td $8345.23
+                                    tr
+                                        td 3321
+                                        td 10/21/2013
+                                        td 2:23 PM
+                                        td $245.12
+                                    tr
+                                        td 3320
+                                        td 10/21/2013
+                                        td 2:15 PM
+                                        td $5663.54
+                                    tr
+                                        td 3319
+                                        td 10/21/2013
+                                        td 2:13 PM
+                                        td $943.45
+                        // END table responsive
+                        .card-footer.text-right
+                            a.btn.btn-secondary.btn-sm(href='#') View All Transactions
+            // END card tab
+        .col-xl-6
+            .card.card-transparent
+                div(data-vector-map="", data-height='450', data-scale=0, data-map-name="world_mill_en")
+
+    // START cards
+    .row
+        .col-xl-3
+
+            // START loader widget
+            .card.card-default
+                .card-body
+                    a.text-muted.float-right(href="#"): em.fa.fa-arrow-right
+                    .text-info Average Monthly Uploads
+                    .text-center.py-4
+                        .easypie-chart.easypie-chart-lg(data-easypiechart, data-percent='70', data-animate='{"duration": "800", "enabled": "true"}',data-bar-color="#23b7e5",data-track-Color='rgba(200,200,200,0.4)',data-scale-Color="false",data-line-width="10",data-line-cap='round',data-size="145")
+                            span 70%
+                    .text-center(data-sparkline="", data-bar-color="#23b7e5", data-height="30", data-bar-width="5", data-bar-spacing="2", data-values="5,4,8,7,8,5,4,6,5,5,9,4,6,3,4,7,5,4,7")
+                .card-footer
+                    p.text-muted
+                        em.fa.fa-upload.fa-fw
+                        span This Month
+                        span.text-dark 1000 Gb
+            // END loader widget
+        .col-xl-3
+            // START messages and activity
+            .card.card-default
+                .card-header
+                    .card-title Latest activities
+                // START list group
+                .list-group
+                    // START list group item
+                    .list-group-item
+                        .media
+                            .align-self-start.mr-2
+                                span.fa-stack
+                                    em.fa.fa-circle.fa-stack-2x.text-purple
+                                    em.fas.fa-cloud-upload-alt.fa-stack-1x.fa-inverse.text-white
+                            .media-body.text-truncate
+                                p.mb-1
+                                    a(href="#").text-purple.m-0 NEW FILE
+                                p.m-0: small
+                                    a(href="#") Bootstrap.xls
+                            .ml-auto
+                                small.text-muted.ml-2 15m
+                    // END list group item
+                    // START list group item
+                    .list-group-item
+                        .media
+                            .align-self-start.mr-2
+                                span.fa-stack
+                                    em.fa.fa-circle.fa-stack-2x.text-info
+                                    em.far.fa-file-alt.fa-stack-1x.fa-inverse.text-white
+                            .media-body.text-truncate
+                                p.mb-1
+                                    a(href="#").text-info.m-0 NEW DOCUMENT
+                                p.m-0: small
+                                    a(href="#") Bootstrap.doc
+                            .ml-auto
+                                small.text-muted.ml-2 2h
+                    // END list group item
+                    // START list group item
+                    .list-group-item
+                        .media
+                            .align-self-start.mr-2
+                                span.fa-stack
+                                    em.fa.fa-circle.fa-stack-2x.text-danger
+                                    em.fa.fa-exclamation.fa-stack-1x.fa-inverse.text-white
+                            .media-body.text-truncate
+                                p.mb-1
+                                    a(href="#").text-danger.m-0 BROADCAST
+                                p.m-0
+                                    a(href="#") Read
+                            .ml-auto
+                                small.text-muted.ml-2 5h
+                    // END list group item
+                    // START list group item
+                    .list-group-item
+                        .media
+                            .align-self-start.mr-2
+                                span.fa-stack
+                                    em.fa.fa-circle.fa-stack-2x.text-success
+                                    em.far.fa-clock.fa-stack-1x.fa-inverse.text-white
+                            .media-body.text-truncate
+                                p.mb-1
+                                    a(href="#").text-success.m-0 NEW MEETING
+                                p.m-0
+                                    small On
+                                        em 10/12/2015 09:00 am
+                            .ml-auto
+                                small.text-muted.ml-2 15h
+                    // END list group item
+                // END list group
+                // START card footer
+                .card-footer
+                    a(href='#').text-sm Load more
+                // END card-footer
+            // END messages and activity
+        .col-xl-6
+            .card.card-default
+                .card-header
+                    .px-2.float-right.badge.badge-danger 5
+                    .px-2.mr-2.float-right.badge.badge-success 12
+                    .card-title Team messages
+
+                // START list group
+                .list-group(data-height="230", data-scrollable="")
+                    // START list group item
+                    .list-group-item.list-group-item-action
+                        .media
+                            img.align-self-start.mx-2.circle.thumb32(src="img/user/02.jpg", alt="Image")
+                            .media-body.text-truncate
+                                p.mb-1
+                                    strong.text-primary
+                                        span.circle.bg-success.circle-lg.text-left
+                                        span Catherine Ellis
+                                p.mb-1.text-sm Cras sit amet nibh libero, in gravida nulla. Nulla...
+                            .ml-auto
+                                small.text-muted.ml-2 2h
+                    // END list group item
+                    // START list group item
+                    .list-group-item.list-group-item-action
+                        .media
+                            img.align-self-start.mx-2.circle.thumb32(src="img/user/03.jpg", alt="Image")
+                            .media-body.text-truncate
+                                p.mb-1
+                                    strong.text-primary
+                                        span.circle.bg-success.circle-lg.text-left
+                                        span Jessica Silva
+                                p.mb-1.text-sm Cras sit amet nibh libero, in gravida nulla. Nulla...
+                            .ml-auto
+                                small.text-muted.ml-2 3h
+                    // END list group item
+                    // START list group item
+                    .list-group-item.list-group-item-action
+                        .media
+                            img.align-self-start.mx-2.circle.thumb32(src="img/user/09.jpg", alt="Image")
+                            .media-body.text-truncate
+                                p.mb-1
+                                    strong.text-primary
+                                        span.circle.bg-danger.circle-lg.text-left
+                                        span Jessie Wells
+                                p.mb-1.text-sm Cras sit amet nibh libero, in gravida nulla. Nulla...
+                            .ml-auto
+                                small.text-muted.ml-2 4h
+                    // END list group item
+                    // START list group item
+                    .list-group-item.list-group-item-action
+                        .media
+                            img.align-self-start.mx-2.circle.thumb32(src="img/user/12.jpg", alt="Image")
+                            .media-body.text-truncate
+                                p.mb-1
+                                    strong.text-primary
+                                        span.circle.bg-danger.circle-lg.text-left
+                                        span Rosa Burke
+                                p.mb-1.text-sm Cras sit amet nibh libero, in gravida nulla. Nulla...
+                            .ml-auto
+                                small.text-muted.ml-2  1d
+                    // END list group item
+                    // START list group item
+                    .list-group-item.list-group-item-action
+                        .media
+                            img.align-self-start.mx-2.circle.thumb32(src="img/user/10.jpg", alt="Image")
+                            .media-body.text-truncate
+                                p.mb-1
+                                    strong.text-primary
+                                        span.circle.bg-danger.circle-lg.text-left
+                                        span Michelle Lane
+                                p.mb-1.text-sm Mauris eleifend, libero nec cursus lacinia...
+                            .ml-auto
+                                small.text-muted.ml-2  2d
+                    // END list group item
+                // END list group
+                // START card footer
+                .card-footer
+                    .input-group
+                        input.form-control.form-control-sm(type='text', placeholder='Search message ..')
+                        span.input-group-btn
+                            button.btn.btn-secondary.btn-sm(type='submit')
+                                i.fa.fa-search
+                // END card-footer
+
+        // END dashboard sidebar
+    // END cards
+
+block vendor_css
+    // WEATHER ICONS
+    link(rel='stylesheet', href='vendor/weather-icons/css/weather-icons.css')
+
+block vendor_js
+    // SLIMSCROLL
+    script(src='vendor/jquery-slimscroll/jquery.slimscroll.js')
+    // SPARKLINE
+    script(src='vendor/jquery-sparkline/jquery.sparkline.js')
+    // FLOT CHART
+    script(src='vendor/flot/jquery.flot.js')
+    script(src='vendor/jquery.flot.tooltip/js/jquery.flot.tooltip.js')
+    script(src='vendor/flot/jquery.flot.resize.js')
+    script(src='vendor/flot/jquery.flot.pie.js')
+    script(src='vendor/flot/jquery.flot.time.js')
+    script(src='vendor/flot/jquery.flot.categories.js')
+    script(src='vendor/jquery.flot.spline/jquery.flot.spline.js')
+    // EASY PIE CHART
+    script(src='vendor/easy-pie-chart/dist/jquery.easypiechart.js')
+    // MOMENT JS
+    script(src='vendor/moment/min/moment-with-locales.js')
+    // VECTOR MAP
+    script(src='vendor/ika.jvectormap/jquery-jvectormap-1.2.2.min.js')
+    script(src='vendor/ika.jvectormap/jquery-jvectormap-world-mill-en.js')
+    script(src='vendor/ika.jvectormap/jquery-jvectormap-us-mill-en.js')

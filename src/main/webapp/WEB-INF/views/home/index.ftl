@@ -7,6 +7,5 @@
 
 
     <p>
-        <@link_to controller="people" class="btn btn-lg btn-success">Click to see JSON with people and addresses</@link_to>
 
 </div>

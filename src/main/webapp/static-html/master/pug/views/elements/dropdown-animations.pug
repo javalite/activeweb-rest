@@ -1,0 +1,41 @@
+extends ../../_layout
+
+block active
+    - sidebar_active = 'dropdown-animations.html'
+
+block content
+    mixin build-anim-card(animation)
+        // START box placeholder
+        .box-placeholder
+            // START button group
+            .btn-group
+                button.btn.btn-secondary(data-toggle="dropdown")
+                    = animation
+                    |
+                .dropdown-menu(role='menu', class='animated ' + animation)
+                    a.dropdown-item(href='#') Action
+                    a.dropdown-item(href='#') Another action
+                    a.dropdown-item(href='#') Something else here
+                    a.dropdown-item(href='#') Separated link
+            // END button group
+        // END box placeholder
+
+    .content-heading
+        div
+            | Dropdown Animations
+            small Extends the dropdown effects when open just adding an animation class
+
+    - var animations = ['bounce','flash','pulse','rubberBand','shake','swing','tada','wobble','bounceIn','bounceInDown','bounceInLeft','bounceInRight','bounceInUp','fadeIn','fadeInDown','fadeInDownBig','fadeInLeft','fadeInLeftBig','fadeInRight','fadeInRightBig','fadeInUp','fadeInUpBig','flip','flipInX','flipInY','lightSpeedIn','rotateIn','rotateInDownLeft','rotateInDownRight','rotateInUpLeft','rotateInUpRight','hinge','rollIn','zoomIn','zoomInDown','zoomInLeft','zoomInRight','zoomInUp']
+    // START row
+    .row
+        each val in animations
+            .col-sm-6.col-lg-3
+                +build-anim-card(val)
+    // END row
+
+    //- bottom space for latest dropdowns
+    br
+    br
+    br
+    br
+    br

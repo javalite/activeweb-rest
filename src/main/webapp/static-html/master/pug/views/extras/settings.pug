@@ -1,0 +1,162 @@
+extends ../../_layout
+
+block active
+  - sidebar_active = 'settings.html'
+
+block content
+    .container-md
+        .row
+            .col-lg-3
+                .card.b
+                    .card-header.bg-gray-lighter.text-bold Personal Settings
+                    .list-group
+                        a.list-group-item.list-group-item-action.active(href='#tabSetting1', data-toggle="tab") Profile
+                        a.list-group-item.list-group-item-action(href='#tabSetting2', data-toggle="tab") Account
+                        a.list-group-item.list-group-item-action(href='#tabSetting3', data-toggle="tab") Emails
+                        a.list-group-item.list-group-item-action(href='#tabSetting4', data-toggle="tab") Notifications
+                        a.list-group-item.list-group-item-action(href='#tabSetting5', data-toggle="tab") Applications
+            .col-lg-9
+                .tab-content.p-0.b0
+                    #tabSetting1.tab-pane.active
+                        .card.b
+                            .card-header.bg-gray-lighter.text-bold Profile
+                            .card-body
+                                form(action="#")
+                                    .form-group
+                                        label Picture
+                                        input.form-control.filestyle(type='file', data-input="false", data-classbutton='btn btn-secondary', data-classinput="form-control inline", data-text="Upload new picture", data-icon="<span class='fa fa-upload mr-2'></span>")
+                                    .form-group
+                                        label Name
+                                        input.form-control(type="text")
+                                    .form-group
+                                        label Bio
+                                        textarea.form-control(rows="3")
+                                    .form-group
+                                        label URL
+                                        input.form-control(type="text")
+                                    .form-group
+                                        label Company
+                                        input.form-control(type="text")
+                                    .form-group
+                                        label Location
+                                        input.form-control(type="text")
+
+                                    button(type="button").btn.btn-info Update settings
+                                    p: small.text-muted * Integer fermentum accumsan metus, id sagittis ipsum molestie vitae
+
+                    #tabSetting2.tab-pane
+                        .card.b
+                            .card-header.bg-gray-lighter.text-bold Account
+                            .card-body
+                                form(action="#")
+                                    .form-group
+                                        label Current password
+                                        input.form-control(type="password")
+                                    .form-group
+                                        label New password
+                                        input.form-control(type="password")
+                                    .form-group
+                                        label Confirm new password
+                                        input.form-control(type="password")
+
+                                    button(type="button").btn.btn-info Update password
+                                    p: small.text-muted * Integer fermentum accumsan metus, id sagittis ipsum molestie vitae
+                        .card.b
+                            .card-header.bg-danger.text-bold Delete account
+                            .card-body.bt
+                                p You will be asked for confirmation before delete account.
+                                button(type="button").btn.btn-secondary: span.text-danger Delete account
+
+                    #tabSetting3.tab-pane
+                        .card.b
+                            .card-header.bg-gray-lighter.text-bold Emails
+                            .card-body
+                                p Etiam eros nibh, condimentum in auctor et, aliquam quis elit. Donec id libero eros. Ut fringilla, justo id fringilla pretium, nibh nunc suscipit mauris, et suscipit nulla nisl ac dolor. Nam egestas, leo eu gravida tincidunt, sem ipsum pellentesque quam, vel iaculis est quam et eros.
+                                p: strong Your email addresses
+                                p
+                                    span.mr-2 email@someaddress.com
+                                    span.badge.badge-success primary
+                                p
+                                    span.mr-2 another.email@someaddress.com
+                                    span.badge.bg-gray private
+                            .card-body.bt
+                                p: strong Add email address
+                                form(action="#")
+                                    .row.mb-2
+                                        .col-xl-6
+                                            .form-group
+                                                .input-group
+                                                    input.form-control(type="email", placeholder="email@server.com")
+                                                    span.input-group-btn
+                                                        button.btn.btn-secondary(type='button') Add
+                                            .form-check
+                                                input#defaultCheck1.form-check-input(type='checkbox' value='')
+                                                label.form-check-label
+                                                    | Keep my email address private
+                                    button(type="button").btn.btn-info Update email
+                                    p: small.text-muted * Integer fermentum accumsan metus, id sagittis ipsum molestie vitae
+
+                    #tabSetting4.tab-pane
+                        form(action="#")
+                            .card.b
+                                .card-header.bg-gray-lighter.text-bold Notifications
+                                .card-body.bb
+                                    .form-check
+                                        input#defaultCheck2.form-check-input(type='checkbox' value='')
+                                        label.form-check-label
+                                            strong Disable email notifications
+                                .card-body
+                                        p: strong Interaction
+                                        .form-check
+                                            input#defaultCheck3.form-check-input(type='checkbox' value='')
+                                            label.form-check-label
+                                                | Alert me when someone start to follow me
+                                        .form-check
+                                            input#defaultCheck4.form-check-input(type='checkbox' value='')
+                                            label.form-check-label
+                                                | Alert me when someone star my work
+                                        .form-check
+                                            input#defaultCheck5.form-check-input(type='checkbox' value='')
+                                            label.form-check-label
+                                                | Alert me when post a new comment
+                                        p.my-2: strong Marketing
+                                        .form-check.mb-2
+                                            input#defaultCheck6.form-check-input(type='checkbox' value='')
+                                            label.form-check-label
+                                                | Send me news and interesting updates
+                                        button.mb-3(type="button").btn.btn-info Update notifications
+                                        p: small.text-muted Mauris sodales accumsan erat, ut dapibus erat faucibus vitae.
+                    #tabSetting5.tab-pane
+                        .card.b
+                            .card-header.bg-gray-lighter.text-bold Applications
+                            .card-body
+                                p
+                                    span You have granted access for
+                                    strong 3 applications
+                                    span to your account.
+                                .list-group
+                                    .list-group-item.d-flex.align-items-center
+                                        img.mr-2.img-fluid.thumb48(src="img/dummy.png", alt="App")
+                                        div
+                                            p.text-bold.mb-0 Application #1
+                                            small Ut turpis urna, tristique sed adipiscing nec, luctus quis leo.
+                                        .ml-auto
+                                            button(type="button").btn.btn-secondary: strong Revoke
+                                    .list-group-item.d-flex.align-items-center
+                                        img.mr-2.img-fluid.thumb48(src="img/dummy.png", alt="App")
+                                        div
+                                            p.text-bold.mb-0 Application #2
+                                            small Ut turpis urna, tristique sed adipiscing nec, luctus quis leo.
+                                        .ml-auto
+                                            button(type="button").btn.btn-secondary: strong Revoke
+                                    .list-group-item.d-flex.align-items-center
+                                        img.mr-2.img-fluid.thumb48(src="img/dummy.png", alt="App")
+                                        div
+                                            p.text-bold.mb-0 Application #3
+                                            small Ut turpis urna, tristique sed adipiscing nec, luctus quis leo.
+                                        .ml-auto
+                                            button(type="button").btn.btn-secondary: strong Revoke
+
+block vendor_js
+  // FILESTYLE
+  script(src='vendor/bootstrap-filestyle/src/bootstrap-filestyle.js')

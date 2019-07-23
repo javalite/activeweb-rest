@@ -1,0 +1,46 @@
+extends ../../_layout
+
+block active
+    - sidebar_active = 'maps-google.html'
+
+block content
+
+    .content-heading
+        div
+            | Google Maps
+            small Easy usage directly from data attribute
+
+    .row
+        .col-lg-6
+            .card.card-default
+                .card-header Classic Map
+                .card-body
+                    .gmap(data-gmap="", data-address="276 N TUSTIN ST, ORANGE, CA 92867")
+        .col-lg-6
+            .card.card-default
+                .card-header Custom zoom
+                .card-body
+                    .gmap(data-gmap="", data-address="276 N TUSTIN ST, ORANGE, CA 92867", data-zoom="19")
+    .row
+        .col-lg-6
+            .card.card-default
+                .card-header Different Map Type
+                .card-body
+                    .gmap(data-gmap="", data-address="276 N TUSTIN ST, ORANGE, CA 92867", data-maptype="SATELLITE")
+        .col-lg-6
+            .card.card-default
+                .card-header Multiple Addresses
+                .card-body
+                    .gmap(data-gmap="", data-address="276 N TUSTIN ST, ORANGE, CA 92867; 376 N TUSTIN ST, ORANGE, CA 92867", data-title="Location 1; Location 2")
+
+    .row
+        .col-lg-12
+            .card.card-default
+                .card-header Styled Maps
+                .card-body
+                    .gmap(data-gmap="", data-address="276 N TUSTIN ST, ORANGE, CA 92867", data-maptype="ROADMAP", data-styled)
+
+block vendor_js
+    // GOOGLE MAPS
+    script(src='//maps.google.com/maps/api/js')
+    script(src='vendor/jquery.gmap/jquery.gmap.js')

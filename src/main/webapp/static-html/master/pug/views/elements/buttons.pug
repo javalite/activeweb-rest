@@ -1,0 +1,389 @@
+extends ../../_layout
+
+block active
+    - sidebar_active = 'buttons.html'
+
+block content
+    mixin dropdown_button(type)
+        // START button group
+        .btn-group.mb-1
+            button.btn.dropdown-toggle(type='button', class='btn-'+type, data-toggle="dropdown")
+                = type
+            .dropdown-menu(role='menu')
+                a(href='#').dropdown-item Action
+                a(href='#').dropdown-item Another action
+                a(href='#').dropdown-item Something else here
+                .dropdown-divider
+                a(href='#').dropdown-item Separated link
+        // END button group
+
+    mixin dropdown_split(type)
+        // START button group
+        .btn-group
+            button.btn(type='button', class='btn-'+type) Action
+            button.btn.dropdown-toggle(type='button', class='btn-'+type, data-toggle="dropdown")
+                span.sr-only= type
+            .dropdown-menu(role='menu')
+                a(href='#').dropdown-item Action
+                a(href='#').dropdown-item Another action
+                a(href='#').dropdown-item Something else here
+                .dropdown-divider
+                a(href='#').dropdown-item Separated link
+        // END button group
+
+    .content-heading Buttons
+    // START row
+    .row
+        .col-lg-6
+            // START card
+            .card.card-default
+                .card-header
+                    h3.card-title Button colors
+                .card-body
+                    button.mb-1.btn.btn-secondary(type='button') Secondary
+                    button.mb-1.btn.btn-primary(type='button') Primary
+                    button.mb-1.btn.btn-success(type='button') Success
+                    button.mb-1.btn.btn-info(type='button') Info
+                    button.mb-1.btn.btn-warning(type='button') Warning
+                    button.mb-1.btn.btn-danger(type='button') Danger
+                    button.mb-1.btn.btn-inverse(type='button') Inverse
+                    button.mb-1.btn.btn-green(type='button') Green
+                    button.mb-1.btn.btn-purple(type='button') Purple
+                    button.mb-1.btn.btn-pink(type='button') Pink
+                    br
+                    br
+                    a(href="#").btn.btn-link Button Link
+                    button(type='button').btn.btn-secondary
+                        strong button tag
+                    |
+                    a(href="#").btn.btn-secondary
+                        strong anchor tag
+            // END card
+        .col-lg-6
+            // START card
+            .card.card-default
+                .card-header
+                    h3.card-title Button Labeled
+                .card-body
+                    // Success button with label
+                    button.btn.btn-labeled.btn-success.mb-2(type='button')
+                        span.btn-label
+                            i.fa.fa-check
+                        | Success
+                    // Danger button with label
+                    button.btn.btn-labeled.btn-danger.mb-2(type='button')
+                        span.btn-label
+                            i.fa.fa-times
+                        | Danger
+                    // Info button with label
+                    button.btn.btn-labeled.btn-info.mb-2(type='button')
+                        span.btn-label
+                            i.fa.fa-exclamation
+                        | Info
+                    // Warning button with label
+                    button.btn.btn-labeled.btn-warning.mb-2(type='button')
+                        span.btn-label
+                            i.fas.fa-exclamation-triangle
+                        | Warning
+                    br
+                    // Standard button with label
+                    button.btn.btn-labeled.btn-secondary(type='button')
+                        span.btn-label
+                            i.fa.fa-arrow-left
+                        | Left
+                    // Standard button with label on the right side
+                    button.btn.btn-labeled.btn-secondary(type='button')
+                        | Right
+                        span.btn-label.btn-label-right
+                            i.fa.fa-arrow-right
+            // END card
+    // END row
+    // START row
+    .row
+        .col-lg-6
+            // START card
+            .card.card-default
+                .card-header
+                    h3.card-title Button sizing
+                .card-body
+                    .row
+                        .col-xl-6
+                            p
+                                button.btn.btn-primary.btn-lg(type='button') Large button
+                                button.btn.btn-secondary.btn-lg(type='button') Large button
+                            p
+                                button.btn.btn-primary(type='button') Secondary button
+                                button.btn.btn-secondary(type='button') Secondary button
+                        .col-xl-6
+                            p
+                                button.btn.btn-primary.btn-sm(type='button') Small button
+                                button.btn.btn-secondary.btn-sm(type='button') Small button
+                            p
+                                button.btn.btn-primary.btn-xs(type='button') Extra small button
+                                button.btn.btn-secondary.btn-xs(type='button') Extra small button
+            // END card
+        .col-lg-6
+            // START card
+            .card.card-default
+                .card-header
+                    h3.card-title Button group
+                .card-body
+                    p
+                    .btn-group
+                        button.btn.btn-secondary(type='button') Left
+                        button.btn.btn-secondary(type='button') Middle
+                        button.btn.btn-secondary(type='button') Right
+                    p
+                    p
+                    .btn-group
+                        button.btn.btn-secondary(type='button') 1
+                        button.btn.btn-secondary(type='button') 2
+                        button.btn.btn-secondary(type='button') 3
+                        button.btn.btn-secondary(type='button') 4
+                    .btn-group
+                        button.btn.btn-secondary(type='button') 5
+                        button.btn.btn-secondary(type='button') 6
+                        button.btn.btn-secondary(type='button') 7
+                    .btn-group
+                        button.btn.btn-secondary(type='button') 8
+            // END card
+    // END row
+    // START card
+    .card.card-default
+        .card-header
+            h3.card-title Outline Buttons
+        .card-body
+            button.mb-1.btn.btn-outline-secondary(type='button') Secondary
+            button.mb-1.btn.btn-outline-primary(type='button') Primary
+            button.mb-1.btn.btn-outline-success(type='button') Success
+            button.mb-1.btn.btn-outline-info(type='button') Info
+            button.mb-1.btn.btn-outline-warning(type='button') Warning
+            button.mb-1.btn.btn-outline-danger(type='button') Danger
+            button.mb-1.btn.btn-outline-inverse(type='button') Inverse
+            button.mb-1.btn.btn-outline-green(type='button') Green
+            button.mb-1.btn.btn-outline-purple(type='button') Purple
+            button.mb-1.btn.btn-outline-pink(type='button') Pink
+            br
+            br
+            button.mb-1.btn-lg.btn.btn-outline-primary(type='button') Outline Large
+            button.mb-1.btn-sm.btn.btn-outline-primary(type='button') Outline Small
+            button.mb-1.btn-xs.btn.btn-outline-primary(type='button') Outline xSmall
+    // END card
+
+    // START row
+    .row
+        .col-lg-6
+            // START card
+            .card.card-default
+                .card-header
+                    h3.card-title Button Pills
+                .card-body
+                    p Pill left
+                    p
+                        button.btn.btn-pill-left.btn-secondary(type='button') Secondary
+                        button.btn.btn-pill-left.btn-primary(type='button') Primary
+                        button.btn.btn-pill-left.btn-success(type='button') Success
+                        button.btn.btn-pill-left.btn-info(type='button') Info
+                        button.btn.btn-pill-left.btn-warning(type='button') Warning
+                        button.btn.btn-pill-left.btn-danger(type='button') Danger
+                        button.btn.btn-pill-left.btn-inverse(type='button') Inverse
+
+                    p Pill right
+                    p
+                        button.btn.btn-pill-right.btn-secondary(type='button') Secondary
+                        button.btn.btn-pill-right.btn-primary(type='button') Primary
+                        button.btn.btn-pill-right.btn-success(type='button') Success
+                        button.btn.btn-pill-right.btn-info(type='button') Info
+                        button.btn.btn-pill-right.btn-warning(type='button') Warning
+                        button.btn.btn-pill-right.btn-danger(type='button') Danger
+                        button.btn.btn-pill-right.btn-inverse(type='button') Inverse
+            // END card
+        .col-lg-6
+            // START card
+            .card.card-default
+                .card-header
+                    h3.card-title Button Oval
+                .card-body
+                    button.btn.btn-oval.btn-secondary(type='button') Secondary
+                    button.btn.btn-oval.btn-primary(type='button') Primary
+                    button.btn.btn-oval.btn-success(type='button') Success
+                    button.btn.btn-oval.btn-info(type='button') Info
+                    button.btn.btn-oval.btn-warning(type='button') Warning
+                    button.btn.btn-oval.btn-danger(type='button') Danger
+                    button.btn.btn-oval.btn-inverse(type='button') Inverse
+            // END card
+            // START card
+            .card.card-default
+                .card-header
+                    h3.card-title Button Square
+                .card-body
+                    button.btn.btn-square.btn-secondary(type='button') Secondary
+                    button.btn.btn-square.btn-primary(type='button') Primary
+                    button.btn.btn-square.btn-success(type='button') Success
+                    button.btn.btn-square.btn-info(type='button') Info
+                    button.btn.btn-square.btn-warning(type='button') Warning
+                    button.btn.btn-square.btn-danger(type='button') Danger
+                    button.btn.btn-square.btn-inverse(type='button') Inverse
+            // END card
+    // END row
+
+    // START row
+    .row
+        .col-lg-6
+            // START card
+            .card.card-default
+                .card-header
+                    h3.card-title Button dropdown
+                .card-body
+                    +dropdown_button('secondary')
+                    +dropdown_button('primary')
+                    +dropdown_button('success')
+                    +dropdown_button('info')
+                    +dropdown_button('warning')
+                    +dropdown_button('danger')
+                    +dropdown_button('inverse')
+            // END card
+
+        .col-lg-6
+            // START card
+            .card.card-default
+                .card-header
+                    h3.card-title Split button dropdown
+                .card-body
+                    +dropdown_split('secondary')
+                    +dropdown_split('primary')
+                    +dropdown_split('success')
+                    +dropdown_split('info')
+                    +dropdown_split('warning')
+                    +dropdown_split('danger')
+                    +dropdown_split('inverse')
+            // END card
+    // END row
+
+    // START card
+    .card.card-default
+        .card-header
+            h3.card-title Button actions
+        .card-body
+            // START row
+            .row
+                .col-xl-4.mb-3
+                    h4 Single toggle
+                    button.btn.btn-primary(type='button', data-toggle='button', aria-pressed='false') Single toggle
+                .col-xl-4.mb-3
+                    h4 Checkbox
+                    .btn-group-toggle(data-toggle='buttons')
+                        label.btn.btn-primary.active
+                            input(type='checkbox', checked='')
+                            |  Checkbox 1
+                        label.btn.btn-primary
+                            input(type='checkbox', )
+                            |  Checkbox 2
+                        label.btn.btn-primary
+                            input(type='checkbox', )
+                            |  Checkbox 3
+                .col-xl-4
+                    h4 Radio
+                    .btn-group-toggle(data-toggle='buttons')
+                        label.btn.btn-primary.active
+                            input#option1(type='radio', name='options', checked='')
+                            |  Radio 1
+                        label.btn.btn-primary
+                            input#option2(type='radio', name='options', )
+                            |  Radio 2
+                        label.btn.btn-primary
+                            input#option3(type='radio', name='options', )
+                            |  Radio 3
+
+    // START card
+    .card.card-default
+        .card-header
+            h3.card-title Pagination
+        .card-body
+            // START row
+            .row
+                .col-xl-6
+                    div
+                        h4 Sizes
+                        nav
+                            ul.pagination.pagination-lg
+                                li.page-item
+                                    a.page-link(href='#', aria-label='Previous')
+                                        span(aria-hidden='true') &laquo;
+                                li.page-item.active
+                                    a.page-link(href='#') 1
+                                li.page-item
+                                    a.page-link(href='#') 2
+                                li.page-item
+                                    a.page-link(href='#') 3
+                                li.page-item
+                                    a.page-link(href='#') 4
+                                li.page-item
+                                    a.page-link(href='#') 5
+                                li.page-item
+                                    a.page-link(href='#', aria-label='Next')
+                                        span(aria-hidden='true') &raquo;
+                        nav
+                            ul.pagination
+                                li.page-item
+                                    a.page-link(href='#', aria-label='Previous')
+                                        span(aria-hidden='true') &laquo;
+                                li.page-item
+                                    a.page-link(href='#') 1
+                                li.page-item
+                                    a.page-link(href='#') 2
+                                li.page-item.active
+                                    a.page-link(href='#') 3
+                                li.page-item
+                                    a.page-link(href='#') 4
+                                li.page-item
+                                    a.page-link(href='#') 5
+                                li.page-item
+                                    a.page-link(href='#', aria-label='Next')
+                                        span(aria-hidden='true') &raquo;
+                        nav
+                            ul.pagination.pagination-sm
+                                li.page-item
+                                    a.page-link(href='#', aria-label='Previous')
+                                        span(aria-hidden='true') &laquo;
+                                li.page-item
+                                    a.page-link(href='#') 1
+                                li.page-item
+                                    a.page-link(href='#') 2
+                                li.page-item
+                                    a.page-link(href='#') 3
+                                li.page-item
+                                    a.page-link(href='#') 4
+                                li.page-item.active
+                                    a.page-link(href='#') 5
+                                li.page-item
+                                    a.page-link(href='#', aria-label='Next')
+                                        span(aria-hidden='true') &raquo;
+
+                .col-xl-6
+                    h4 Pager
+                    nav
+                        ul.pagination
+                            li.page-item.previous
+                                a.page-link(href='#')
+                                    span.mr-2(aria-hidden='true') &larr;
+                                    |  Older
+                            li.page-item.next.ml-auto
+                                a.page-link(href='#')
+                                    | Newer
+                                    span.ml-2(aria-hidden='true') &rarr;
+                    nav
+                        ul.pagination.justify-content-center
+                            li.page-item
+                                a.page-link(href='#') Previous
+                            li.page-item
+                                a.page-link(href='#') Next
+
+
+
+
+            // END row
+    // END card
+    style.
+        .btn-group, .btn { margin: 0 .25rem .25rem 0; }
+        .btn-group>.btn { margin-right: 0 ; }

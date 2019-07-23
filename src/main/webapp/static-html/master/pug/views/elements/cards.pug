@@ -1,0 +1,300 @@
+extends ../../_layout
+
+block active
+    - sidebar_active = 'cards.html'
+
+block content
+    .content-heading
+        div
+            | Cards
+            small Cards can contain almost any kind of element inside
+
+    .container-fluid
+        // START row
+        .row
+            .col-lg-4
+                // START card
+                #cardDemo1.card.card-default
+                    .card-header
+                        | Collapsible Card
+                        a(href="#", data-tool="card-collapse", data-toggle="tooltip", title="Collapse Card").float-right
+                            em.fa.fa-minus
+                    .card-wrapper
+                        .card-body
+                            p Card can be collapsed clicking on the chevron up/down icon on the top right corner
+                        .card-footer
+                            | Card Footer
+                // END card
+            .col-lg-4
+                // START card
+                #cardDemo3.card.card-default.card-demo
+                    .card-header
+                        | Initially collapsed Card
+                        a(href="#", data-tool="card-dismiss", data-toggle="tooltip", title="Close Card").float-right
+                            em.fa.fa-times
+                        a(href="#", data-tool="card-collapse", data-toggle="tooltip", title="Collapse Card", data-start-collapsed).float-right
+                            em.fa.fa-plus
+                    // .card-wrapper is the element to be collapsed
+                    .card-wrapper
+                        .card-body
+                            p Initially collapsed Card
+                        .card-footer
+                            | Card Footer
+                // END card
+            .col-lg-4
+                // START card
+                #cardDemo2.card.card-default.card-demo
+                    .card-header
+                        | Dismissable Card
+                        a(href="#", data-tool="card-dismiss", data-toggle="tooltip", title="Close Card").float-right
+                            em.fa.fa-times
+                    .card-body
+                        p Card can be dismissed by clicking on the cross icon icon on the top right corner
+                // END card
+        // END row
+
+        h4.page-header Card Refresh
+
+        // START row
+        .row
+            .col-lg-4
+                // START card
+                .card.card-default#cardDemoRefresh1.card-demo
+                    .card-header
+                        | Standard Spinner
+                        a(href="#", data-tool="card-refresh", data-toggle="tooltip", title="Refresh Card", data-spinner="standard").float-right
+                            em.fas.fa-sync
+                    .card-body
+                        p Click on the refresh icon to see how it triggers a refresh-event while it shows a spinner
+                // END card
+            .col-lg-4
+                // START card
+                .card.card-default#cardDemoRefresh2.card-demo
+                    .card-header
+                        | Custom Spinner
+                        a(href="#", data-tool="card-refresh", data-toggle="tooltip", title="Refresh Card", data-spinner="traditional").float-right
+                            em.fas.fa-sync
+                    .card-body
+                        p Click on the refresh icon to see how it triggers a refresh-event while it shows a spinner
+                // END card
+            .col-lg-4
+                // START card
+                .card.card-default#cardDemoRefresh3.card-demo
+                    .card-header
+                        | Another Spinner
+                        a(href="#", data-tool="card-refresh", data-toggle="tooltip", title="Refresh Card", data-spinner="line back-and-forth grow").float-right
+                            em.fas.fa-sync
+                    .card-body
+                        p See the list of allowed spinner at the Spinners page. A real use example is at the chart page.
+                // END card
+        // END row
+
+
+
+    h4.page-header Card Styles
+
+    .row
+        .col-lg-4
+            .card.text-white.bg-primary.mb-3
+                .card-header Header
+                .card-body
+                    h5.card-title Primary card title
+                    p.card-text
+                        | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+        .col-lg-4
+            .card.card-default.mb-3
+                .card-header Header
+                .card-body
+                    h5.card-title Card Default card title
+                    p.card-text
+                        | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+        .col-lg-4
+            .card.text-white.bg-success.mb-3
+                .card-header Header
+                .card-body
+                    h5.card-title Success card title
+                    p.card-text
+                        | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+    .row
+        .col-lg-4
+            .card.text-white.bg-danger.mb-3
+                .card-header Header
+                .card-body
+                    h5.card-title Danger card title
+                    p.card-text
+                        | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+        .col-lg-4
+            .card.text-white.bg-warning.mb-3
+                .card-header Header
+                .card-body
+                    h5.card-title Warning card title
+                    p.card-text
+                        | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+        .col-lg-4
+            .card.text-white.bg-info.mb-3
+                .card-header Header
+                .card-body
+                    h5.card-title Info card title
+                    p.card-text
+                        | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+
+    .row
+        .col-lg-6
+            .card.bg-light.mb-3
+                .card-header Header
+                .card-body
+                    h5.card-title Light card title
+                    p.card-text
+                        | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+        .col-lg-6
+            .card.text-white.bg-dark.mb-3
+                .card-header Header
+                .card-body
+                    h5.card-title Dark card title
+                    p.card-text
+                        | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+
+    .row
+        .col-lg-4
+            .card.mb-3.border-primary
+                .card-header.text-white.bg-primary Header
+                .card-body
+                    h5.card-title Primary card title
+                    p.card-text
+                        | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+        .col-lg-4
+            .card.mb-3.border-secondary
+                .card-header.bg-secondary Header
+                .card-body
+                    h5.card-title Card Default card title
+                    p.card-text
+                        | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+        .col-lg-4
+            .card.mb-3.border-success
+                .card-header.text-white.bg-success Header
+                .card-body
+                    h5.card-title Success card title
+                    p.card-text
+                        | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+    .row
+        .col-lg-4
+            .card.mb-3.border-danger
+                .card-header.text-white.bg-danger Header
+                .card-body
+                    h5.card-title Danger card title
+                    p.card-text
+                        | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+        .col-lg-4
+            .card.mb-3.border-warning
+                .card-header.text-white.bg-warning Header
+                .card-body
+                    h5.card-title Warning card title
+                    p.card-text
+                        | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+        .col-lg-4
+            .card.mb-3.border-info
+                .card-header.text-white.bg-info Header
+                .card-body
+                    h5.card-title Info card title
+                    p.card-text
+                        | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+
+    h4.page-header Card Deck
+    .mb-4
+        .card-deck
+            .card.card-default
+                .card-header Demo content
+                .card-body
+                    h5.card-title Card title
+                    p.card-text
+                        | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                .card-footer
+                    .text-sm.text-muted Last updated 3 mins ago
+            .card.card-default
+                .card-header Demo content
+                .card-body
+                    h5.card-title Card title
+                    p.card-text This card has supporting text below as a natural lead-in to additional content.
+                    p.card-text This card has supporting text below as a natural lead-in to additional content.
+                    p.card-text This card has supporting text below as a natural lead-in to additional content.
+                    p.card-text This card has supporting text below as a natural lead-in to additional content.
+                .card-footer
+                    .text-sm.text-muted Last updated 3 mins ago
+            .card.card-default
+                .card-header Demo content
+                .card-body
+                    h5.card-title Card title
+                    p.card-text
+                        | This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                .card-footer
+                    .text-sm.text-muted Last updated 3 mins ago
+
+
+    h4.page-header Accordion
+    #accordion
+        .card.card-default.mb-1
+            #headingOne.card-header
+                h4.mb-0
+                    a.text-inherit(data-toggle='collapse' data-target='#collapseOne' aria-expanded='true' aria-controls='collapseOne', href="")
+                        | Collapsible Group Item #1
+            #collapseOne.collapse.show(aria-labelledby='headingOne' data-parent='#accordion')
+                .card-body.border-top
+                    | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.
+        .card.card-default.mb-1
+            #headingTwo.card-header
+                h4.mb-0
+                    a.text-inherit.collapsed(data-toggle='collapse' data-target='#collapseTwo' aria-expanded='false' aria-controls='collapseTwo', href="")
+                        | Collapsible Group Item #2
+            #collapseTwo.collapse(aria-labelledby='headingTwo' data-parent='#accordion')
+                .card-body.border-top
+                    | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.
+        .card.card-default.mb-1
+            #headingThree.card-header
+                h4.mb-0
+                    a.text-inherit.collapsed(data-toggle='collapse' data-target='#collapseThree' aria-expanded='false' aria-controls='collapseThree', href="")
+                        | Collapsible Group Item #3
+            #collapseThree.collapse(aria-labelledby='headingThree' data-parent='#accordion')
+                .card-body.border-top
+                    | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.
+
+    h4.page-header Tabs
+    // START row
+    .row
+        .col-xl-12
+            // START card
+            #cardDemo14.card.card-default
+                .card-header Basic Tabs
+                .card-body
+                    div(role='tabpanel')
+                        // Nav tabs
+                        ul.nav.nav-tabs(role='tablist')
+                            li.nav-item(role='presentation')
+                                a.nav-link.active(href='#home', aria-controls='home', role='tab', data-toggle='tab') Home
+                            li.nav-item(role='presentation')
+                                a.nav-link(href='#profile', aria-controls='profile', role='tab', data-toggle='tab') Profile
+                            li.nav-item(role='presentation')
+                                a.nav-link(href='#messages', aria-controls='messages', role='tab', data-toggle='tab') Messages
+                            li.nav-item(role='presentation')
+                                a.nav-link(href='#settings', aria-controls='settings', role='tab', data-toggle='tab') Settings
+                        // Tab panes
+                        .tab-content
+                            #home.tab-pane.active(role='tabpanel') Suspendisse velit erat, vulputate sit amet feugiat a, lobortis nec felis.
+                            #profile.tab-pane(role='tabpanel') Integer lobortis commodo auctor.
+                            #messages.tab-pane(role='tabpanel') Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            #settings.tab-pane(role='tabpanel') Sed commodo tellus ut mi tristique pharetra.
+
+            // END card
+    // END row
+
+    .jumbotron.jumbotron-fluid
+        h1.display-4 Hello, world!
+        p.lead
+            | This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
+        hr.my-4
+        p
+            | It uses utility classes for typography and spacing to space content out within the larger container.
+        p.lead
+            a.btn.btn-primary.btn-lg(href='#' role='button') Learn more
+
+
+block vendor_js

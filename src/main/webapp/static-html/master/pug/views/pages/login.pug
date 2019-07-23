@@ -1,0 +1,39 @@
+extends ../../_layout_page
+
+block content
+    .block-center.mt-4.wd-xl
+        // START card
+        .card.card-flat
+            .card-header.text-center.bg-dark
+                a(href="#")
+                    img.block-center.rounded(src='img/logo.png', alt='Image')
+            .card-body
+                p.text-center.py-2 SIGN IN TO CONTINUE.
+                form#loginForm(novalidate).mb-3
+                    .form-group
+                        .input-group.with-focus
+                            input#exampleInputEmail1.form-control.border-right-0(type='email', placeholder='Enter email', autocomplete="off",required)
+                            .input-group-append
+                                span.input-group-text.text-muted.bg-transparent.border-left-0
+                                    em.fa.fa-envelope
+                    .form-group
+                        .input-group.with-focus
+                            input#exampleInputPassword1.form-control.border-right-0(type='password', placeholder='Password', required)
+                            .input-group-append
+                                span.input-group-text.text-muted.bg-transparent.border-left-0
+                                    em.fa.fa-lock
+                    .clearfix
+                        .checkbox.c-checkbox.float-left.mt-0
+                            label
+                                input(type='checkbox', value='', name="remember")
+                                span.fa.fa-check
+                                |  Remember Me
+                        .float-right
+                            a.text-muted(href="recover.html") Forgot your password?
+
+                    button.btn.btn-block.btn-primary.mt-3(type='submit') Login
+
+                p.pt-3.text-center Need to Signup?
+                a(href="register.html").btn.btn-block.btn-secondary Register Now
+        // END card
+        include ../_partials/_footer_page

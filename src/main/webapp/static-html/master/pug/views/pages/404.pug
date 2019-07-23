@@ -1,0 +1,24 @@
+extends ../../_layout_page
+
+block content
+    .abs-center.wd-xl
+        // START card
+        .text-center.mb-4
+            .text-lg.mb-3 404
+            p.lead.m-0 We couldn't find this page.
+            p The page you are looking for does not exists.
+
+        .input-group.mb-4
+            input.form-control(type='text', placeholder="Try with a search")
+            span.input-group-btn
+                button.btn.btn-secondary(type='button')
+                        em.fa.fa-search
+
+        ul.list-inline.text-center.text-sm.mb-4
+            li.list-inline-item: a.text-muted(href="dashboard.html") Go to App
+            li.text-muted.list-inline-item |
+            li.list-inline-item: a.text-muted(href="login.html") Login
+            li.text-muted.list-inline-item |
+            li.list-inline-item: a.text-muted(href="register.html") Register
+
+        include ../_partials/_footer_page

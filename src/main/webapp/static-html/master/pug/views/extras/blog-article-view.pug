@@ -1,0 +1,233 @@
+extends ../../_layout
+
+block active
+    - sidebar_active = 'blog-article-view.html'
+
+block content
+    .content-heading New Article
+
+    .alert.alert-info
+        em.fa.fa-exclamation-circle.fa-lg.fa-fw
+        span There is an autosaved version of this article that is more recent than the version below.
+            a.text-white(href='#') Restore
+
+    .row
+        // Article Content
+        .col-xl-9
+            .card.card-default
+                .card-body
+                    form(action="#")
+                        input.mb-3.form-control.form-control-lg(type="text", name="article-title", placeholder="Article title...")
+                        .btn-toolbar(data-role='editor-toolbar', data-target='#editor')
+                            .btn-group.dropdown
+                                a.btn.btn-secondary.dropdown-toggle(data-toggle='dropdown', title='Font')
+                                    em.fa.fa-font
+                                .dropdown-menu
+                                    a.dropdown-item(href='javacript:void', data-edit='fontName Arial', style="font-family:'Arial'") Arial
+                                    a.dropdown-item(href='javacript:void', data-edit='fontName Sans', style="font-family:'Sans'") Sans
+                                    a.dropdown-item(href='javacript:void', data-edit='fontName Serif', style="font-family:'Serif'") Serif
+                            .btn-group.dropdown
+                                a.btn.btn-secondary.dropdown-toggle(data-toggle='dropdown', title='Font Size')
+                                    em.fa.fa-text-height
+                                    | &nbsp;
+                                .dropdown-menu
+                                    a.dropdown-item(href='javacript:void', data-edit='fontSize 5', style='font-size:24px') Huge
+                                    a.dropdown-item(href='javacript:void', data-edit='fontSize 3', style='font-size:18px') Normal
+                                    a.dropdown-item(href='javacript:void', data-edit='fontSize 1', style='font-size:14px') Small
+                            .btn-group
+                                a.btn.btn-secondary(data-edit='bold', data-toggle="tooltip", title='Bold (Ctrl/Cmd+B)')
+                                    em.fa.fa-bold
+                                a.btn.btn-secondary(data-edit='italic', data-toggle="tooltip", title='Italic (Ctrl/Cmd+I)')
+                                    em.fa.fa-italic
+                                a.btn.btn-secondary(data-edit='strikethrough', data-toggle="tooltip", title='Strikethrough')
+                                    em.fa.fa-strikethrough
+                                a.btn.btn-secondary(data-edit='underline', data-toggle="tooltip", title='Underline (Ctrl/Cmd+U)')
+                                    em.fa.fa-underline
+                            .btn-group
+                                a.btn.btn-secondary(data-edit='insertunorderedlist', data-toggle="tooltip", title='Bullet list')
+                                    em.fa.fa-list-ul
+                                a.btn.btn-secondary(data-edit='insertorderedlist', data-toggle="tooltip", title='Number list')
+                                    em.fa.fa-list-ol
+                                a.btn.btn-secondary(data-edit='outdent', data-toggle="tooltip", title='Reduce indent (Shift+Tab)')
+                                    em.fas.fa-outdent
+                                a.btn.btn-secondary(data-edit='indent', data-toggle="tooltip", title='Indent (Tab)')
+                                    em.fa.fa-indent
+                            .btn-group
+                                a.btn.btn-secondary(data-edit='justifyleft', data-toggle="tooltip", title='Align Left (Ctrl/Cmd+L)')
+                                    em.fa.fa-align-left
+                                a.btn.btn-secondary(data-edit='justifycenter', data-toggle="tooltip", title='Center (Ctrl/Cmd+E)')
+                                    em.fa.fa-align-center
+                                a.btn.btn-secondary(data-edit='justifyright', data-toggle="tooltip", title='Align Right (Ctrl/Cmd+R)')
+                                    em.fa.fa-align-right
+                                a.btn.btn-secondary(data-edit='justifyfull', data-toggle="tooltip", title='Justify (Ctrl/Cmd+J)')
+                                    em.fa.fa-align-justify
+                            .btn-group.dropdown
+                                a.btn.btn-secondary.dropdown-toggle(data-toggle='dropdown', title='Hyperlink')
+                                    em.fa.fa-link
+                                .dropdown-menu
+                                    .input-group
+                                        input#LinkInput.form-control.form-control-sm(placeholder='URL', type='text', data-edit='createLink')
+                                        .input-group-btn
+                                            button.btn.btn-sm.btn-secondary(type='button') Add
+                                a.btn.btn-secondary(data-edit='unlink', data-toggle="tooltip", title='Remove Hyperlink')
+                                    em.fa.fa-cut
+                            .btn-group
+                                a#pictureBtn.btn.btn-secondary(data-toggle="tooltip", title='Insert picture (or just drag & drop)')
+                                    em.far.fa-image
+                                input(type='file', data-edit='insertImage', style='position:absolute; opacity:0; width:41px; height:34px')
+                            .btn-group.ml-auto
+                                a.btn.btn-secondary(data-edit='undo', data-toggle="tooltip", title='Undo (Ctrl/Cmd+Z)')
+                                    em.fa.fa-undo
+                                a.btn.btn-secondary(data-edit='redo', data-toggle="tooltip", title='Redo (Ctrl/Cmd+Y)')
+                                    em.fas.fa-redo
+                        .form-control.wysiwyg.mt-3(style='overflow:scroll; height:250px;max-height:250px') Type something ...
+
+                        br
+                        p Notes
+                        textarea.mb-3.form-control(cols="6")
+                        .clearfix
+                            .float-left
+                                button.btn.btn-secondary(type="button")
+                                    em.fa.fa-edit.fa-fw
+                                    | Draft
+                                button.btn.btn-primary(type="button")
+                                    em.fa.fa-check.fa-fw
+                                    | Save
+                            .float-right
+                                button.btn.btn-danger(type="button")
+                                    em.fas.fa-trash-alt.fa-fw
+                                    | Remove
+            p.lead List of Comments
+            .card
+                .table-responsive
+                    table.table.table-hover
+                        thead
+                            tr
+                                th
+                                    strong Comment ID
+                                th
+                                    strong Date
+                                th
+                                    strong Username
+                                th
+                                    strong Comment excerpt
+                                th.text-center
+                                    strong Current status
+                                th.text-right(style="width:130px")
+                                    strong Actions
+                        tbody
+                            tr
+                                td 123
+                                td 10/05/2015
+                                td: a(href="") Jack Jordan
+                                td Sed quis eros libero, a euismod nisl....
+                                td.text-center
+                                    span.badge.badge-success Approved
+                                td.text-right
+                                    button(type="button").btn.btn-sm.btn-secondary
+                                        em.fas.fa-pencil-alt
+                                    button(type="button").btn.btn-sm.btn-danger
+                                        em.fas.fa-trash-alt
+                                    button(type="button").btn.btn-sm.btn-success
+                                        em.fa.fa-check
+                            tr
+                                td 456
+                                td 10/07/2015
+                                td: a(href="") Hailey Mckinney
+                                td Nulla facilisi.
+                                td.text-center
+                                    span.badge.badge-success Approved
+                                td.text-right
+                                    button(type="button").btn.btn-sm.btn-secondary
+                                        em.fas.fa-pencil-alt
+                                    button(type="button").btn.btn-sm.btn-danger
+                                        em.fas.fa-trash-alt
+                                    button(type="button").btn.btn-sm.btn-success
+                                        em.fa.fa-check
+                            tr
+                                td 789
+                                td 11/05/2015
+                                td: a(href="") Peyton Reyes
+                                td Quisque enim nisi, semper non pulvinar et, aliquam id lorem...
+                                td.text-center
+                                    span.badge.badge-warning Pending
+                                td.text-right
+                                    button(type="button").btn.btn-sm.btn-secondary
+                                        em.fas.fa-pencil-alt
+                                    button(type="button").btn.btn-sm.btn-danger
+                                        em.fas.fa-trash-alt
+                                    button(type="button").btn.btn-sm.btn-success
+                                        em.fa.fa-check
+                            tr
+                                td 999
+                                td 10/06/2015
+                                td: a(href="") Darryl Harper
+                                td Nulla facilisi.
+                                td.text-center
+                                    span.badge.badge-danger Rejected
+                                td.text-right
+                                    button(type="button").btn.btn-sm.btn-secondary
+                                        em.fas.fa-pencil-alt
+                                    button(type="button", disabled="").btn.btn-sm.btn-danger
+                                        em.fas.fa-trash-alt
+                                    button(type="button").btn.btn-sm.btn-success
+                                        em.fa.fa-check
+        // Article sidebar
+        .col-xl-3
+            .card.card-default
+                .card-body
+                    p.lead Article Data
+
+                    p.my-2 Categories
+                    select.chosen-select.form-control(multiple)
+                        //- option(value='')
+                        option coding
+                        option less
+                        option sass
+                        option angularjs
+                        option node
+                        option expressJS
+                    p.my-2 Tags
+                    select.chosen-select.form-control(multiple)
+                        //- option(value='')
+                        option JAVASCRIPT
+                        option WEB
+                        option BOOTSTRAP
+                        option SERVER
+                        option HTML5
+                        option CSS
+                    p.my-2 Reviewers
+                    select.chosen-select.form-control(multiple)
+                        //- option(value='')
+                        option adam@email.com
+                        option amalie@email.com
+                        option wladimir@email.com
+                        option samantha@email.com
+                        option estefanía@email.com
+                        option natasha@email.com
+                        option nicole@email.com
+                        option adrian@email.com
+
+                    p.lead.mt-3 SEO Metadata
+                    .form-group
+                        p Title
+                        input.form-control(type='text', placeholder="Brief description..")
+                    .form-group
+                        p Description
+                        textarea.form-control(rows='5', placeholder='Max 255 characters...')
+                    .form-group
+                        p Keywords
+                        textarea.form-control(rows='5', placeholder='Max 1000 characters...')
+
+block vendor_css
+    // CHOSEN
+    link(rel='stylesheet', href='vendor/chosen-js/chosen.css')
+block vendor_js
+    // CHOSEN
+    script(src='vendor/chosen-js/chosen.jquery.js')
+    // WYSIWYG
+    script(src='vendor/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js')
+    // Demo
+    script.
+        $('.chosen-select').chosen();
+        $('.wysiwyg').wysiwyg();

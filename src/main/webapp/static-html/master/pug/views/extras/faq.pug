@@ -1,0 +1,182 @@
+extends ../../_layout
+
+block active
+  - sidebar_active = 'faq.html'
+
+block content
+    .container.container-md
+        .row.mb-3
+            .col-lg-8
+                .h1.text-bold FAQs
+                p.text-muted Praesent id mauris urna, et tristique lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            .col-lg-4
+                .card: .card-body.text-center
+                    p.mb-3 Sed semper diam vitae purus tristique at scelerisque massa ultricies.
+                    button(type="button").btn.btn-info Contact support
+
+        h4.my-3.py-4.text-dark Some presale Questions
+        #accordion1
+            .card.b0.mb-2
+                .card-header: h4.card-title: a.text-inherit(data-toggle="collapse", data-parent="#accordion1", href="#acc1collapse1")
+                    small: em.fa.fa-plus.text-primary.mr-2
+                    span How can I change the color?
+                #acc1collapse1.collapse
+                    .card-body
+                        p Donec congue sagittis mi sit amet tincidunt. Quisque sollicitudin massa vel erat tincidunt blandit. Curabitur quis leo nulla. Phasellus faucibus placerat luctus. Integer fermentum molestie massa at congue. Quisque quis quam dictum diam volutpat adipiscing.
+                        p Proin ut urna enim.
+                        .text-right
+                            small.text-muted.mr-2 Was this information useful?
+                            button(type="button").btn.btn-secondary.btn-xs: em.fa.fa-thumbs-up.text-muted
+                            button(type="button").btn.btn-secondary.btn-xs: em.fa.fa-thumbs-down.text-muted
+            .card.b0.mb-2
+                .card-header: h4.card-title: a.text-inherit(data-toggle="collapse", data-parent="#accordion1", href="#acc1collapse2")
+                    small: em.fa.fa-plus.text-primary.mr-2
+                    span How can I change the color?
+                #acc1collapse2.collapse
+                    .card-body
+                        p Donec congue sagittis mi sit amet tincidunt. Quisque sollicitudin massa vel erat tincidunt blandit. Curabitur quis leo nulla. Phasellus faucibus placerat luctus. Integer fermentum molestie massa at congue. Quisque quis quam dictum diam volutpat adipiscing.
+                        p Proin ut urna enim.
+                        .text-right
+                            small.text-muted.mr-2 Was this information useful?
+                            button(type="button").btn.btn-secondary.btn-xs: em.fa.fa-thumbs-up.text-muted
+                            button(type="button").btn.btn-secondary.btn-xs: em.fa.fa-thumbs-down.text-muted
+            .card.b0.mb-2
+                .card-header: h4.card-title: a.text-inherit(data-toggle="collapse", data-parent="#accordion1", href="#acc1collapse3")
+                    small: em.fa.fa-plus.text-primary.mr-2
+                    span How can I change the color?
+                #acc1collapse3.collapse
+                    .card-body
+                        p Donec congue sagittis mi sit amet tincidunt. Quisque sollicitudin massa vel erat tincidunt blandit. Curabitur quis leo nulla. Phasellus faucibus placerat luctus. Integer fermentum molestie massa at congue. Quisque quis quam dictum diam volutpat adipiscing.
+                        p Proin ut urna enim.
+                        .text-right
+                            small.text-muted.mr-2 Was this information useful?
+                            button(type="button").btn.btn-secondary.btn-xs: em.fa.fa-thumbs-up.text-muted
+                            button(type="button").btn.btn-secondary.btn-xs: em.fa.fa-thumbs-down.text-muted
+            .card.b0.mb-2
+                .card-header: h4.card-title: a.text-inherit(data-toggle="collapse", data-parent="#accordion1", href="#acc1collapse4")
+                    small: em.fa.fa-plus.text-primary.mr-2
+                    span How can I change the color?
+                #acc1collapse4.collapse
+                    .card-body
+                        p Donec congue sagittis mi sit amet tincidunt. Quisque sollicitudin massa vel erat tincidunt blandit. Curabitur quis leo nulla. Phasellus faucibus placerat luctus. Integer fermentum molestie massa at congue. Quisque quis quam dictum diam volutpat adipiscing.
+                        p Proin ut urna enim.
+                        .text-right
+                            small.text-muted.mr-2 Was this information useful?
+                            button(type="button").btn.btn-secondary.btn-xs: em.fa.fa-thumbs-up.text-muted
+                            button(type="button").btn.btn-secondary.btn-xs: em.fa.fa-thumbs-down.text-muted
+            .card.b0.mb-2
+                .card-header: h4.card-title: a.text-inherit(data-toggle="collapse", data-parent="#accordion1", href="#acc1collapse5")
+                    small: em.fa.fa-plus.text-primary.mr-2
+                    span How can I change the color?
+                #acc1collapse5.collapse
+                    .card-body
+                        p Donec congue sagittis mi sit amet tincidunt. Quisque sollicitudin massa vel erat tincidunt blandit. Curabitur quis leo nulla. Phasellus faucibus placerat luctus. Integer fermentum molestie massa at congue. Quisque quis quam dictum diam volutpat adipiscing.
+                        p Proin ut urna enim.
+                        .text-right
+                            small.text-muted.mr-2 Was this information useful?
+                            button(type="button").btn.btn-secondary.btn-xs: em.fa.fa-thumbs-up.text-muted
+                            button(type="button").btn.btn-secondary.btn-xs: em.fa.fa-thumbs-down.text-muted
+
+        h4.my-3.py-4.text-dark Buyer Questions
+
+        #accordion2
+            .card.b0.mb-2
+                .card-header: h4.card-title: a.text-inherit(data-toggle="collapse", data-parent="#accordion2", href="#acc2collapse1")
+                    small: em.fa.fa-plus.text-primary.mr-2
+                    span How can I change the color?
+                #acc2collapse1.collapse
+                    .card-body
+                        p Donec congue sagittis mi sit amet tincidunt. Quisque sollicitudin massa vel erat tincidunt blandit. Curabitur quis leo nulla. Phasellus faucibus placerat luctus. Integer fermentum molestie massa at congue. Quisque quis quam dictum diam volutpat adipiscing.
+                        p Proin ut urna enim.
+                        .text-right
+                            small.text-muted.mr-2 Was this information useful?
+                            button(type="button").btn.btn-secondary.btn-xs: em.fa.fa-thumbs-up.text-muted
+                            button(type="button").btn.btn-secondary.btn-xs: em.fa.fa-thumbs-down.text-muted
+            .card.b0.mb-2
+                .card-header: h4.card-title: a.text-inherit(data-toggle="collapse", data-parent="#accordion2", href="#acc2collapse2")
+                    small: em.fa.fa-plus.text-primary.mr-2
+                    span How can I change the color?
+                #acc2collapse2.collapse
+                    .card-body
+                        p Donec congue sagittis mi sit amet tincidunt. Quisque sollicitudin massa vel erat tincidunt blandit. Curabitur quis leo nulla. Phasellus faucibus placerat luctus. Integer fermentum molestie massa at congue. Quisque quis quam dictum diam volutpat adipiscing.
+                        p Proin ut urna enim.
+                        .text-right
+                            small.text-muted.mr-2 Was this information useful?
+                            button(type="button").btn.btn-secondary.btn-xs: em.fa.fa-thumbs-up.text-muted
+                            button(type="button").btn.btn-secondary.btn-xs: em.fa.fa-thumbs-down.text-muted
+            .card.b0.mb-2
+                .card-header: h4.card-title: a.text-inherit(data-toggle="collapse", data-parent="#accordion2", href="#acc2collapse3")
+                    small: em.fa.fa-plus.text-primary.mr-2
+                    span How can I change the color?
+                #acc2collapse3.collapse
+                    .card-body
+                        p Donec congue sagittis mi sit amet tincidunt. Quisque sollicitudin massa vel erat tincidunt blandit. Curabitur quis leo nulla. Phasellus faucibus placerat luctus. Integer fermentum molestie massa at congue. Quisque quis quam dictum diam volutpat adipiscing.
+                        p Proin ut urna enim.
+                        .text-right
+                            small.text-muted.mr-2 Was this information useful?
+                            button(type="button").btn.btn-secondary.btn-xs: em.fa.fa-thumbs-up.text-muted
+                            button(type="button").btn.btn-secondary.btn-xs: em.fa.fa-thumbs-down.text-muted
+            .card.b0.mb-2
+                .card-header: h4.card-title: a.text-inherit(data-toggle="collapse", data-parent="#accordion2", href="#acc2collapse4")
+                    small: em.fa.fa-plus.text-primary.mr-2
+                    span How can I change the color?
+                #acc2collapse4.collapse
+                    .card-body
+                        p Donec congue sagittis mi sit amet tincidunt. Quisque sollicitudin massa vel erat tincidunt blandit. Curabitur quis leo nulla. Phasellus faucibus placerat luctus. Integer fermentum molestie massa at congue. Quisque quis quam dictum diam volutpat adipiscing.
+                        p Proin ut urna enim.
+                        .text-right
+                            small.text-muted.mr-2 Was this information useful?
+                            button(type="button").btn.btn-secondary.btn-xs: em.fa.fa-thumbs-up.text-muted
+                            button(type="button").btn.btn-secondary.btn-xs: em.fa.fa-thumbs-down.text-muted
+
+        h4.my-3.py-4.text-dark Seller Questions
+
+        #accordion3
+            .card.b0.mb-2
+                .card-header: h4.card-title: a.text-inherit(data-toggle="collapse", data-parent="#accordion3", href="#acc3collapse1")
+                    small: em.fa.fa-plus.text-primary.mr-2
+                    span How can I change the color?
+                #acc3collapse1.collapse
+                    .card-body
+                        p Donec congue sagittis mi sit amet tincidunt. Quisque sollicitudin massa vel erat tincidunt blandit. Curabitur quis leo nulla. Phasellus faucibus placerat luctus. Integer fermentum molestie massa at congue. Quisque quis quam dictum diam volutpat adipiscing.
+                        p Proin ut urna enim.
+                        .text-right
+                            small.text-muted.mr-2 Was this information useful?
+                            button(type="button").btn.btn-secondary.btn-xs: em.fa.fa-thumbs-up.text-muted
+                            button(type="button").btn.btn-secondary.btn-xs: em.fa.fa-thumbs-down.text-muted
+            .card.b0.mb-2
+                .card-header: h4.card-title: a.text-inherit(data-toggle="collapse", data-parent="#accordion3", href="#acc3collapse2")
+                    small: em.fa.fa-plus.text-primary.mr-2
+                    span How can I change the color?
+                #acc3collapse2.collapse
+                    .card-body
+                        p Donec congue sagittis mi sit amet tincidunt. Quisque sollicitudin massa vel erat tincidunt blandit. Curabitur quis leo nulla. Phasellus faucibus placerat luctus. Integer fermentum molestie massa at congue. Quisque quis quam dictum diam volutpat adipiscing.
+                        p Proin ut urna enim.
+                        .text-right
+                            small.text-muted.mr-2 Was this information useful?
+                            button(type="button").btn.btn-secondary.btn-xs: em.fa.fa-thumbs-up.text-muted
+                            button(type="button").btn.btn-secondary.btn-xs: em.fa.fa-thumbs-down.text-muted
+            .card.b0.mb-2
+                .card-header: h4.card-title: a.text-inherit(data-toggle="collapse", data-parent="#accordion3", href="#acc3collapse3")
+                    small: em.fa.fa-plus.text-primary.mr-2
+                    span How can I change the color?
+                #acc3collapse3.collapse
+                    .card-body
+                        p Donec congue sagittis mi sit amet tincidunt. Quisque sollicitudin massa vel erat tincidunt blandit. Curabitur quis leo nulla. Phasellus faucibus placerat luctus. Integer fermentum molestie massa at congue. Quisque quis quam dictum diam volutpat adipiscing.
+                        p Proin ut urna enim.
+                        .text-right
+                            small.text-muted.mr-2 Was this information useful?
+                            button(type="button").btn.btn-secondary.btn-xs: em.fa.fa-thumbs-up.text-muted
+                            button(type="button").btn.btn-secondary.btn-xs: em.fa.fa-thumbs-down.text-muted
+            .card.b0.mb-2
+                .card-header: h4.card-title: a.text-inherit(data-toggle="collapse", data-parent="#accordion3", href="#acc3collapse4")
+                    small: em.fa.fa-plus.text-primary.mr-2
+                    span How can I change the color?
+                #acc3collapse4.collapse
+                    .card-body
+                        p Donec congue sagittis mi sit amet tincidunt. Quisque sollicitudin massa vel erat tincidunt blandit. Curabitur quis leo nulla. Phasellus faucibus placerat luctus. Integer fermentum molestie massa at congue. Quisque quis quam dictum diam volutpat adipiscing.
+                        p Proin ut urna enim.
+                        .text-right
+                            small.text-muted.mr-2 Was this information useful?
+                            button(type="button").btn.btn-secondary.btn-xs: em.fa.fa-thumbs-up.text-muted
+                            button(type="button").btn.btn-secondary.btn-xs: em.fa.fa-thumbs-down.text-muted

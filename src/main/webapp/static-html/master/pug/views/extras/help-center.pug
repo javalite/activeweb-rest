@@ -1,0 +1,106 @@
+extends ../../_layout
+
+block active
+  - sidebar_active = 'help-center.html'
+
+block content
+    .unwrap
+        .bg-cover
+            .container.container-md.py-4
+                .text-center.mb-3.pb-3
+                    .h1.text-bold Help Center
+                    p User our Help Center to quickly find answers
+
+    .container.container-md
+        form(action="#")
+            .input-group.input-group-lg
+                input.form-control.form-control-lg.rounded-0(type='text', name='term', placeholder='Search')
+                select.form-control.form-control-lg
+                    option All Products
+                    option Templates
+                    option Servers
+                    option Billing
+                    option Buyers
+                    option Sellers
+                    option Plans
+                    option Accounts
+                .input-group-append
+                    button.btn.btn-info.btn-lg.b0.rounded-0(type='button'): strong Search
+
+        p.my-3.py-4.text-muted.text-center: small Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+
+        .row
+            .col-lg-4
+                .card.b
+                    .card-body.text-center
+                        a(href="#").link-unstyled.text-primary
+                            em.fa-5x.fas.fa-tv.mb-3
+                            br
+                            span.h4 All Products
+                            br
+                            .text-sm.text-muted View all &rarr;
+            .col-lg-4
+                .card.b
+                    .card-body.text-center
+                        a(href="#").link-unstyled.text-info
+                            em.fa-5x.fa.fa-object-group.mb-3
+                            br
+                            span.h4 Templates
+                            br
+                            .text-sm.text-muted View all &rarr;
+            .col-lg-4
+                .card.b
+                    .card-body.text-center
+                        a(href="#").link-unstyled.text-purple
+                            em.fa-5x.fa.fa-cubes.mb-3
+                            br
+                            span.h4 Servers
+                            br
+                            .text-sm.text-muted View all &rarr;
+            .col-lg-4
+                .card.b
+                    .card-body.text-center
+                        a(href="#").link-unstyled.text-warning
+                            em.fa-5x.far.fa-gem.mb-3
+                            br
+                            span.h4 Buyers
+                            br
+                            .text-sm.text-muted View all &rarr;
+            .col-lg-4
+                .card.b
+                    .card-body.text-center
+                        a(href="#").link-unstyled.text-danger
+                            em.fa-5x.far.fa-building.mb-3
+                            br
+                            span.h4 Sellers
+                            br
+                            .text-sm.text-muted View all &rarr;
+            .col-lg-4
+                .card.b
+                    .card-body.text-center
+                        a(href="#").link-unstyled.text-success
+                            em.fa-5x.far.fa-calendar-check.mb-3
+                            br
+                            span.h4 Billing
+                            br
+                            .text-sm.text-muted View all &rarr;
+        .row
+            .col-lg-2
+            .col-lg-4
+                .card.b
+                    .card-body.text-center
+                        a(href="#").link-unstyled.text-dark
+                            em.fa-5x.fa.fa-recycle.mb-3
+                            br
+                            span.h4 Plans
+                            br
+                            .text-sm.text-muted View all &rarr;
+            .col-lg-4
+                .card.b
+                    .card-body.text-center
+                        a(href="#").link-unstyled.text-dark
+                            em.fa-5x.fa.fa-street-view.mb-3
+                            br
+                            span.h4 Accounts
+                            br
+                            .text-sm.text-muted View all &rarr;

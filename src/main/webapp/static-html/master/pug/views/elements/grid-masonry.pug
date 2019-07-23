@@ -1,0 +1,87 @@
+extends ../../_layout
+
+block active
+  - sidebar_active = 'grid-masonry.html'
+
+block content
+    .container
+        p
+            strong.mr-1 Cards
+            | can be organized into Masonry-like columns with just CSS by wrapping them in
+            code .card-columns.
+            | Cards are built with CSS column properties instead of flexbox for easier alignment. Cards are ordered from top to bottom and left to right.
+        .card-columns
+            .card.mb-4
+                img.card-img-top.img-fluid(src='img/bg1.jpg' alt='Card image cap')
+                .card-body
+                    h4.card-title Card title that wraps to a new line
+                    p.card-text
+                        | This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+            .card.p-3.mb-4
+                blockquote.card-body.mb-0.p-0
+                    p
+                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                    footer
+                        .text-sm.text-muted
+                            | Someone famous in
+                            cite(title='Source Title') Source Title
+            .card.mb-4
+                img.card-img-top.img-fluid(src='img/bg2.jpg' alt='Card image cap')
+                .card-body
+                    h4.card-title Card title
+                    p.card-text This card has supporting text below as a natural lead-in to additional content.
+                    p.card-text
+                        span.text-sm.text-muted Last updated 3 mins ago
+            .card.bg-inverse.p-3.text-center.mb-4.border-0
+                blockquote.mb-0
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.
+                    footer
+                        .text-sm
+                            | Someone famous in
+                            cite(title='Source Title') Source Title
+            .card.text-center.mb-4
+                .card-body
+                    h4.card-title Card title
+                    p.card-text This card has supporting text below as a natural lead-in to additional content.
+                    p.card-text
+                        span.text-sm.text-muted Last updated 3 mins ago
+            .card.mb-4
+                img.card-img.img-fluid(src='img/bg3.jpg' alt='Card image')
+            .card.p-3.text-right.mb-4
+                blockquote.mb-0
+                    p
+                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                    footer
+                        .text-sm.text-muted
+                            | Someone famous in
+                            cite(title='Source Title') Source Title
+            .card.mb-4
+                .card-body
+                    h4.card-title Card title
+                    p.card-text
+                        | This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                    p.card-text
+                        span.text-sm.text-muted Last updated 3 mins ago
+            .card.mb-4
+                img.card-img-top.img-fluid(src='img/bg1.jpg' alt='Card image cap')
+                .card-body
+                    h4.card-title Card title that wraps to a new line
+                    p.card-text
+                        | This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+            .card.bg-inverse.bg-primary.p-3.text-center.mb-4
+                blockquote.mb-0
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.
+                    footer
+                        .text-sm
+                            | Someone famous in
+                            cite(title='Source Title') Source Title
+            .card.mb-4
+                img.card-img-top.img-fluid(src='img/bg4.jpg' alt='Card image cap')
+
+            .card.bg-inverse.p-3.text-center.mb-4
+                blockquote.mb-0
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.
+                    footer
+                        .text-sm
+                            | Someone famous in
+                            cite(title='Source Title') Source Title

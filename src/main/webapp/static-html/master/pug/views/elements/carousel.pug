@@ -1,0 +1,36 @@
+extends ../../_layout
+
+block active
+    - sidebar_active = 'carousel.html'
+
+block content
+    .content-heading Carousel
+
+    #carouselExampleCaptions.carousel(data-ride='carousel')
+        ol.carousel-indicators
+                li.active(data-target='#carouselExampleCaptions' data-slide-to='0')
+                li(data-target='#carouselExampleCaptions' data-slide-to='1')
+                li(data-target='#carouselExampleCaptions' data-slide-to='2')
+        .carousel-inner
+            .carousel-item.active
+                img.d-block.w-100(src='img/bg3.jpg' alt='First slide')
+                .carousel-caption.d-none.d-md-block
+                    h5 First slide label
+                    p Nulla vitae elit libero, a pharetra augue mollis interdum.
+            .carousel-item
+                img.d-block.w-100(src='img/bg3.jpg' alt='Second slide')
+                .carousel-caption.d-none.d-md-block
+                    h5 Second slide label
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            .carousel-item
+                img.d-block.w-100(src='img/bg3.jpg' alt='Third slide')
+                .carousel-caption.d-none.d-md-block
+                    h5 Third slide label
+                    p Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+        a.carousel-control-prev(href='#carouselExampleCaptions' role='button' data-slide='prev')
+            span.carousel-control-prev-icon(aria-hidden='true')
+            span.sr-only Previous
+        a.carousel-control-next(href='#carouselExampleCaptions' role='button' data-slide='next')
+            span.carousel-control-next-icon(aria-hidden='true')
+            span.sr-only Next
+

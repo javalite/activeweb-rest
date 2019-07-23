@@ -1,0 +1,250 @@
+extends ../../_layout
+
+block active
+  - sidebar_active = 'team-viewer.html'
+
+block content
+    .content-heading
+        | Team viewer
+        .ml-auto
+            em.fas.fa-exclamation-triangle.text-warning
+
+    .row
+        .col-xl-4.col-lg-6
+            // Team Card
+            .card.card-default
+                .card-header
+                    .float-right
+                        .badge.badge-success free
+                    .card-title Team #1
+                .card-body.bt
+                    a.inline(href="#", data-toggle="tooltip", data-title="Team leader"): img.rounded-circle.thumb48(src="img/user/03.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/02.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/04.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/05.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/06.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/07.jpg", alt="project member")
+                .card-body.bb.text-center
+                    div(data-toggle="tooltip", data-title="Progress of asigned tasks")
+                        .progress.progress-xs.m-0: .progress-bar.bg-info(style="width:50%")
+                .card-body.bb
+                    .row.text-center
+                        .col-4
+                            p.text-bold BUDGET
+                            .inline.mr-2(data-sparkline="", data-values="60,40", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#ff902b"]')
+                        .col-4
+                            p.text-bold TASKS
+                            .h3.m-0 26
+                        .col-4
+                            p.text-bold AVAILABITY
+                            .inline.mr-2(data-sparkline="", data-values="70,30", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#ff902b"]')
+                .card-body
+                    ul.list-inline.m-0
+                        li.list-inline-item: .badge.bg-gray angularjs
+                        li.list-inline-item: .badge.bg-gray jquery
+                        li.list-inline-item: .badge.bg-gray gulp
+                        li.list-inline-item: .badge.bg-gray git
+                        li.list-inline-item: .badge.p-1.bg-gray ios
+                .card-footer.text-center
+                    a(href="#").btn.btn-secondary.btn-oval Manage Team
+            // end Team Card
+        .col-xl-4.col-lg-6
+            // Team Card
+            .card.card-default
+                .card-header
+                    .float-right
+                        .badge.bg-gray asigned
+                    .card-title Team #2
+                .card-body.bt
+                    a.inline(href="#", data-toggle="tooltip", data-title="Team leader"): img.rounded-circle.thumb48(src="img/user/03.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/02.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/04.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/05.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/09.jpg", alt="project member")
+                .card-body.bb.text-center
+                    div(data-toggle="tooltip", data-title="Progress of asigned tasks")
+                        .progress.progress-xs.m-0: .progress-bar.bg-info(style="width:90%")
+                .card-body.bb
+                    .row.text-center
+                        .col-4
+                            p.text-bold BUDGET
+                            .inline.mr-2(data-sparkline="", data-values="10,90", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#f05050"]')
+                        .col-4
+                            p.text-bold TASKS
+                            .h3.m-0 145
+                        .col-4
+                            p.text-bold AVAILABITY
+                            .inline.mr-2(data-sparkline="", data-values="40,60", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#27c24c"]')
+                .card-body
+                    ul.list-inline.m-0
+                        li.list-inline-item: .badge.bg-gray angularjs
+                        li.list-inline-item: .badge.bg-gray jquery
+                        li.list-inline-item: .badge.bg-gray gulp
+                        li.list-inline-item: .badge.bg-gray git
+                        li.list-inline-item: .badge.p-1.bg-gray ios
+                .card-footer.text-center
+                    a(href="#").btn.btn-secondary.btn-oval Manage Team
+            // end Team Card
+        .col-xl-4.col-lg-6
+            // Team Card
+            .card.card-default
+                .card-header
+                    .float-right
+                        .badge.badge-success free
+                    .card-title Team #3
+                .card-body.bt
+                    a.inline(href="#", data-toggle="tooltip", data-title="Team leader"): img.rounded-circle.thumb48(src="img/user/03.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/02.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/04.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/05.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/06.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/07.jpg", alt="project member")
+                .card-body.bb.text-center
+                    div(data-toggle="tooltip", data-title="Progress of asigned tasks")
+                        .progress.progress-xs.m-0: .progress-bar.bg-info(style="width:50%")
+                .card-body.bb
+                    .row.text-center
+                        .col-4
+                            p.text-bold BUDGET
+                            .inline.mr-2(data-sparkline="", data-values="60,40", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#ff902b"]')
+                        .col-4
+                            p.text-bold TASKS
+                            .h3.m-0 98
+                        .col-4
+                            p.text-bold AVAILABITY
+                            .inline.mr-2(data-sparkline="", data-values="40,60", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#27c24c"]')
+                .card-body
+                    ul.list-inline.m-0
+                        li.list-inline-item: .badge.bg-gray angularjs
+                        li.list-inline-item: .badge.bg-gray jquery
+                        li.list-inline-item: .badge.bg-gray gulp
+                        li.list-inline-item: .badge.bg-gray git
+                        li.list-inline-item: .badge.p-1.bg-gray ios
+                .card-footer.text-center
+                    a(href="#").btn.btn-secondary.btn-oval Manage Team
+            // end Team Card
+
+        .col-xl-4.col-lg-6
+            // Team Card
+            .card.card-default
+                .card-header
+                    .float-right
+                        .badge.bg-gray asigned
+                    .card-title Team #4
+                .card-body.bt
+                    a.inline(href="#", data-toggle="tooltip", data-title="Team leader"): img.rounded-circle.thumb48(src="img/user/03.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/02.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/04.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/05.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/06.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/07.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/08.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/09.jpg", alt="project member")
+                .card-body.bb.text-center
+                    div(data-toggle="tooltip", data-title="Progress of asigned tasks")
+                        .progress.progress-xs.m-0: .progress-bar.bg-info(style="width:25%")
+                .card-body.bb
+                    .row.text-center
+                        .col-4
+                            p.text-bold BUDGET
+                            .inline.mr-2(data-sparkline="", data-values="60,40", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#ff902b"]')
+                        .col-4
+                            p.text-bold TASKS
+                            .h3.m-0 145
+                        .col-4
+                            p.text-bold AVAILABITY
+                            .inline.mr-2(data-sparkline="", data-values="40,60", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#27c24c"]')
+                .card-body
+                    ul.list-inline.m-0
+                        li.list-inline-item: .badge.bg-gray angularjs
+                        li.list-inline-item: .badge.bg-gray jquery
+                        li.list-inline-item: .badge.bg-gray gulp
+                        li.list-inline-item: .badge.bg-gray git
+                        li.list-inline-item: .badge.p-1.bg-gray ios
+                .card-footer.text-center
+                    a(href="#").btn.btn-secondary.btn-oval Manage Team
+            // end Team Card
+        .col-xl-4.col-lg-6
+            // Team Card
+            .card.card-default
+                .card-header
+                    .float-right
+                        .badge.bg-gray asigned
+                    .card-title Team #5
+                .card-body.bt
+                    a.inline(href="#", data-toggle="tooltip", data-title="Team leader"): img.rounded-circle.thumb48(src="img/user/03.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/02.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/04.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/05.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/06.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/07.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/08.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/09.jpg", alt="project member")
+                .card-body.bb.text-center
+                    div(data-toggle="tooltip", data-title="Progress of asigned tasks")
+                        .progress.progress-xs.m-0: .progress-bar.bg-info(style="width:50%")
+                .card-body.bb
+                    .row.text-center
+                        .col-4
+                            p.text-bold BUDGET
+                            .inline.mr-2(data-sparkline="", data-values="60,40", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#ff902b"]')
+                        .col-4
+                            p.text-bold TASKS
+                            .h3.m-0 500
+                        .col-4
+                            p.text-bold AVAILABITY
+                            .inline.mr-2(data-sparkline="", data-values="40,60", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#27c24c"]')
+                .card-body
+                    ul.list-inline.m-0
+                        li.list-inline-item: .badge.bg-gray angularjs
+                        li.list-inline-item: .badge.bg-gray jquery
+                        li.list-inline-item: .badge.bg-gray gulp
+                        li.list-inline-item: .badge.bg-gray git
+                        li.list-inline-item: .badge.p-1.bg-gray ios
+                .card-footer.text-center
+                    a(href="#").btn.btn-secondary.btn-oval Manage Team
+            // end Team Card
+        .col-xl-4.col-lg-6
+            // Team Card
+            .card.card-default
+                .card-header
+                    .float-right
+                        .badge.badge-success free
+                    .card-title Team #6
+                .card-body.bt
+                    a.inline(href="#", data-toggle="tooltip", data-title="Team leader"): img.rounded-circle.thumb48(src="img/user/03.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/02.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/04.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/05.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/06.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/07.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/08.jpg", alt="project member")
+                    a.inline(href="#"): img.rounded-circle.thumb24(src="img/user/09.jpg", alt="project member")
+                .card-body.bb.text-center
+                    div(data-toggle="tooltip", data-title="Progress of asigned tasks")
+                        .progress.progress-xs.m-0: .progress-bar.bg-info(style="width:50%")
+                .card-body.bb
+                    .row.text-center
+                        .col-4
+                            p.text-bold BUDGET
+                            .inline.mr-2(data-sparkline="", data-values="5,95", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#f05050"]')
+                        .col-4
+                            p.text-bold TASKS
+                            .h3.m-0 145
+                        .col-4
+                            p.text-bold AVAILABITY
+                            .inline.mr-2(data-sparkline="", data-values="70,30", data-type='pie', data-height="24", data-slice-colors='["#edf1f2", "#ff902b"]')
+                .card-body
+                    ul.list-inline.m-0
+                        li.list-inline-item: .badge.bg-gray angularjs
+                        li.list-inline-item: .badge.bg-gray jquery
+                        li.list-inline-item: .badge.bg-gray gulp
+                        li.list-inline-item: .badge.bg-gray git
+                        li.list-inline-item: .badge.p-1.bg-gray ios
+                .card-footer.text-center
+                    a(href="#").btn.btn-secondary.btn-oval Manage Team
+            // end Team Card
+
+block vendor_js
+  // SPARKLINE
+  script(src='vendor/jquery-sparkline/jquery.sparkline.js')

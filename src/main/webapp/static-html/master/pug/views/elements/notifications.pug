@@ -1,0 +1,286 @@
+extends ../../_layout
+
+block active
+    - sidebar_active = 'notifications.html'
+
+block content
+    .content-heading
+        div
+            | Notifications
+            span.text-sm.d-none.d-sm-block A complete set of notification posibilities
+            // Breadcrumb below title
+            ol.breadcrumb.breadcrumb.px-0.pb-0
+                li.breadcrumb-item
+                    a(href='#') Home
+                li.breadcrumb-item
+                    a(href='#') Elements
+                li.breadcrumb-item.active Notifications
+        // Breadcrumb right aligned
+        ol.breadcrumb.ml-auto
+            li.breadcrumb-item
+                a(href='#') Home
+            li.breadcrumb-item
+                a(href='#') Elements
+            li.breadcrumb-item.active Notifications
+
+    // Breadcrumb next to view title
+    ol.breadcrumb
+        li.breadcrumb-item
+            a(href='#') Home
+        li.breadcrumb-item
+            a(href='#') Elements
+        li.breadcrumb-item.active Notifications
+
+    ol.breadcrumb
+        li.breadcrumb-item
+            a(href='#') Home
+        li.breadcrumb-item
+            a(href='#') Elements
+        li.breadcrumb-item.active Notifications
+
+    // START row
+    .row
+        .col-xl-6
+            // START card
+            .card.card-default
+                .card-header
+                    | Notify Alerts
+                .card-body
+                    p Create toggleable notifications that fade out automatically.
+                    p
+                        button.btn.btn-secondary(type="button", data-notify="", data-message="Message ..") Message
+                    p You can use HTML inside your notification message
+                    p
+                        button.btn.btn-secondary(type="button", data-notify="", data-message="<em class='fa fa-check'></em> Message with icon..") Message with Icon
+            // END card
+
+            // START card
+            .card.card-default
+                .card-header
+                    | Alert Styles
+                .card-body
+                    .alert.alert-success(role='alert')
+                        strong Well done!
+                        |  You successfully read this important alert message.
+                    .alert.alert-info(role='alert')
+                        strong Heads up!
+                        |  This alert needs your attention, but it&apos;s not super important.
+                    .alert.alert-warning(role='alert')
+                        strong Warning!
+                        |  Better check yourself, you&apos;re not looking too good.
+                    .alert.alert-danger(role='alert')
+                        strong Oh snap!
+                        |  Change a few things up and try submitting again.
+                    .alert.alert-warning.alert-dismissible.fade.show(role='alert')
+                            button.close(type='button', data-dismiss='alert', aria-label='Close')
+                                span(aria-hidden='true') &times;
+                            strong Holy guacamole!
+                            |  Best check yo self, you&apos;re not looking too good.
+
+            // END card
+        .col-xl-6
+            // START card
+            .card.card-default
+                .card-header
+                    | Notify with Status
+                .card-body
+                    p Uses builtin alert status to apply notifications
+                    p
+                        button.btn.btn-danger(type="button", data-notify="", data-message="Message with status.." data-options='{"status":"danger"}') Danger
+                        button.btn.btn-info(type="button", data-notify="", data-message="Message with status.." data-options='{"status":"info"}') Info
+                        button.btn.btn-warning(type="button", data-notify="", data-message="Message with status.." data-options='{"status":"warning"}') Warning
+                        button.btn.btn-success(type="button", data-notify="", data-message="Message with status.." data-options='{"status":"success"}') Success
+                    p Show in different positions
+                    p
+                        button.btn.btn-secondary(type="button", data-notify="", data-message="Message in position.." data-options='{"pos":"bottom-center"}') Bottom Cener
+                        button.btn.btn-secondary(type="button", data-notify="", data-message="Message in position.." data-options='{"pos":"top-left"}') Top Left
+                        button.btn.btn-secondary(type="button", data-notify="", data-message="Message in position.." data-options='{"pos":"top-right"}') Top Right
+                        button.btn.btn-secondary(type="button", data-notify="", data-message="Message in position.." data-options='{"status":"success", "pos":"bottom-right"}') Succes at Bottom Right
+            // END card
+
+            // START card
+            .card.card-default
+                .card-header
+                    | Modals
+                .card-body
+
+                    // Button trigger modal
+                    button.btn.btn-primary.btn-lg(type='button', data-toggle='modal', data-target='#myModal')   Default modal
+                    button.btn.btn-primary.btn-lg(type='button', data-toggle='modal', data-target='#myModalLarge')   Large modal
+                    button.btn.btn-primary.btn-lg(type='button', data-toggle='modal', data-target='#myModalSmall')  Small modal
+            // END card
+
+            // START card
+            .card.card-default
+                .card-header
+                    | Popovers
+                .card-body
+                    button.btn.btn-secondary(type='button', title="Popover title", data-container='body', data-toggle='popover', data-placement='left', data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.')   Popover on left
+                    button.btn.btn-secondary(type='button', title="Popover title", data-container='body', data-toggle='popover', data-placement='top', data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.')   Popover on top
+                    button.btn.btn-secondary(type='button', title="Popover title", data-container='body', data-toggle='popover', data-placement='bottom', data-content='Vivamussagittis lacus vel augue laoreet rutrum faucibus.')   Popover on bottom
+                    button.btn.btn-secondary(type='button', title="Popover title", data-container='body', data-toggle='popover', data-placement='right', data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.')   Popover on right
+            // END card
+            // START card
+            .card.card-default
+                .card-header Tooltips
+                .card-body
+                    button.btn.btn-secondary(type='button', data-toggle='tooltip', data-placement='left', title='Tooltip on left') Tooltip on left
+                    button.btn.btn-secondary(type='button', data-toggle='tooltip', data-placement='top', title='Tooltip on top') Tooltip on top
+                    button.btn.btn-secondary(type='button', data-toggle='tooltip', data-placement='bottom', title='Tooltip on bottom') Tooltip on bottom
+                    button.btn.btn-secondary(type='button', data-toggle='tooltip', data-placement='right', title='Tooltip on right') Tooltip on right
+            // END card
+    // END row
+
+    .row
+        .col-xl-6
+            style.
+                .scrollspy-example-2 {
+                    position: relative;
+                    height: 350px;
+                    overflow: auto;
+                }
+            .card.card-default.mb-4
+                .card-header Scrollspy w/side Nav
+                .row
+                    .col-4
+                        nav#navbar-example3.navbar.navbar-light.bg-light.flex-column
+                            a.navbar-brand(href='#') Navbar
+                            nav.nav.nav-pills.flex-column
+                                a.nav-link.active(href='#item-1') Item 1
+                                nav.nav.nav-pills.flex-column
+                                    a.nav-link.ml-3.my-1(href='#item-1-1') Item 1-1
+                                    a.nav-link.ml-3.my-1(href='#item-1-2') Item 1-2
+                                a.nav-link(href='#item-2') Item 2
+                                a.nav-link(href='#item-3') Item 3
+                                nav.nav.nav-pills.flex-column
+                                    a.nav-link.ml-3.my-1(href='#item-3-1') Item 3-1
+                                    a.nav-link.ml-3.my-1(href='#item-3-2') Item 3-2
+                    .col-8
+                        .scrollspy-example-2(data-spy='scroll' data-target='#navbar-example3' data-offset='0')
+                            h4#item-1 Item 1
+                            p
+                                | Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit dolore.
+                            h5#item-1-1 Item 1-1
+                            p
+                                | Amet tempor mollit aliquip pariatur excepteur commodo do ea cillum commodo Lorem et occaecat elit qui et. Aliquip labore ex ex esse voluptate occaecat Lorem ullamco deserunt. Aliqua cillum excepteur irure consequat id quis ea. Sit proident ullamco aute magna pariatur nostrud labore. Reprehenderit aliqua commodo eiusmod aliquip est do duis amet proident magna consectetur consequat eu commodo fugiat non quis. Enim aliquip exercitation ullamco adipisicing voluptate excepteur minim exercitation minim minim commodo adipisicing exercitation officia nisi adipisicing. Anim id duis qui consequat labore adipisicing sint dolor elit cillum anim et fugiat.
+                            h5#item-1-2 Item 1-2
+                            p
+                                | Cillum nisi deserunt magna eiusmod qui eiusmod velit voluptate pariatur laborum sunt enim. Irure laboris mollit consequat incididunt sint et culpa culpa incididunt adipisicing magna magna occaecat. Nulla ipsum cillum eiusmod sint elit excepteur ea labore enim consectetur in labore anim. Proident ullamco ipsum esse elit ut Lorem eiusmod dolor et eiusmod. Anim occaecat nulla in non consequat eiusmod velit incididunt.
+                            h4#item-2 Item 2
+                            p
+                                | Quis magna Lorem anim amet ipsum do mollit sit cillum voluptate ex nulla tempor. Laborum consequat non elit enim exercitation cillum aliqua consequat id aliqua. Esse ex consectetur mollit voluptate est in duis laboris ad sit ipsum anim Lorem. Incididunt veniam velit elit elit veniam Lorem aliqua quis ullamco deserunt sit enim elit aliqua esse irure. Laborum nisi sit est tempor laborum mollit labore officia laborum excepteur commodo non commodo dolor excepteur commodo. Ipsum fugiat ex est consectetur ipsum commodo tempor sunt in proident.
+                            h4#item-3 Item 3
+                            p
+                                | Quis anim sit do amet fugiat dolor velit sit ea ea do reprehenderit culpa duis. Nostrud aliqua ipsum fugiat minim proident occaecat excepteur aliquip culpa aute tempor reprehenderit. Deserunt tempor mollit elit ex pariatur dolore velit fugiat mollit culpa irure ullamco est ex ullamco excepteur.
+                            h5#item-3-1 Item 3-1
+                            p
+                                | Deserunt quis elit Lorem eiusmod amet enim enim amet minim Lorem proident nostrud. Ea id dolore anim exercitation aute fugiat labore voluptate cillum do laboris labore. Ex velit exercitation nisi enim labore reprehenderit labore nostrud ut ut. Esse officia sunt duis aliquip ullamco tempor eiusmod deserunt irure nostrud irure. Ullamco proident veniam laboris ea consectetur magna sunt ex exercitation aliquip minim enim culpa occaecat exercitation. Est tempor excepteur aliquip laborum consequat do deserunt laborum esse eiusmod irure proident ipsum esse qui.
+                            h5#item-3-2 Item 3-2
+                            p
+                                | Labore sit culpa commodo elit adipisicing sit aliquip elit proident voluptate minim mollit nostrud aute reprehenderit do. Mollit excepteur eu Lorem ipsum anim commodo sint labore Lorem in exercitation velit incididunt. Occaecat consectetur nisi in occaecat proident minim enim sunt reprehenderit exercitation cupidatat et do officia. Aliquip consequat ad labore labore mollit ut amet. Sit pariatur tempor proident in veniam culpa aliqua excepteur elit magna fugiat eiusmod amet officia.
+        .col-xl-6
+            style.
+                .scrollspy-example {
+                    position: relative;
+                    height: 200px;
+                    margin-top: .5rem;
+                    overflow: auto;
+                }
+            .card.card-default.mb-4
+                nav#navbar-example2.navbar.navbar-light.bg-light
+                    a.navbar-brand(href='#') Scrollspy
+                    ul.nav.nav-pills
+                        li.nav-item
+                            a.nav-link(href='#fat') @fat
+                        li.nav-item
+                            a.nav-link(href='#mdo') @mdo
+                        li.nav-item.dropdown
+                            a.nav-link.dropdown-toggle(data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false') Dropdown
+                            .dropdown-menu
+                                a.dropdown-item(href='#one') one
+                                a.dropdown-item(href='#two') two
+                                .dropdown-divider(role='separator')
+                                a.dropdown-item(href='#three') three
+                .card-body.pt-0
+                    .scrollspy-example(data-spy='scroll' data-target='#navbar-example2' data-offset='0')
+                        h4.mt-0#fat @fat
+                        p Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.
+                        h4#mdo @mdo
+                        p Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua cupidatat mcsweeney's vero. Cupidatat four loko nisi, ea helvetica nulla carles. Tattooed cosby sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles non aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                        h4#one one
+                        p Occaecat commodo aliqua delectus. Fap craft beer deserunt skateboard ea. Lomo bicycle rights adipisicing banh mi, velit ea sunt next level locavore single-origin coffee in magna veniam. High life id vinyl, echo park consequat quis aliquip banh mi pitchfork. Vero VHS est adipisicing. Consectetur nisi DIY minim messenger bag. Cred ex in, sustainable delectus consectetur fanny pack iphone.
+                        h4#two two
+                        p In incididunt echo park, officia deserunt mcsweeney's proident master cleanse thundercats sapiente veniam. Excepteur VHS elit, proident shoreditch +1 biodiesel laborum craft beer. Single-origin coffee wayfarers irure four loko, cupidatat terry richardson master cleanse. Assumenda you probably haven't heard of them art party fanny pack, tattooed nulla cardigan tempor ad. Proident wolf nesciunt sartorial keffiyeh eu banh mi sustainable. Elit wolf voluptate, lo-fi ea portland before they sold out four loko. Locavore enim nostrud mlkshk brooklyn nesciunt.
+                        h4#three three
+                        p Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.
+                        p Keytar twee blog, culpa messenger bag marfa whatever delectus food truck. Sapiente synth id assumenda. Locavore sed helvetica cliche irony, thundercats you probably haven't heard of them consequat hoodie gluten-free lo-fi fap aliquip. Labore elit placeat before they sold out, terry richardson proident brunch nesciunt quis cosby sweater pariatur keffiyeh ut helvetica artisan. Cardigan craft beer seitan readymade velit. VHS chambray laboris tempor veniam. Anim mollit minim commodo ullamco thundercats.
+
+    // START card
+    .card.card-default
+        .card-header Progress Bar
+            .btn-group.float-right
+        .card-body
+            .progress.mb-3
+                .progress-bar.bg-success(role='progressbar', aria-valuenow='40', aria-valuemin='0', aria-valuemax='100', style='width: 40%')
+                    span.sr-only 40% Complete (success)
+            .progress.mb-3
+                .progress-bar.bg-info(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100', style='width: 20%')
+                    span.sr-only 20% Complete
+            .progress.progress-sm.mb-3
+                .progress-bar.bg-warning(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='width: 60%')
+                    span.sr-only 60% Complete (warning)
+            .progress.progress-xs.mb-3
+                .progress-bar.bg-danger(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='width: 80%')
+                    span.sr-only 80% Complete (danger)
+            .progress.mb-3
+                    .progress-bar.bg-purple.progress-bar-striped(role='progressbar', aria-valuenow='40', aria-valuemin='0', aria-valuemax='100', style='width: 40%')
+                        span.sr-only 40% Complete (success)
+            .progress
+                .progress-bar.bg-yellow(style='width: 35%')
+                    span.sr-only 35% Complete (success)
+                .progress-bar.bg-warning.progress-bar-striped(style='width: 20%')
+                    span.sr-only 20% Complete (warning)
+                .progress-bar.bg-danger(style='width: 10%')
+                    span.sr-only 10% Complete (danger)
+    // END card
+
+block vendor_js
+
+    // Modals must be declare at body level so the content overlaps the background
+
+    // Modal
+    #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+        .modal-dialog
+            .modal-content
+                .modal-header
+                    h4#myModalLabel.modal-title Modal title
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') &times;
+                .modal-body ...
+                .modal-footer
+                    button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+                    button.btn.btn-primary(type='button') Save changes
+    // Modal Large
+    #myModalLarge.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabelLarge', aria-hidden='true')
+        .modal-dialog.modal-lg
+            .modal-content
+                .modal-header
+                    h4#myModalLabelLarge.modal-title Modal title
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') &times;
+                .modal-body ...
+                .modal-footer
+                    button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+                    button.btn.btn-primary(type='button') Save changes
+    // Modal Small
+    #myModalSmall.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabelSmall', aria-hidden='true')
+        .modal-dialog.modal-sm
+            .modal-content
+                .modal-header
+                    h4#myModalLabelSmall.modal-title Modal title
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') &times;
+                .modal-body ...
+                .modal-footer
+                    button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+                    button.btn.btn-primary(type='button') Save changes
