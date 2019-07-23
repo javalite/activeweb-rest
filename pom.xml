@@ -9,7 +9,7 @@
     <name>JavaLite REST Example</name>
 
     <properties>
-        <javalite.version>2.2</javalite.version>
+        <javalite.version>2.3</javalite.version>
         <environments>development,test</environments>
     </properties>
 
@@ -123,7 +123,7 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>1.7.7</version>
+            <version>1.7.25</version>
         </dependency>
         <dependency>
             <groupId>org.codehaus.jackson</groupId>
@@ -145,30 +145,4 @@
         </dependency>
 
     </dependencies>
-
-    <repositories>
-        <repository>
-            <id>snapshots1</id>
-            <name>Sonatype Snapshots</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-                <checksumPolicy>warn</checksumPolicy>
-            </snapshots>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>snapshots2</id>
-            <name>Sonatype Snapshots</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-                <checksumPolicy>warn</checksumPolicy>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
-
 </project>
